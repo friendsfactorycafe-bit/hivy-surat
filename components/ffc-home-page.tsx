@@ -14,7 +14,7 @@ import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
-import { FFCReviewsSlider } from '@/components/ffc-reviews-slider';
+import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig, packages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
 
 // Experience features
