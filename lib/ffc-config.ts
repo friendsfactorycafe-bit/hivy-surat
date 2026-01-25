@@ -435,13 +435,13 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
   },
   {
     id: "setup-6",
-    slug: "the-personalized-proposal",
-    name: "Personalized Proposal",
+    slug: "the-elite-group-setup",
+    name: "Elite Group Setup",
     emoji: "💍✨",
     shortDescription: "Create a one-of-a-kind proposal experience tailored just for your love story ✨",
-    fullDescription: `💍✨ Personalized Proposal — where your unique love story gets the perfect setting it deserves
+    fullDescription: `💍✨ Elite Group Setup — where your unique love story gets the perfect setting it deserves
 
-Make your proposal truly unforgettable with a customized setup designed around your love story at Surat's best personalized proposal venue ✨.
+Make your proposal truly unforgettable with a customized setup designed around your love story at Surat's best elite group setup venue ✨.
 
 📦 Package Includes
 • Cake: Complimentary
@@ -481,11 +481,11 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary Surprise | Personal Milestones | Pre-Wedding Photoshoot
 
-📍 Best personalized proposal venue Surat | Custom celebration cafe Gotri | Couple-friendly venue`,
+📍 Best elite group setup venue Surat | Custom celebration cafe Gotri | Couple-friendly venue`,
     price: 5700,
     cakeIncluded: true,
     features: [
-      "2 Hours Private Personalized Celebration 💍",
+      "2 Hours Private Elite Group Celebration 💍",
       "Complimentary Celebration Cake 🍰",
       "Champagne: ₹500/- (Non-Alcoholic)",
       "Fully Decorated Private Setup ✨",
@@ -499,14 +499,14 @@ Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary
       "⚠️ Food NOT included in this package"
     ],
     perfectFor: ["Marriage Proposal", "Birthday Celebration", "Bride-to-Be Party", "Anniversary Surprise", "Personal Milestones", "Pre-Wedding Photoshoot"],
-    thumbnail: "/packages/the-personalized-proposal/78.png",
+    thumbnail: "/packages/the-elite-group-setup/78.png",
     images: [
-      "/packages/the-personalized-proposal/78.png",
-      "/packages/the-personalized-proposal/79.png",
-      "/packages/the-personalized-proposal/80.png",
-      "/packages/the-personalized-proposal/81.png",
-      "/packages/the-personalized-proposal/82.png",
-      "/packages/the-personalized-proposal/83.png"
+      "/packages/the-elite-group-setup/78.png",
+      "/packages/the-elite-group-setup/79.png",
+      "/packages/the-elite-group-setup/80.png",
+      "/packages/the-elite-group-setup/81.png",
+      "/packages/the-elite-group-setup/82.png",
+      "/packages/the-elite-group-setup/83.png"
     ]
   }
 ];
