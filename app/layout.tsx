@@ -311,6 +311,11 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'GT-PHWHQV4L');
             gtag('config', 'AW-11390931743');
+            gtag('event', 'conversion', {
+              'send_to': 'AW-11390931743/O21FCL-_9-0bEJ-mz7cq',
+              'value': 1.0,
+              'currency': 'INR'
+            });
           `}
         </Script>
       </head>
