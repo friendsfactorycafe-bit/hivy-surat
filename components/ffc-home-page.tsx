@@ -21,67 +21,67 @@ import { siteConfig, packages, serviceCategories, suratAreas, formatPrice, getAl
 const experienceFeatures = [
   {
     icon: Clock,
-    title: "3 Mesmerizing Hours",
-    description: "Three magical hours designed to create unforgettable memories"
+    title: "3-Hour Private Booking",
+    description: "Enjoy three exclusive hours at our private rooftop venue for your candlelight dinner or celebration"
   },
   {
     icon: Gift,
-    title: "Cake & Champagne",
-    description: "Complimentary cake & non-alcoholic champagne (₹500)"
+    title: "Celebration Cake Included",
+    description: "Complimentary birthday/anniversary cake & non-alcoholic champagne with every package"
   },
   {
     icon: Camera,
-    title: "Photo-Ready Setup",
-    description: "Instagram-worthy decorations for your special moments"
+    title: "Instagram-Worthy Setup",
+    description: "Professional balloon decorations, fairy lights & romantic photo-ready ambiance"
   },
   {
     icon: Music,
-    title: "Romantic Music",
-    description: "Soft background melodies to set the perfect mood"
+    title: "Romantic Ambiance",
+    description: "Soft romantic music, candlelight setting & complete privacy for couples"
   }
 ];
 
 // FAQ items
 const faqs = [
   {
-    question: "What is the location of HIVY?",
-    answer: "HIVY is located in Surat, Gujarat—your premier spot for candlelight dinners and romantic celebrations."
+    question: "What is HIVY and where is it located in Surat?",
+    answer: "HIVY is Surat's premier couples-only private celebration venue—the best spot for candlelight dinners, romantic rooftop dining, birthday surprises, and anniversary celebrations in Surat, Gujarat."
   },
   {
-    question: "How do I book a candlelight dinner or event?",
-    answer: `WhatsApp ${siteConfig.phone} or call directly—share your occasion (anniversary, proposal), date, and guest count for instant confirmation and custom quotes.`
+    question: "How do I book a candlelight dinner or birthday surprise at HIVY?",
+    answer: `Simply WhatsApp ${siteConfig.phone} or call directly. Share your occasion (candlelight dinner, birthday surprise, anniversary celebration, proposal), preferred date, and number of guests. We'll confirm your booking instantly with a custom quote for your romantic celebration.`
   },
   {
-    question: "What are the starting prices for packages?",
-    answer: "Our celebration packages include premium setup, mocktails, flowers, and decor. Contact us for current pricing and custom quotes."
+    question: "What are the prices for candlelight dinner packages in Surat?",
+    answer: "Our romantic celebration packages start from affordable rates and include premium rooftop setup, welcome drinks, decorations, and gourmet dining. Contact us for current pricing on candlelight dinner packages, birthday surprise setups, and anniversary celebration deals."
   },
   {
-    question: "Can we book for marriage proposals or engagements?",
-    answer: "Absolutely—our proposal setups feature heart arches, fairy lights, and champagne for unforgettable 'yes' moments in Surat."
+    question: "Can I book HIVY for a marriage proposal or engagement?",
+    answer: "Absolutely! HIVY is Surat's most popular proposal venue. Our romantic proposal setups feature heart arches, fairy lights, rose petals, and champagne—perfect for creating an unforgettable 'yes' moment. We've hosted 3000+ successful proposals and engagements."
   },
   {
-    question: "What occasions do you host?",
-    answer: "Anniversary celebrations, birthday surprises, proposals, last candlelight dinners before marriage, engagements, pre-wedding shoots, and pregnancy announcements."
+    question: "What occasions can I celebrate at HIVY Surat?",
+    answer: "We specialize in candlelight dinners, birthday surprises (for boyfriend, girlfriend, husband, wife), anniversary celebrations (1st, 10th, 25th), marriage proposals, engagement parties, Valentine's Day dinners, pre-wedding shoots, pregnancy announcements, and romantic date nights."
   },
   {
-    question: "What time slots are available?",
-    answer: "Evenings 6 PM–11 PM; weekends book fast—advance booking recommended for Surat's romantic peak hours."
+    question: "What are the time slots available for candlelight dinner booking?",
+    answer: "Our romantic celebration time slots are from 6 PM to 11 PM. Weekend slots for candlelight dinners and birthday surprises book fast—we recommend advance booking to secure your preferred date at Surat's best romantic restaurant."
   },
   {
-    question: "Can we customize decorations and menu?",
-    answer: "Fully customizable—balloons, cakes, themed backdrops, vegan mocktails for your anniversary or pregnancy announcement."
+    question: "Can I customize the decorations for my birthday surprise or anniversary?",
+    answer: "Yes! All our celebration packages are fully customizable. Choose from balloon decorations, flower arrangements, themed backdrops, personalized messages, cakes, and more for your birthday room decoration, anniversary setup, or proposal arrangement."
   },
   {
-    question: "Is HIVY suitable for small groups or couples only?",
-    answer: "Perfect for 2-3 people; intimate couple setups or family celebrations with complete privacy."
+    question: "Is HIVY a private venue for couples only?",
+    answer: "Yes, HIVY is 100% private and exclusively for couples. You'll have complete privacy during your booking slot—no other guests. It's the safest, most romantic, and couple-friendly celebration venue in Surat with a 4.9★ rating."
   },
   {
-    question: "Is your venue private and couple-friendly?",
-    answer: "Yes, absolutely! Our venue is exclusively for couples. You'll have complete privacy with no other guests during your booking slot. It's a safe, comfortable, and romantic space."
+    question: "What areas in Surat does HIVY serve for romantic celebrations?",
+    answer: "We welcome couples from all Surat areas including Vesu, Adajan, Athwa, Piplod, City Light, Althan, Varachha, Pal, Dumas Road, and more. HIVY is centrally located as the best candlelight dinner restaurant serving all of Surat."
   },
   {
-    question: "What is your cancellation policy?",
-    answer: "Rescheduling must be informed at least one day prior. Event can be rescheduled within one month, subject to availability. No Refund Policy Applicable."
+    question: "What is the cancellation and rescheduling policy?",
+    answer: "Rescheduling must be informed at least one day prior. Your candlelight dinner or birthday surprise booking can be rescheduled within one month, subject to availability. Please note: No Refund Policy Applicable."
   }
 ];
 
@@ -154,13 +154,13 @@ function GallerySection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-            <ImageIcon className="h-4 w-4 mr-2" /> Our Gallery
+            <ImageIcon className="h-4 w-4 mr-2" /> Romantic Celebration Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Magical Moments at HIVY
+            Candlelight Dinners & Celebrations at HIVY Surat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A glimpse into the romantic experiences we create for couples. Every setup is designed to make your moments unforgettable.
+            Real moments from birthday surprises, anniversary dinners, marriage proposals & romantic date nights at Surat's best couples-only celebration venue.
           </p>
         </div>
 
@@ -230,9 +230,11 @@ function GallerySection() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover"
+                    preload="metadata"
+                    className="w-full h-full object-cover bg-stone-200"
                     onMouseEnter={(e) => e.currentTarget.play()}
                     onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                    onLoadedData={(e) => { e.currentTarget.currentTime = 0.5; }}
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -272,13 +274,13 @@ function BlogSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-            Our Blog
+            Romantic Celebration Blog
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Celebration Ideas & Inspiration
+            Birthday Surprise & Anniversary Ideas in Surat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Tips, guides, and ideas to help you plan the perfect celebration in Surat
+            Tips, guides, and romantic date ideas to help you plan the perfect candlelight dinner, birthday surprise, or proposal in Surat
           </p>
         </div>
 
@@ -343,8 +345,8 @@ export default function FFCHomePage() {
   
   // Hero slider images
   const heroSlides = [
-    { src: '/images/hero/slider1.png', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
     { src: '/images/hero/slider2.png', alt: 'Rooftop Celebration Setup with Fairy Lights Surat' },
+    { src: '/images/hero/slider1.png', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
   ];
 
   // Auto-slide effect
@@ -409,7 +411,7 @@ export default function FFCHomePage() {
                 {siteConfig.tagline}
               </p>
               <p className="text-lg mb-8 text-white/80 max-w-xl">
-                Premium romantic celebration venue for couples. Birthday surprises, candlelight dinners, anniversaries, proposals & more.
+                Surat's premier private rooftop venue for romantic candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals & intimate date nights. 100% private, couples-only experience.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -455,51 +457,18 @@ export default function FFCHomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-              Our Services
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Perfect For Every Celebration
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              From intimate candlelight dinners to grand proposals, we create magical moments for every special occasion.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {serviceCategories.map((service) => (
-              <Card key={service.slug} className="h-full border-stone-200 group">
-                <CardContent className="p-4 md:p-6 text-center">
-                  <div className="text-3xl md:text-4xl mb-3 md:mb-4">{service.emoji}</div>
-                  <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-600 text-xs md:text-sm line-clamp-3 hidden md:block">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Packages Section */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-stone-100 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-16">
             <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-              Our Packages
+              Candlelight Dinner & Celebration Packages
             </Badge>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-serif">
-              Our Romantic Celebration Packages
+              Romantic Celebration Packages in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              6 unique romantic setups designed to make your celebration unforgettable
+              6 unique private rooftop setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
             </p>
           </div>
           
@@ -544,16 +513,52 @@ export default function FFCHomePage() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+              Romantic Celebration Services in Surat
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
+              Perfect For Every Romantic Celebration in Surat
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              From intimate candlelight dinners to grand marriage proposals, surprise birthday parties to anniversary celebrations—we create magical moments for couples at our private rooftop venue in Surat.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {serviceCategories.map((service) => (
+              <Card key={service.slug} className="h-full border-stone-200 group">
+                <CardContent className="p-4 md:p-6 text-center">
+                  <div className="text-3xl md:text-4xl mb-3 md:mb-4">{service.emoji}</div>
+                  <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-600 text-xs md:text-sm line-clamp-3 hidden md:block">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Experience Features */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-              What You Get
+              Why Couples Choose HIVY Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              The Complete Experience
+              The Complete Romantic Date Experience
             </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Every couple deserves a private, romantic celebration. Our packages include everything for an unforgettable candlelight dinner or birthday surprise.
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -576,13 +581,13 @@ export default function FFCHomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-stone-1000/20 text-yellow-300 border-stone-1000/30">
-                Our Menu
+                Romantic Dinner Menu
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
-                Curated Café-Style Delicacies
+                Gourmet Cuisine for Candlelight Dinners
               </h2>
               <p className="text-gray-300 mb-8">
-                Crafted for Romantic Dates & Private Celebrations
+                Curated café-style delicacies crafted for romantic date nights, anniversary dinners & special celebrations in Surat
               </p>
               
               <div className="space-y-4">
@@ -644,13 +649,13 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-              <MapPin className="h-4 w-4 mr-2" /> Areas We Serve
+              <MapPin className="h-4 w-4 mr-2" /> Candlelight Dinner & Celebrations Near You
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Serving All of Surat
+              Best Romantic Restaurant Serving All Areas in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We bring romantic celebrations to couples across all areas of Surat
+              Whether you're looking for a candlelight dinner near Vesu, birthday surprise venue in Adajan, or anniversary restaurant in Athwa—we serve couples from all areas of Surat
             </p>
           </div>
           
@@ -682,11 +687,14 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
-              FAQ
+              FAQ - Candlelight Dinner & Celebrations
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-              Frequently Asked Questions
+              Common Questions About Romantic Celebrations in Surat
             </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Everything you need to know about booking candlelight dinners, birthday surprises & anniversary celebrations at HIVY
+            </p>
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
@@ -708,10 +716,10 @@ export default function FFCHomePage() {
       <section className="py-20 bg-gradient-to-r from-yellow-800 to-yellow-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
-            Ready to Create Unforgettable Memories?
+            Book Your Candlelight Dinner or Birthday Surprise Today
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Book your romantic celebration today and let us make your special moments truly magical
+            Create unforgettable romantic memories at Surat's best private celebration venue. Perfect for anniversaries, proposals, date nights & special occasions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer">

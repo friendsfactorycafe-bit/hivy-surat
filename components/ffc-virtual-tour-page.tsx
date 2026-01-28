@@ -58,11 +58,13 @@ export default function FFCVirtualTourPage() {
                 muted
                 loop
                 playsInline
+                preload="metadata"
                 poster="/images/hero/video-poster.svg"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
               >
-                <source src="/videos/virtual-tour.MP4" type="video/mp4" />
+                <source src="/videos/virtual-tour.mp4" type="video/mp4" />
+                <source src="/videos/InShot_20250111_162317353.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               

@@ -135,14 +135,38 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Instagram-worthy Setup 📸"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Valentine's Day"],
-    thumbnail: "/packages/tent-of-romance/images/12.png",
+    thumbnail: "/packages/thumbnails/Tent of Romance @ 6500_- only.png",
     images: [
       "/packages/tent-of-romance/images/12.png",
       "/packages/tent-of-romance/images/13.png",
       "/packages/tent-of-romance/images/14.png",
       "/packages/tent-of-romance/images/15.png",
       "/packages/tent-of-romance/images/16.png",
-      "/packages/tent-of-romance/images/17.png"
+      "/packages/tent-of-romance/images/17.png",
+      "/packages/tent-of-romance/images/18.png",
+      "/packages/tent-of-romance/images/19.png",
+      "/packages/tent-of-romance/images/20.png",
+      "/packages/tent-of-romance/images/21.png",
+      "/packages/tent-of-romance/images/22.png",
+      "/packages/tent-of-romance/images/23.png",
+      "/packages/tent-of-romance/images/24.png",
+      "/packages/tent-of-romance/images/25.png",
+      "/packages/tent-of-romance/images/26.png",
+      "/packages/tent-of-romance/images/62.png",
+      "/packages/tent-of-romance/images/63.png",
+      "/packages/tent-of-romance/images/64.png",
+      "/packages/tent-of-romance/images/65.png",
+      "/packages/tent-of-romance/images/66.png",
+      "/packages/tent-of-romance/images/67.png",
+      "/packages/tent-of-romance/images/68.png",
+      "/packages/tent-of-romance/images/69.png",
+      "/packages/tent-of-romance/images/70.png",
+      "/packages/tent-of-romance/images/71.png",
+      "/packages/tent-of-romance/images/72.png",
+      "/packages/tent-of-romance/images/73.png",
+      "/packages/tent-of-romance/images/74.png",
+      "/packages/tent-of-romance/images/75.png",
+      "/packages/tent-of-romance/images/76.png"
     ]
   },
   {
@@ -207,14 +231,17 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Perfect for Proposals 💍"
     ],
     perfectFor: ["Marriage Proposal", "Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot"],
-    thumbnail: "/packages/fairy-tale-proposals/2.png",
+    thumbnail: "/packages/thumbnails/Fairy Tale Proposals.png",
     images: [
       "/packages/fairy-tale-proposals/2.png",
       "/packages/fairy-tale-proposals/3.png",
       "/packages/fairy-tale-proposals/4.png",
       "/packages/fairy-tale-proposals/5.png",
       "/packages/fairy-tale-proposals/6.png",
-      "/packages/fairy-tale-proposals/7.png"
+      "/packages/fairy-tale-proposals/7.png",
+      "/packages/fairy-tale-proposals/8.png",
+      "/packages/fairy-tale-proposals/9.png",
+      "/packages/fairy-tale-proposals/10.png"
     ]
   },
   {
@@ -279,14 +306,25 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Instagram-worthy Photo Spots 📸"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Date Night"],
-    thumbnail: "/packages/swing-of-love/images/28.png",
+    thumbnail: "/packages/thumbnails/Swing of LOVE @ 5100.png",
     images: [
       "/packages/swing-of-love/images/28.png",
       "/packages/swing-of-love/images/29.png",
       "/packages/swing-of-love/images/30.png",
       "/packages/swing-of-love/images/31.png",
       "/packages/swing-of-love/images/32.png",
-      "/packages/swing-of-love/images/33.png"
+      "/packages/swing-of-love/images/33.png",
+      "/packages/swing-of-love/images/34.png",
+      "/packages/swing-of-love/images/35.png",
+      "/packages/swing-of-love/images/36.png",
+      "/packages/swing-of-love/images/37.png",
+      "/packages/swing-of-love/images/38.png",
+      "/packages/swing-of-love/images/39.png",
+      "/packages/swing-of-love/images/40.png",
+      "/packages/swing-of-love/images/41.png",
+      "/packages/swing-of-love/images/42.png",
+      "/packages/swing-of-love/images/43.png",
+      "/packages/swing-of-love/images/44.png"
     ]
   },
   {
@@ -351,14 +389,23 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Open Roof Experience with Wind 🌙"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Boho Theme Party"],
-    thumbnail: "/packages/boho-chic/images/46.png",
+    thumbnail: "/packages/thumbnails/BoHo Chic @ 5700.png",
     images: [
       "/packages/boho-chic/images/46.png",
       "/packages/boho-chic/images/47.png",
       "/packages/boho-chic/images/48.png",
       "/packages/boho-chic/images/49.png",
       "/packages/boho-chic/images/50.png",
-      "/packages/boho-chic/images/51.png"
+      "/packages/boho-chic/images/51.png",
+      "/packages/boho-chic/images/52.png",
+      "/packages/boho-chic/images/53.png",
+      "/packages/boho-chic/images/54.png",
+      "/packages/boho-chic/images/55.png",
+      "/packages/boho-chic/images/56.png",
+      "/packages/boho-chic/images/57.png",
+      "/packages/boho-chic/images/58.png",
+      "/packages/boho-chic/images/59.png",
+      "/packages/boho-chic/images/60.png"
     ]
   },
   {
@@ -423,14 +470,23 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Open Roof with Gentle Breeze 🌙"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Couple Date Night"],
-    thumbnail: "/packages/tent-of-romance/images/62.png",
+    thumbnail: "/packages/thumbnails/TwinHeart @ 4700_- only.png",
     images: [
       "/packages/tent-of-romance/images/62.png",
       "/packages/tent-of-romance/images/63.png",
       "/packages/tent-of-romance/images/64.png",
       "/packages/tent-of-romance/images/65.png",
       "/packages/tent-of-romance/images/66.png",
-      "/packages/tent-of-romance/images/67.png"
+      "/packages/tent-of-romance/images/67.png",
+      "/packages/tent-of-romance/images/68.png",
+      "/packages/tent-of-romance/images/69.png",
+      "/packages/tent-of-romance/images/70.png",
+      "/packages/tent-of-romance/images/71.png",
+      "/packages/tent-of-romance/images/72.png",
+      "/packages/tent-of-romance/images/73.png",
+      "/packages/tent-of-romance/images/74.png",
+      "/packages/tent-of-romance/images/75.png",
+      "/packages/tent-of-romance/images/76.png"
     ]
   },
   {
@@ -482,7 +538,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary Surprise | Personal Milestones | Pre-Wedding Photoshoot
 
 📍 Best elite group setup venue Surat | Custom celebration cafe Gotri | Couple-friendly venue`,
-    price: 5700,
+    price: 5400,
     cakeIncluded: true,
     features: [
       "2 Hours Private Elite Group Celebration 💍",
@@ -499,14 +555,41 @@ Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary
       "⚠️ Food NOT included in this package"
     ],
     perfectFor: ["Marriage Proposal", "Birthday Celebration", "Bride-to-Be Party", "Anniversary Surprise", "Personal Milestones", "Pre-Wedding Photoshoot"],
-    thumbnail: "/packages/the-elite-group-setup/78.png",
+    thumbnail: "/packages/thumbnails/Elite Group Setup.png",
     images: [
-      "/packages/the-elite-group-setup/78.png",
-      "/packages/the-elite-group-setup/79.png",
-      "/packages/the-elite-group-setup/80.png",
-      "/packages/the-elite-group-setup/81.png",
-      "/packages/the-elite-group-setup/82.png",
-      "/packages/the-elite-group-setup/83.png"
+      "/packages/Elite Group Setup/78.png",
+      "/packages/Elite Group Setup/79.png",
+      "/packages/Elite Group Setup/80.png",
+      "/packages/Elite Group Setup/81.png",
+      "/packages/Elite Group Setup/82.png",
+      "/packages/Elite Group Setup/83.png",
+      "/packages/Elite Group Setup/84.png",
+      "/packages/Elite Group Setup/85.png",
+      "/packages/Elite Group Setup/86.png",
+      "/packages/Elite Group Setup/87.png",
+      "/packages/Elite Group Setup/88.png",
+      "/packages/Elite Group Setup/89.png",
+      "/packages/Elite Group Setup/90.png",
+      "/packages/Elite Group Setup/91.png",
+      "/packages/Elite Group Setup/92.png",
+      "/packages/Elite Group Setup/93.png",
+      "/packages/Elite Group Setup/94.png",
+      "/packages/Elite Group Setup/95.png",
+      "/packages/Elite Group Setup/96.png",
+      "/packages/Elite Group Setup/97.png",
+      "/packages/Elite Group Setup/98.png",
+      "/packages/Elite Group Setup/99.png",
+      "/packages/Elite Group Setup/100.png",
+      "/packages/Elite Group Setup/101.png",
+      "/packages/Elite Group Setup/102.png",
+      "/packages/Elite Group Setup/103.png",
+      "/packages/Elite Group Setup/104.png",
+      "/packages/Elite Group Setup/105.png",
+      "/packages/Elite Group Setup/106.png",
+      "/packages/Elite Group Setup/107.png",
+      "/packages/Elite Group Setup/108.png",
+      "/packages/Elite Group Setup/109.png",
+      "/packages/Elite Group Setup/110.png"
     ]
   }
 ];
