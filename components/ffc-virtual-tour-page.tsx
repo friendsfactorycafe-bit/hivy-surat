@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Camera, Play, ChevronRight } from 'lucide-react';
@@ -13,12 +13,28 @@ import { packages } from '@/lib/ffc-config';
 
 export default function FFCVirtualTourPage() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showPlayButton, setShowPlayButton] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
     if (videoRef.current) {
       videoRef.current.play();
       setIsPlaying(true);
+      setShowPlayButton(false);
+    }
+  };
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+        setShowPlayButton(false);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+        setShowPlayButton(true);
+      }
     }
   };
   return (
@@ -50,33 +66,42 @@ export default function FFCVirtualTourPage() {
             </div>
             
             {/* Vertical Video */}
-            <div className="aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl relative">
+            <div className="aspect-[9/16] bg-gradient-to-br from-stone-800 to-stone-900 rounded-2xl overflow-hidden shadow-2xl relative">
               <video 
                 ref={videoRef}
-                className="w-full h-full object-cover"
-                controls
+                className="w-full h-full object-cover cursor-pointer"
                 muted
                 loop
                 playsInline
-                preload="metadata"
-                poster="/images/hero/video-poster.svg"
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
+                preload="auto"
+                onClick={handleVideoClick}
+                onPlay={() => { setIsPlaying(true); setShowPlayButton(false); }}
+                onPause={() => { setIsPlaying(false); setShowPlayButton(true); }}
               >
                 <source src="/videos/virtual-tour.mp4" type="video/mp4" />
                 <source src="/videos/InShot_20250111_162317353.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
-              {/* Play Button Overlay */}
-              {!isPlaying && (
+              {/* Play Button Overlay - Always visible when not playing */}
+              {showPlayButton && (
                 <button
                   onClick={handlePlayClick}
-                  className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors cursor-pointer"
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-black/40 via-black/20 to-black/40 hover:from-black/50 hover:via-black/30 hover:to-black/50 transition-all cursor-pointer z-10"
                 >
-                  <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  {/* HIVY Branding */}
+                  <div className="mb-6 text-center">
+                    <div className="text-3xl font-bold text-white font-serif tracking-wider">HIVY</div>
+                    <div className="text-sm text-white/80 mt-1">Place for Celebrations</div>
+                    <div className="text-yellow-400 text-sm mt-2 font-medium">✨ Virtual Tour ✨</div>
+                  </div>
+                  
+                  {/* Play Button */}
+                  <div className="w-20 h-20 bg-white/95 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:bg-white transition-all duration-300 border-4 border-yellow-600/30">
                     <Play className="w-10 h-10 text-yellow-800 ml-1" fill="currentColor" />
                   </div>
+                  
+                  <p className="text-white/90 text-sm mt-4 font-medium">Tap to explore our romantic spaces</p>
                 </button>
               )}
             </div>
