@@ -3,8 +3,8 @@ import FFCPackagesPage from '@/components/ffc-packages-page';
 
 export const metadata: Metadata = {
   title: 'Our Packages | HIVY - Place for Celebrations Surat',
-  description: 'Explore 6 unique romantic celebration packages at HIVY - Place for Celebrations Surat. From rooftop setups to glass house experiences. Starting from ₹4,700.',
-  keywords: 'romantic packages surat, celebration packages, birthday surprise packages, candlelight dinner packages, friends factory cafe packages',
+  description: 'Explore 5 unique romantic celebration packages at HIVY - Place for Celebrations Surat. From rooftop setups to bohemian experiences. Starting from ₹5,100.',
+  keywords: 'romantic packages surat, celebration packages, birthday surprise packages, candlelight dinner packages, hivy packages surat',
 };
 
 export default function PackagesPage() {

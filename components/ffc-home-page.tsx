@@ -15,7 +15,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import FFCReviewsSlider from '@/components/ffc-reviews-slider';
-import { siteConfig, packages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
+import { siteConfig, getVisiblePackages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
 
 // Experience features
 const experienceFeatures = [
@@ -85,54 +85,25 @@ const faqs = [
   }
 ];
 
-// Gallery items data - placeholder for now (images need to be added)
+// Gallery items data - Optimized for faster loading (reduced to 16 items)
 const galleryItems = [
   // Featured Images from packages
-  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', featured: false },
-  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
   { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/62.png', alt: 'Twin Heart Setup Surat', title: 'TwinHeart', featured: false },
-  { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
+  { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
   { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
-  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
+  { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
   { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Couple celebration Surat', title: 'Couple Moment', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
-  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
+  { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
   { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
   { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
-  { type: 'video', src: '/videos/VID_20251121_210202081.mp4', alt: 'Romantic moments reel Surat', title: 'Romantic Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/15.png', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/5.png', alt: 'Fairy tale celebration Surat', title: 'Fairy Tale', featured: false },
-  { type: 'video', src: '/videos/Black and White Collage Love Instagram Story_20251216_193952_0000.mp4', alt: 'Anniversary dinner video Surat', title: 'Anniversary Moments', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/31.png', alt: 'Surprise party Surat', title: 'Surprise Party', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/49.png', alt: 'Romantic dinner date Surat', title: 'Dinner Date', featured: false },
-  { type: 'video', src: '/videos/AQMDtltfDyiUPs-9Tr526ge47AAU7ggt4oQbeh84YLSpNx1jCUyeE9TCB1AMaEICPcMw4CEVHKukZQAlQY5hb__rRs5TpTuxbug5yA8.mp4', alt: 'Birthday surprise video Surat', title: 'Birthday Surprise', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/16.png', alt: 'Valentine setup Surat', title: 'Valentine Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/6.png', alt: 'Valentine dinner Surat', title: 'Valentine Dinner', featured: false },
-  { type: 'video', src: '/videos/AQNQec1KPnBvx-zrxCocMhtjjQS03bldv1cruUOwlpUkuok_31_J9WgZ6bFf7EAdNCPfxlO1zqxgOeX6nqHZFzcWqwK9tTMgRL_Kq5o.mp4', alt: 'Valentine celebration video Surat', title: 'Valentine Video', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/32.png', alt: 'Valentine romantic setup Surat', title: 'Valentine Romance', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/50.png', alt: 'Birthday surprise for girlfriend Surat', title: 'Girlfriend Surprise', featured: false },
-  { type: 'video', src: '/videos/AQNoQjiBHpKRIkLzSYZj4-MJfr4wZKfP_4prtmlhZ38OjsZhQ57uV4T4iA2DmgR7_rn2vbTM-fv0CfNa_EFxl1PeHwX7CqIeoFNOlw4.mp4', alt: 'Baby moments video Surat', title: 'Special Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/17.png', alt: 'Birthday surprise for boyfriend Surat', title: 'Boyfriend Surprise', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/7.png', alt: 'Birthday room decoration Surat', title: 'Room Decoration', featured: false },
-  { type: 'video', src: '/videos/AQPv7qZR0Ny5r-JyihzC7aON0523lToDrQEm5ThW7FPgqTAka8XPqwmwoWvGJ_7H0_XfTJtUYZPaBVSP1W4Qn2Vzrc4jLeJAK28U1LM.mp4', alt: 'Pre-wedding couple video Surat', title: 'Pre-Wedding Video', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/33.png', alt: 'Couple birthday party Surat', title: 'Birthday Party', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/51.png', alt: 'Surprise date Surat', title: 'Surprise Date', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/18.png', alt: 'Couple moment Surat', title: 'Couple Moment', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/63.png', alt: 'Twin heart decoration Surat', title: 'Twin Heart Décor', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/34.png', alt: 'Pre-wedding photoshoot Surat', title: 'Pre-Wedding Photo', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/52.png', alt: 'Baby shower decoration Surat', title: 'Baby Shower', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/19.png', alt: 'Baby moments celebration Surat', title: 'Baby Moments', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/8.png', alt: 'Candlelight dinner for couples Surat', title: 'Couple Dinner', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/35.png', alt: 'Rooftop dinner Surat', title: 'Rooftop Dinner', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/53.png', alt: 'Private dining Surat', title: 'Private Dining', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/20.png', alt: 'Romantic venue Surat', title: 'Romantic Venue', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/64.png', alt: 'Celebration venue Surat', title: 'Celebration Venue', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
+  { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
 ];
 
 // Gallery Section Component
@@ -468,12 +439,12 @@ export default function FFCHomePage() {
               Romantic Celebration Packages in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              6 unique private rooftop setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
+              5 unique private rooftop setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
-            {packages.map((pkg, index) => (
+            {getVisiblePackages().map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
                 <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-stone-200 group overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">

@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
-import { ServiceCategory, packages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
+import { ServiceCategory, getVisiblePackages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
 
 interface ServicePageProps {
   service: ServiceCategory;
@@ -18,7 +18,7 @@ interface ServicePageProps {
 
 export default function FFCServicePage({ service }: ServicePageProps) {
   // Get related packages
-  const relatedPackages = packages.slice(0, 4);
+  const relatedPackages = getVisiblePackages().slice(0, 4);
 
   return (
     <div className="min-h-screen bg-white">

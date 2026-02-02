@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
-import { ServiceCategory, ServiceKeyword, packages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
+import { ServiceCategory, ServiceKeyword, getVisiblePackages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
 import { generateKeywordPageContent } from '@/lib/ffc-unique-content';
 
 interface KeywordPageProps {
@@ -20,7 +20,7 @@ interface KeywordPageProps {
 
 export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
   // Get related packages
-  const relatedPackages = packages.slice(0, 4);
+  const relatedPackages = getVisiblePackages().slice(0, 4);
 
   // Get related keywords (excluding current)
   const relatedKeywords = service.keywords.filter(k => k.slug !== keyword.slug).slice(0, 6);

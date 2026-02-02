@@ -17,7 +17,7 @@
 import { MetadataRoute } from "next";
 import { 
   serviceCategories, 
-  packages,
+  getVisiblePackages,
   suratAreas,
   blogPosts
 } from "@/lib/ffc-config";
@@ -85,8 +85,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
   
   // ==================== PACKAGE DETAIL PAGES ====================
-  // Setup packages - high priority for conversions
-  packages.forEach((pkg) => {
+  // Setup packages - high priority for conversions (exclude hidden packages)
+  getVisiblePackages().forEach((pkg) => {
     entries.push({
       url: `${baseUrl}/packages/${pkg.slug}`,
       lastModified: currentDate,

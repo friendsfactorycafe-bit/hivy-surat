@@ -86,10 +86,10 @@ function getRecommendedPackages(service: ServiceCategory) {
   // Map service categories to relevant packages
   const packageMapping: Record<string, string[]> = {
     "birthday-surprise": ["tent-of-romance", "fairy-tale-proposals", "swing-of-love"],
-    "anniversary-celebration": ["tent-of-romance", "boho-chic", "twin-heart"],
+    "anniversary-celebration": ["tent-of-romance", "boho-chic", "swing-of-love"],
     "proposal": ["fairy-tale-proposals", "tent-of-romance", "the-elite-group-setup"],
     "candlelight-dinner": ["tent-of-romance", "swing-of-love", "boho-chic"],
-    "surprise-date": ["swing-of-love", "twin-heart", "boho-chic"],
+    "surprise-date": ["swing-of-love", "boho-chic", "tent-of-romance"],
     "pre-wedding-shoot": ["fairy-tale-proposals", "boho-chic", "the-elite-group-setup"],
     "baby-moments": ["boho-chic", "the-elite-group-setup", "swing-of-love"],
     "valentines-week": ["tent-of-romance", "fairy-tale-proposals", "swing-of-love"],

@@ -9,9 +9,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
-import { packages, formatPrice } from '@/lib/ffc-config';
+import { getVisiblePackages, formatPrice } from '@/lib/ffc-config';
 
 export default function FFCPackagesPage() {
+  const visiblePackages = getVisiblePackages();
+  
   return (
     <div className="min-h-screen bg-white">
       <FFCHeader />
@@ -20,13 +22,13 @@ export default function FFCPackagesPage() {
       <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-4 bg-white/20 text-white border-white/30">
-            <Gift className="h-4 w-4 mr-2" /> 6 Unique Setups
+            <Gift className="h-4 w-4 mr-2" /> 5 Unique Setups
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">
             Our Packages
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Choose from 6 stunning romantic setups designed to make your celebration unforgettable
+            Choose from 5 stunning romantic setups designed to make your celebration unforgettable
           </p>
         </div>
       </section>
@@ -35,7 +37,7 @@ export default function FFCPackagesPage() {
       <section className="py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
-            {packages.map((pkg, index) => (
+            {visiblePackages.map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
                 <Card className="overflow-hidden border-stone-200 hover:shadow-xl transition-all group h-full">
                   {/* Image */}

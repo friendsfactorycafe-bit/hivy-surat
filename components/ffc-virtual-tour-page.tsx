@@ -9,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
-import { packages } from '@/lib/ffc-config';
+import { getVisiblePackages } from '@/lib/ffc-config';
 
 export default function FFCVirtualTourPage() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -129,11 +129,11 @@ export default function FFCVirtualTourPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold font-serif mb-4">Our Setups Gallery</h2>
-            <p className="text-gray-600">Explore our 6 unique celebration spaces</p>
+            <p className="text-gray-600">Explore our 5 unique celebration spaces</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
-            {packages.map((pkg) => (
+            {getVisiblePackages().map((pkg) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
                 <Card className="overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1 group">
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">

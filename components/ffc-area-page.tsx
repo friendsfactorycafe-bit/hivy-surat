@@ -10,7 +10,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
-import { AreaConfig, packages, serviceCategories, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
+import { AreaConfig, getVisiblePackages, serviceCategories, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
 
 interface AreaPageProps {
   area: AreaConfig;
@@ -197,7 +197,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  {packages.slice(0, 4).map((pkg) => (
+                  {getVisiblePackages().slice(0, 4).map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
                       <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-stone-200 group bg-white">
                         <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 flex items-center justify-center">

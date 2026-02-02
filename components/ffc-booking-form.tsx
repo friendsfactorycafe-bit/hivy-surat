@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { siteConfig, packages } from '@/lib/ffc-config';
+import { siteConfig, getVisiblePackages } from '@/lib/ffc-config';
 
 // Form validation schema
 const ffcBookingSchema = z.object({
@@ -40,15 +40,15 @@ const momentOptions = [
 
 // Time slots
 const timeSlots = [
-  { value: 'lunch-12-3', label: '12 PM to 3 PM (Lunch - Indoor)' },
-  { value: 'lunch-1-4', label: '1 PM to 4 PM (Lunch - Indoor)' },
-  { value: 'lunch-2-5', label: '2 PM to 5 PM (Lunch - Indoor)' },
-  { value: 'evening-4-7', label: '4 PM to 7 PM (Evening - Indoor)' },
-  { value: 'evening-5-8', label: '5 PM to 8 PM (Evening - Indoor)' },
-  { value: 'evening-6-9', label: '6 PM to 9 PM (Evening - Indoor)' },
-  { value: 'dinner-7-10', label: '7 PM to 10 PM (Dinner - Indoor/Rooftop)' },
-  { value: 'dinner-730-1030', label: '7:30 PM to 10:30 PM (Dinner - Indoor/Rooftop)' },
-  { value: 'dinner-8-11', label: '8 PM to 11 PM (Dinner - Indoor/Rooftop)' },
+  { value: 'lunch-12-3', label: '12 PM to 3 PM (Lunch)' },
+  { value: 'lunch-1-4', label: '1 PM to 4 PM (Lunch)' },
+  { value: 'lunch-2-5', label: '2 PM to 5 PM (Lunch)' },
+  { value: 'evening-4-7', label: '4 PM to 7 PM (Evening)' },
+  { value: 'evening-5-8', label: '5 PM to 8 PM (Evening)' },
+  { value: 'evening-6-9', label: '6 PM to 9 PM (Evening)' },
+  { value: 'dinner-7-10', label: '7 PM to 10 PM (Dinner)' },
+  { value: 'dinner-730-1030', label: '7:30 PM to 10:30 PM (Dinner)' },
+  { value: 'dinner-8-11', label: '8 PM to 11 PM (Dinner)' },
 ];
 
 interface FFCBookingFormProps {
@@ -241,7 +241,7 @@ export function FFCBookingForm({ pageTitle, variant = 'default', packageName, de
                   <SelectValue placeholder="Select package" />
                 </SelectTrigger>
                 <SelectContent>
-                  {packages.map((pkg) => (
+                  {getVisiblePackages().map((pkg) => (
                     <SelectItem key={pkg.slug} value={pkg.slug}>
                       {pkg.emoji} {pkg.name} - ₹{pkg.price.toLocaleString('en-IN')}
                     </SelectItem>

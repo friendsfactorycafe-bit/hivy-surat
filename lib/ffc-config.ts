@@ -14,6 +14,7 @@ export interface SetupPackage {
   perfectFor: string[];
   thumbnail: string;
   images: string[];
+  hidden?: boolean; // If true, package won't show on website but data is preserved
 }
 
 export interface ServiceCategory {
@@ -409,87 +410,6 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
     ]
   },
   {
-    id: "setup-5",
-    slug: "twin-heart",
-    name: "TwinHeart",
-    emoji: "💕💕",
-    shortDescription: "Celebrate love with twin hearts symbolizing two souls becoming one ✨",
-    fullDescription: `💕💕 TwinHeart @ ₹4700/- only — where two hearts beat as one, and love is celebrated in its purest form
-
-Experience the magic of togetherness in a beautifully decorated twin heart setup at Surat's most romantic venue ✨.
-
-🎂 Cake & Champagne
-• Cake: ₹500/-
-• Champagne: ₹500/- (Non-Alcoholic Fruit Flavor)
-
-⏰ 3 Mesmerizing Hours
-3 hours for creating beautiful memories, each moment a brushstroke on the canvas of your love story.
-
-❤️ Elegant Tent
-Combining Red and White color to realm of elegance and luxury, where white curtains softly frame the scene, gentle lighting dances in the air, combined with Red Rose Petals.
-
-🌸 Curtains, Flowers, and Lights
-Decorating the floor with Red Roses giving twin heart shapes, enhanced by carefully selected props. The tent is decorated with flowing curtains, vibrant flowers, and twinkling lights, creating a magical ambiance that is sure to enchant you and your partner.
-
-🪴 Unique Props
-We provide unique props to enhance the atmosphere and add a touch of whimsy to your experience. From vintage lanterns to bohemian rugs, our props will transport you to another world.
-
-💑 Lower Seating
-Relax and unwind in our comfortable lower seating, designed to help you and your partner connect on a deeper level as you enjoy each other's company in this beautiful open roof with the wind blowing through making it truly mesmerizing moments.
-
-🕯️ Candle Lights
-The soft glow of candle lights adds a warm, romantic touch to your evening. We strategically place candles around the tent to enhance the intimate atmosphere.
-
-🌹 A Floor Adorned with Natural Red Rose Petals
-Immerse yourselves in the romance of a love story told through petals. Our Twin Hearts Rose Petal Decoration is designed to capture the essence of your connection. A beautiful arrangement of delicate rose petals forms two intertwined hearts, symbolizing the bond that ties you and your partner together. Surrounded by soft, fragrant petals, this stunning setup creates a breathtaking moment—perfect for a proposal, anniversary, or any celebration of love.
-
-🍽️ Dishes That Delight the Senses
-Indulge in our mouth-watering dishes, specially prepared to tantalize your taste buds and complement the romantic setting. From appetizers to desserts, our menu is sure to delight.
-
-🎶 Romantic Music
-Set the mood with soft, romantic music playing in the background, enhancing the overall ambiance of your evening and creating a truly unforgettable experience.
-
-🎉 Perfect For
-Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candlelight Dinner | Pre-Wedding Photoshoot | Couple Date Night
-
-📍 Best heart-themed venue Surat | Romantic celebration cafe Gotri | Couple-friendly venue`,
-    price: 4700,
-    cakeIncluded: false,
-    features: [
-      "3 Hours Private Twin Heart Celebration 💕",
-      "Cake Available: ₹500/-",
-      "Champagne: ₹500/- (Non-Alcoholic)",
-      "Elegant Red & White Tent Setup",
-      "Twin Heart Rose Petal Floor Art 🌹",
-      "Flowing Curtains & Twinkling Lights 💡",
-      "Unique Props & Vintage Lanterns",
-      "Comfortable Lower Seating 💑",
-      "Candle-Lit Romantic Atmosphere 🕯️",
-      "Mouth-Watering Multi-Course Dishes 🍽️",
-      "Romantic Background Music 🎶",
-      "Open Roof with Gentle Breeze 🌙"
-    ],
-    perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Couple Date Night"],
-    thumbnail: "/packages/thumbnails/TwinHeart @ 4700_- only.png",
-    images: [
-      "/packages/tent-of-romance/images/62.png",
-      "/packages/tent-of-romance/images/63.png",
-      "/packages/tent-of-romance/images/64.png",
-      "/packages/tent-of-romance/images/65.png",
-      "/packages/tent-of-romance/images/66.png",
-      "/packages/tent-of-romance/images/67.png",
-      "/packages/tent-of-romance/images/68.png",
-      "/packages/tent-of-romance/images/69.png",
-      "/packages/tent-of-romance/images/70.png",
-      "/packages/tent-of-romance/images/71.png",
-      "/packages/tent-of-romance/images/72.png",
-      "/packages/tent-of-romance/images/73.png",
-      "/packages/tent-of-romance/images/74.png",
-      "/packages/tent-of-romance/images/75.png",
-      "/packages/tent-of-romance/images/76.png"
-    ]
-  },
-  {
     id: "setup-6",
     slug: "the-elite-group-setup",
     name: "Elite Group Setup",
@@ -593,6 +513,22 @@ Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary
     ]
   }
 ];
+
+// Get visible packages (excluding hidden ones) in specific order: 5100, 5700, 6300, 6500, 5400
+export const getVisiblePackages = (): SetupPackage[] => {
+  const priceOrder = [5100, 5700, 6300, 6500, 5400];
+  return packages
+    .filter(pkg => !pkg.hidden)
+    .sort((a, b) => {
+      const aIndex = priceOrder.indexOf(a.price);
+      const bIndex = priceOrder.indexOf(b.price);
+      // If price not in order array, put at end
+      if (aIndex === -1 && bIndex === -1) return 0;
+      if (aIndex === -1) return 1;
+      if (bIndex === -1) return -1;
+      return aIndex - bIndex;
+    });
+};
 
 // ==================== MENU ITEMS ====================
 export const menuItems = {
@@ -858,7 +794,10 @@ export const suratAreas: AreaConfig[] = [
 
 // Helper functions
 export function getPackageBySlug(slug: string): SetupPackage | undefined {
-  return packages.find(p => p.slug === slug);
+  const pkg = packages.find(p => p.slug === slug);
+  // Return undefined if package is hidden (treat as not found)
+  if (pkg?.hidden) return undefined;
+  return pkg;
 }
 
 export function getServiceBySlug(slug: string): ServiceCategory | undefined {

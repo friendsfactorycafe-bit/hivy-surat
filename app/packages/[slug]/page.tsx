@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import FFCPackageDetailPage from '@/components/ffc-package-detail-page';
-import { packages, getPackageBySlug } from '@/lib/ffc-config';
+import { getVisiblePackages, getPackageBySlug } from '@/lib/ffc-config';
 
 interface PackagePageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return packages.map((pkg) => ({
+  return getVisiblePackages().map((pkg) => ({
     slug: pkg.slug,
   }));
 }
