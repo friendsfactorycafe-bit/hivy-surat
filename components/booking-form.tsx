@@ -159,38 +159,41 @@ export function BookingForm({ domain, pageTitle, variant = 'default', onClose }:
       
       <CardContent className={`${variant === 'modal' ? 'p-6' : 'p-6'}`}>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          {/* Your Name Field */}
-          <div className="space-y-2">
-            <Label htmlFor="name" className="flex items-center gap-2">
-              <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
-              Your Name *
-            </Label>
-            <Input
-              id="name"
-              placeholder="Enter your name"
-              {...register('name')}
-              className={errors.name ? 'border-red-500' : ''}
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
-            )}
-          </div>
+          {/* Names Row - Side by Side */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* Your Name Field */}
+            <div className="space-y-2">
+              <Label htmlFor="name" className="flex items-center gap-2">
+                <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
+                Your Name *
+              </Label>
+              <Input
+                id="name"
+                placeholder="Your name"
+                {...register('name')}
+                className={errors.name ? 'border-red-500' : ''}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name.message}</p>
+              )}
+            </div>
 
-          {/* Partner's Name Field */}
-          <div className="space-y-2">
-            <Label htmlFor="partnerName" className="flex items-center gap-2">
-              <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
-              Your Partner's Name *
-            </Label>
-            <Input
-              id="partnerName"
-              placeholder="Enter your partner's name"
-              {...register('partnerName')}
-              className={errors.partnerName ? 'border-red-500' : ''}
-            />
-            {errors.partnerName && (
-              <p className="text-red-500 text-sm">{errors.partnerName.message}</p>
-            )}
+            {/* Partner's Name Field */}
+            <div className="space-y-2">
+              <Label htmlFor="partnerName" className="flex items-center gap-2">
+                <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
+                Partner's Name *
+              </Label>
+              <Input
+                id="partnerName"
+                placeholder="Partner's name"
+                {...register('partnerName')}
+                className={errors.partnerName ? 'border-red-500' : ''}
+              />
+              {errors.partnerName && (
+                <p className="text-red-500 text-sm">{errors.partnerName.message}</p>
+              )}
+            </div>
           </div>
 
           {/* Phone Field */}
