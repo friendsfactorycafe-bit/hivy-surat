@@ -11,7 +11,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { siteConfig, getVisiblePackages } from '@/lib/ffc-config';
+import { siteConfig, getVisiblePackages, packages } from '@/lib/ffc-config';
 
 // Form validation schema
 const ffcBookingSchema = z.object({
