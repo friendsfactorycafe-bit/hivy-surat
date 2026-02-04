@@ -99,7 +99,7 @@ export default function TermsConditionsPage() {
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">7. Venue Rules and Guest Conduct</h2>
             <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
               <li>Our venue is exclusively for couples and intimate celebrations (maximum 2-3 guests per booking)</li>
-              <li>This is a couple-friendly, private venue with complete privacy during your slot</li>
+              <li>This is a couple-friendly, venue with complete privacy during your slot</li>
               <li>Guests must maintain respectful and appropriate behavior at all times</li>
               <li>Smoking is prohibited inside the premises</li>
               <li>Alcohol consumption is not permitted (only non-alcoholic mocktails and champagne provided)</li>
@@ -117,7 +117,7 @@ export default function TermsConditionsPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">9. Weather and Force Majeure</h2>
             <p className="text-gray-600 mb-6">
-              For rooftop bookings, in case of inclement weather (rain, extreme wind), we will:
+              For private venue bookings, in case of inclement weather (rain, extreme wind), we will:
             </p>
             <ul className="list-disc pl-6 text-gray-600 mb-6 space-y-2">
               <li>Offer an alternative indoor setup if available</li>

@@ -131,7 +131,7 @@ export default function FFCBlogPage() {
           </h2>
           <p className="text-stone-200 mb-8 max-w-2xl mx-auto">
             Turn your special moments into unforgettable memories at HIVY - Place for Celebrations, 
-            Surat's premier rooftop celebration venue.
+            Surat's premier romantic celebration venue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

@@ -160,7 +160,7 @@ export default async function ServiceCategoryPage({
         "Delicious multi-course menu",
         "Soft romantic music",
         "Beautiful table settings",
-        "Indoor & rooftop options"
+        "Indoor & private venue options"
       ],
       perfectFor: ["Date Night", "Romantic Dinner", "Special Occasions", "Valentine's Day", "Just Because Moments"]
     },

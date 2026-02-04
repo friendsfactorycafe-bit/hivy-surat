@@ -19,8 +19,8 @@ export interface GalleryItem {
 // SEO-friendly gallery items with keyword-rich names
 export const galleryItems: GalleryItem[] = [
   // Featured Images
-  { type: 'image', src: '/images/gallery/rooftop-romantic-setup-surat-1.jpg', alt: 'Romantic rooftop setup in Surat', title: 'Romantic Rooftop', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/images/gallery/romantic-rooftop-candlelight-dinner-surat-1.jpg', alt: 'Candlelight dinner in Surat', title: 'Candlelight Dinner', featured: false },
+  { type: 'image', src: '/images/gallery/private venue-romantic-setup-surat-1.jpg', alt: 'Romantic private setup in Surat', title: 'Romantic private venue', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/images/gallery/romantic-candlelight-dinner-surat-1.jpg', alt: 'Candlelight dinner in Surat', title: 'Candlelight Dinner', featured: false },
   { type: 'image', src: '/images/gallery/candlelight-dinner-setup-surat-1.jpg', alt: 'Romantic dinner setup Surat', title: 'Evening Romance', featured: false },
   { type: 'video', src: '/videos/birthday-celebration-video-surat-1.mp4', alt: 'Birthday celebration video Surat', title: 'Birthday Celebration', featured: false },
   { type: 'image', src: '/images/gallery/birthday-surprise-decoration-surat-1.jpg', alt: 'Birthday surprise decoration Surat', title: 'Birthday Surprise', featured: false },
@@ -29,7 +29,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/images/gallery/romantic-table-decoration-surat-1.jpg', alt: 'Romantic table decoration Surat', title: 'Table Decor', featured: false },
   { type: 'image', src: '/images/gallery/birthday-balloon-decoration-surat-1.jpg', alt: 'Birthday balloon decoration Surat', title: 'Balloon Decoration', featured: false },
   { type: 'image', src: '/images/gallery/anniversary-dinner-setup-surat-1.jpg', alt: 'Anniversary dinner setup Surat', title: 'Anniversary Dinner', featured: false },
-  { type: 'video', src: '/videos/rooftop-celebration-reel-surat-1.mp4', alt: 'Rooftop celebration reel Surat', title: 'Rooftop Vibes', featured: false },
+  { type: 'video', src: '/videos/private venue-celebration-reel-surat-1.mp4', alt: 'romantic celebration reel Surat', title: 'Romantic Vibes', featured: false },
   { type: 'image', src: '/images/gallery/romantic-ambiance-cafe-surat-1.jpg', alt: 'Romantic ambiance cafe Surat', title: 'Romantic Ambiance', featured: false },
   { type: 'image', src: '/images/gallery/couple-celebration-surat-1.jpg', alt: 'Couple celebration Surat', title: 'Couple Moment', featured: false },
   { type: 'image', src: '/images/gallery/evening-romantic-celebration-surat-1.jpg', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
@@ -64,7 +64,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/images/gallery/baby-moments-celebration-surat-1.jpg', alt: 'Baby moments celebration Surat', title: 'Baby Moments', featured: false },
   { type: 'image', src: '/images/gallery/candlelight-dinner-for-couples-surat-1.jpg', alt: 'Candlelight dinner for couples Surat', title: 'Couple Dinner', featured: false },
   { type: 'video', src: '/videos/couple-celebration-video-surat-1.mp4', alt: 'Couple celebration video Surat', title: 'Celebration Video', featured: false },
-  { type: 'image', src: '/images/gallery/rooftop-dinner-surat-1.jpg', alt: 'Rooftop dinner Surat', title: 'Rooftop Dinner', featured: false },
+  { type: 'image', src: '/images/gallery/candlelight-dinner-surat-1.jpg', alt: 'candlelight dinner Surat', title: 'candlelight dinner', featured: false },
   { type: 'image', src: '/images/gallery/private-dining-surat-1.jpg', alt: 'Private dining Surat', title: 'Private Dining', featured: false },
   { type: 'image', src: '/images/gallery/romantic-venue-surat-1.jpg', alt: 'Romantic venue Surat', title: 'Romantic Venue', featured: false },
   { type: 'image', src: '/images/gallery/celebration-venue-surat-1.jpg', alt: 'Celebration venue Surat', title: 'Celebration Venue', featured: false },

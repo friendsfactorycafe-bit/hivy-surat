@@ -48,7 +48,7 @@ export default function FFCAboutPage() {
                   At <strong>HIVY - Place for Celebrations</strong> in Surat's Gotri area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
                 </p>
                 <p>
-                  That's why we transformed a stunning <strong>rooftop into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic rooftop cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
+                  That's why we transformed a stunning <strong>venue into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic romantic cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
                 </p>
                 <p>
                   From heartfelt <strong>birthday surprises</strong> and <strong>anniversary celebrations</strong> to unforgettable <strong>marriage proposals</strong>, engagement reveals, <strong>pre-wedding shoots</strong>, pregnancy announcements, and last candlelight dinners before marriage, we've hosted <strong>500+ magical evenings</strong>.
@@ -168,8 +168,8 @@ export default function FFCAboutPage() {
                     <MapPin className="h-5 w-5 text-yellow-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Prime Gotri Rooftop Location</h3>
-                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds on Sevasi-Canal Road. The best rooftop cafe in Surat for couples seeking privacy.</p>
+                    <h3 className="font-semibold text-lg mb-1">Prime Gotri Venue Location</h3>
+                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds on Sevasi-Canal Road. The best romantic cafe in Surat for couples seeking privacy.</p>
                   </div>
                 </div>
                 

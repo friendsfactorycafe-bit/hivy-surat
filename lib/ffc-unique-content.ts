@@ -43,9 +43,9 @@ export interface FFCAreaContent {
 const openingStyles = [
   (kw: string, city: string, venue: string) => `Dreams of a perfect ${kw.toLowerCase()} in ${city}? Your search ends here! ${venue} has been transforming ordinary celebrations into extraordinary memories since 2019. Every couple deserves a celebration that reflects their unique love story, and our dedicated team specializes in creating exactly that – personalized, magical ${kw.toLowerCase()} experiences that leave lasting impressions.`,
   
-  (kw: string, city: string, venue: string) => `Picture this: the city lights of ${city} twinkling below, soft music playing, and your partner's eyes sparkling with joy. This is what a ${kw.toLowerCase()} at ${venue} looks like. We've spent years perfecting the art of romantic celebrations, and our rooftop venue has become the most sought-after destination for couples seeking unforgettable ${kw.toLowerCase()} moments.`,
+  (kw: string, city: string, venue: string) => `Picture this: the city lights of ${city} twinkling below, soft music playing, and your partner's eyes sparkling with joy. This is what a ${kw.toLowerCase()} at ${venue} looks like. We've spent years perfecting the art of romantic celebrations, and Our venue has become the most sought-after destination for couples seeking unforgettable ${kw.toLowerCase()} moments.`,
   
-  (kw: string, city: string, venue: string) => `In the heart of ${city}, where modern romance meets traditional warmth, ${venue} stands as a beacon for couples seeking extraordinary celebrations. Our ${kw.toLowerCase()} services have earned us the trust of over 3,000 happy couples, each with their own unique story of love celebrated under our starlit rooftop.`,
+  (kw: string, city: string, venue: string) => `In the heart of ${city}, where modern romance meets traditional warmth, ${venue} stands as a beacon for couples seeking extraordinary celebrations. Our ${kw.toLowerCase()} services have earned us the trust of over 3,000 happy couples, each with their own unique story of love celebrated under our starlit private venue.`,
   
   (kw: string, city: string, venue: string) => `When love calls for celebration, ${venue} answers with perfection. Located in the vibrant city of ${city}, we've established ourselves as the premier destination for ${kw.toLowerCase()} experiences. From the moment you step into our venue to the final goodbye, every detail is crafted to make your ${kw.toLowerCase()} absolutely magical.`,
   
@@ -100,7 +100,7 @@ const sectionVariations = {
 
 **Honoring Your Journey**: Whether you've been married for one year or twenty-five, your ${kw.toLowerCase()} should reflect your unique journey. Share your story with us, and we'll incorporate meaningful elements into your celebration.
 
-**Creating New Memories**: While cherishing the past, your ${kw.toLowerCase()} is also about creating new beautiful memories together. Our rooftop setting under the ${spouse.toLowerCase() === 'wife' ? 'starlit sky' : 'city lights'} provides the perfect backdrop for new chapters.
+**Creating New Memories**: While cherishing the past, your ${kw.toLowerCase()} is also about creating new beautiful memories together. Our venue setting under the ${spouse.toLowerCase() === 'wife' ? 'starlit sky' : 'city lights'} provides the perfect backdrop for new chapters.
 
 **The Gift of Time**: In the rush of daily life, quality time becomes precious. A ${kw.toLowerCase()} at ${venue} gives you three uninterrupted hours to focus solely on each other – a gift more valuable than any material present.`
     },
@@ -126,7 +126,7 @@ const sectionVariations = {
       heading: `What Makes ${venue} the Best ${kw}`,
       content: `Searching for the perfect ${kw.toLowerCase()} in ${city}? Here's why ${venue} consistently ranks as the top choice for couples:
 
-**Rooftop Magic**: Our rooftop venue offers breathtaking panoramic views of ${city}. As the sun sets and city lights come alive, your celebration transforms into a magical experience that's hard to find elsewhere.
+**Venue Magic**: Our venue offers breathtaking panoramic views of ${city}. As the sun sets and city lights come alive, your celebration transforms into a magical experience that's hard to find elsewhere.
 
 **Glass House Elegance**: For those who prefer an intimate indoor setting, our glass house provides a cozy, elegant space. The transparent walls let you enjoy the ambiance of the outdoors while staying comfortable inside.
 
@@ -140,7 +140,7 @@ const sectionVariations = {
       heading: `What You Get at Our ${kw}`,
       content: `When you book ${venue} as your ${kw.toLowerCase()}, here's the complete experience you receive:
 
-**Venue & Duration**: Full 3 hours of exclusive access to your chosen setup – rooftop or glass house. The space is entirely yours from your arrival until you leave.
+**Venue & Duration**: Full 3 hours of exclusive access to your chosen setup – private venue or glass house. The space is entirely yours from your arrival until you leave.
 
 **Professional Decorations**: Our team sets up beautiful decorations including balloons, fairy lights, candles, and flowers (based on package). Every ${kw.toLowerCase()} is Instagram-ready.
 
@@ -240,7 +240,7 @@ const sectionVariations = {
       heading: `${kw} Locations at Our Venue`,
       content: `${venue} offers multiple stunning spots for your ${kw.toLowerCase()}:
 
-**Rooftop with City View**: Our rooftop provides a spectacular backdrop of ${city}'s skyline. Golden hour shots here are simply magical for any ${kw.toLowerCase()}.
+**venue with City View**: Our venue provides a spectacular backdrop of ${city}'s skyline. Golden hour shots here are simply magical for any ${kw.toLowerCase()}.
 
 **Glass House Interior**: The elegant glass house with its soft lighting creates dreamy, intimate photographs. Perfect for couples who want a sophisticated ${kw.toLowerCase()} look.
 
@@ -258,7 +258,7 @@ const sectionVariations = {
       heading: `${kw} Tips for Best Results`,
       content: `Make the most of your ${kw.toLowerCase()} at ${venue} with these tips:
 
-**Best Time Slots**: For outdoor rooftop shots, book the evening slot (5-8 PM) for golden hour magic. For indoor glass house ${kw.toLowerCase()}, any slot works beautifully.
+**Best Time Slots**: For outdoor private venue shots, book the evening slot (5-8 PM) for golden hour magic. For indoor glass house ${kw.toLowerCase()}, any slot works beautifully.
 
 **What to Wear**: Coordinated outfits work best. Avoid busy patterns and neon colors. Solid colors in complementary shades photograph beautifully for ${kw.toLowerCase()}.
 
@@ -309,7 +309,7 @@ At ${venue}, we understand that a ${kwLower} is more than decorations – it's a
   } else if (service.slug === 'anniversary-celebration') {
     introduction += `Anniversaries are milestones that celebrate the beautiful journey of togetherness. At ${venue}, we help you honor this journey with an exquisite ${kwLower} that reflects the depth of your love. From your first anniversary to your silver jubilee, we make every year feel special.
 
-Our ${kwLower} setups are designed to rekindle romance and create new beautiful memories. As you sit together under the starlit rooftop or in our elegant glass house, surrounded by flowers and soft candlelight, you'll remember why you fell in love in the first place.`;
+Our ${kwLower} setups are designed to rekindle romance and create new beautiful memories. As you sit together under the starlit private venue or in our elegant glass house, surrounded by flowers and soft candlelight, you'll remember why you fell in love in the first place.`;
   } else if (service.slug === 'proposal') {
     introduction += `The moment you pop the question will be etched in your memories forever. At ${venue}, we ensure this moment is nothing short of perfect. Our ${kwLower} setups have witnessed hundreds of "Yes!" moments, each one as magical as the last.
 
@@ -325,7 +325,7 @@ Our ${kwLower} experiences are meticulously planned to maintain the element of s
   } else if (service.slug === 'pre-wedding-shoot') {
     introduction += `Before the wedding day arrives, couples seek to capture their love story through beautiful photographs. ${venue} provides the perfect backdrop for your ${kwLower}, with multiple setups, stunning lighting, and romantic ambiance all in one location.
 
-Unlike outdoor locations where you battle weather and crowds, our ${kwLower} venue offers controlled conditions, privacy, and multiple looks without traveling. From rooftop golden hour shots to intimate indoor portraits, your ${kwLower} at our venue will be diverse and stunning.`;
+Unlike outdoor locations where you battle weather and crowds, our ${kwLower} venue offers controlled conditions, privacy, and multiple looks without traveling. From private venue golden hour shots to intimate indoor portraits, your ${kwLower} at our venue will be diverse and stunning.`;
   } else if (service.slug === 'baby-moments') {
     introduction += `The news of a baby is a moment of pure joy, and celebrating it deserves a special setting. ${venue} provides the perfect venue for your ${kwLower}, whether it's announcing the pregnancy, revealing the gender, or simply celebrating the miracle of new life.
 
@@ -362,7 +362,7 @@ Our ${kwLower} packages are designed specifically for this romantic season, feat
 
 **Exclusive Private Venue**: When you book a ${kwLower} with us, the entire space is exclusively yours. No other guests, no interruptions – just you, your loved one, and the romantic ambiance we create.
 
-**Stunning Rooftop & Glass House**: Choose between our breathtaking rooftop with panoramic city views or our elegant glass house for an intimate ${kwLower} experience. Both options are equally magical!
+**Stunning elegant indoor**: Choose between our breathtaking venue with panoramic city views or our elegant glass house for an intimate ${kwLower} experience. Both options are equally magical!
 
 **Professional Setup**: Our experienced team arrives hours before your ${kwLower} to set up everything perfectly. From balloon arrangements to candle placement, every detail is handled professionally.
 
@@ -396,10 +396,10 @@ On the day, simply arrive at your scheduled time. Everything is ready – decora
         heading: `${kw} Packages Available`,
         content: `We offer 8 thoughtfully designed packages for your ${kwLower}:
 
-**Premium Rooftop Packages (₹4,700 - ₹6,900)**
-• Forever Us LoveFrame Rooftop - Elegant photo frame setup with city views
-• Eternal Love Rooftop - Canopy style with romantic curtains
-• Cupid's Dreamscape Rooftop - Classic romantic setup with premium decorations
+**Premium private venue Packages (₹4,700 - ₹6,900)**
+• Forever Us LoveFrame private venue - Elegant photo frame setup with city views
+• Eternal Love private venue - Canopy style with romantic curtains
+• Cupid's Dreamscape private venue - Classic romantic setup with premium decorations
 
 **Elegant Glass House Packages**
 • Pure Love Glass House - Intimate indoor setting with white theme
@@ -408,7 +408,7 @@ On the day, simply arrive at your scheduled time. Everything is ready – decora
 • Moonlit Memories Glass House - Magical lighting focus
 • Starlit Serenity Glass House - Peaceful, romantic ambiance
 
-Each ${kwLower} package includes 3 hours of private venue access, welcome drinks, delicious food menu, decorations, and soft music. Packages 1-3 include complimentary cake; others have cake available at ₹500.`
+Each ${kwLower} package includes 3 hours of exclusive access, welcome drinks, delicious food menu, decorations, and soft music. Packages 1-3 include complimentary cake; others have cake available at ₹500.`
       }
     ];
   }
@@ -435,7 +435,7 @@ Each ${kwLower} package includes 3 hours of private venue access, welcome drinks
   const whyChooseUsBase = [
     `100% private ${kwLower} venue – no other guests`,
     `6 unique ${kwLower} themes available`,
-    `Stunning rooftop views & elegant glass house options`,
+    `Stunning private venue views & elegant glass house options`,
     `All-inclusive packages with food, decorations, music`,
     `Professional setup handled by our team`,
     `Trusted by 3,000+ ${city} couples`,
@@ -467,13 +467,13 @@ Each ${kwLower} package includes 3 hours of private venue access, welcome drinks
   // Generate unique testimonials based on keyword type
   let testimonialContent = '';
   if (slug.includes('birthday')) {
-    testimonialContent = `"My husband's ${kwLower} at ${venue} was beyond amazing! The rooftop setup exceeded all expectations. He was genuinely surprised!" – Priya M., ${city}
+    testimonialContent = `"My husband's ${kwLower} at ${venue} was beyond amazing! The private setup exceeded all expectations. He was genuinely surprised!" – Priya M., ${city}
 
 "Planned my girlfriend's ${kwLower} here and she couldn't stop smiling. The decorations were gorgeous and the food was delicious!" – Rahul P., Alkapuri
 
 "Best ${kwLower} venue in ${city}! The team was so helpful with surprise coordination." – Sneha & Amit, Gotri`;
   } else if (slug.includes('anniversary')) {
-    testimonialContent = `"Our 5th anniversary ${kwLower} was magical! The candlelight setup on the rooftop was so romantic." – Kavita & Raj, ${city}
+    testimonialContent = `"Our 5th anniversary ${kwLower} was magical! The candlelight setup at the venue was so romantic." – Kavita & Raj, ${city}
 
 "We've celebrated our last 3 anniversaries here. ${venue} never disappoints with their ${kwLower}!" – Meera & Karan, Subhanpura
 
@@ -506,7 +506,7 @@ Each ${kwLower} package includes 3 hours of private venue access, welcome drinks
     },
     {
       question: `Is the ${kwLower} venue completely private?`,
-      answer: `Yes, 100% private! No other guests will be present during your 3-hour ${kwLower} slot. The entire space – rooftop or glass house – is exclusively yours.`
+      answer: `Yes, 100% private! No other guests will be present during your 3-hour ${kwLower} slot. The entire space – private venue or glass house – is exclusively yours.`
     },
     {
       question: `What food is included in the ${kwLower} package?`,
@@ -596,7 +596,7 @@ export function generateAreaPageContent(area: AreaConfig): FFCAreaContent {
     
     `${areaName} residents, discover ${city}'s most romantic celebration venue! ${venue} has hosted countless celebrations for couples living in ${areaName}, and each one has been magical. ${areaDescription}`,
     
-    `From ${areaName} to our rooftop – the journey to romance is short but the memories last forever! ${venue} welcomes couples from ${areaName} to experience premium celebrations. ${areaDescription}`,
+    `From ${areaName} to Our venue – the journey to romance is short but the memories last forever! ${venue} welcomes couples from ${areaName} to experience premium celebrations. ${areaDescription}`,
     
     `Attention ${areaName} lovebirds! The perfect celebration venue awaits you at ${venue}. We've designed our experiences keeping couples from ${areaName} in mind. ${areaDescription}`
   ];
@@ -616,7 +616,7 @@ Whether you're planning a surprise for your partner or want to celebrate togethe
 
 **Anniversary Celebrations**: From first anniversaries to silver jubilees, couples from ${areaName} celebrate their love milestones with us. Elegant setups, romantic ambiance, and delicious food await.
 
-**Proposal & Ring Ceremonies**: Several ${areaName} couples have gotten engaged at our venue! Our romantic rooftop provides the perfect backdrop for the most important question.
+**Proposal & Ring Ceremonies**: Several ${areaName} couples have gotten engaged at our venue! Our romantic private venue provides the perfect backdrop for the most important question.
 
 **Candlelight Dinners**: Escape the routine and enjoy an intimate candlelight dinner. ${areaName} couples appreciate our private setting and stunning views.
 
@@ -642,7 +642,7 @@ Every service is fully customizable to match the preferences of ${areaName} coup
 
 **Trusted Reputation**: Word-of-mouth from happy ${areaName} couples has made us the trusted choice in the area. Many bookings come from recommendations.
 
-**Multiple Options**: Whether you prefer an open rooftop or cozy glass house, we offer options that suit different preferences of ${areaName} couples.`
+**Multiple Options**: Whether you prefer an Open-air venue or cozy glass house, we offer options that suit different preferences of ${areaName} couples.`
     },
     {
       heading: `Getting Here from ${areaName}`,
@@ -661,7 +661,7 @@ Every service is fully customizable to match the preferences of ${areaName} coup
 
 **Surprise Planning**: If you're from ${areaName} and planning a surprise, we can help coordinate. Share your partner's expected location and we'll suggest the best timing.
 
-**Weather Considerations**: For rooftop celebrations, ${areaName} residents should check weather forecasts. Our glass house is perfect for any weather!`
+**Weather Considerations**: For romantic celebrations, ${areaName} residents should check weather forecasts. Our glass house is perfect for any weather!`
     },
     {
       heading: `Book Your ${areaName} to ${venue} Experience`,

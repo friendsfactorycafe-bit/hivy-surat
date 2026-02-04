@@ -75,13 +75,15 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
             {/* Left Column - Images/Visual */}
             <div>
               {/* Main Image with Navigation Arrows */}
-              <div className="aspect-[4/5] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[3/5] rounded-xl md:rounded-2xl overflow-hidden relative mb-3 md:mb-4 group max-h-[80vh] md:max-h-none">
+              <div className="aspect-[4/5] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-xl md:rounded-2xl overflow-hidden relative mb-3 md:mb-4 group bg-stone-100">
                 <Image
                   src={pkg.images[selectedImage] || pkg.thumbnail}
                   alt={pkg.name}
                   fill
-                  className="object-contain scale-125 md:scale-100 md:object-cover"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   priority
+                  quality={100}
                 />
                 
                 {/* Navigation Arrows - Always visible on mobile */}

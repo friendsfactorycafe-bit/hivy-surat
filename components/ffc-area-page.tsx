@@ -139,7 +139,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 </p>
 
                 <p className="text-gray-600 mb-6">
-                  Whether you're celebrating a birthday, anniversary, proposal, or simply want a romantic candlelight dinner, our venue offers stunning rooftop setups and elegant glass houses that provide the perfect ambiance for your special moments.
+                  Whether you're celebrating a birthday, anniversary, proposal, or simply want a romantic candlelight dinner, our venue offers stunning private setups and elegant glass houses that provide the perfect ambiance for your special moments.
                 </p>
 
                 <div className="bg-white rounded-xl p-6 mb-8">
@@ -181,7 +181,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-yellow-800 font-bold">•</span>
-                    <span><strong>6 Unique Setups:</strong> Choose from rooftop and glass house experiences.</span>
+                    <span><strong>6 Unique Setups:</strong> Choose from elegant indoor experiences.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-yellow-800 font-bold">•</span>

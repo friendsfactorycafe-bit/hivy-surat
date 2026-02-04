@@ -15,6 +15,7 @@ import { DomainConfig } from '@/lib/domains-config';
 // Form validation schema
 const bookingSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
+  partnerName: z.string().min(2, 'Partner name must be at least 2 characters'),
   phone: z.string().min(10, 'Enter valid 10-digit phone number').max(10, 'Enter valid 10-digit phone number').regex(/^[6-9]\d{9}$/, 'Enter valid Indian mobile number'),
   occasionDate: z.string().min(1, 'Please select a date'),
   occasion: z.string().min(1, 'Please select an occasion'),
@@ -36,7 +37,7 @@ const occasionOptions = [
   { value: 'surprise-date', label: 'Surprise Date' },
   { value: 'valentines-day', label: "Valentine's Day Special" },
   { value: 'honeymoon', label: 'Honeymoon Celebration' },
-  { value: 'rooftop-dinner', label: 'Rooftop Dinner' },
+  { value: 'candlelight-dinner', label: 'candlelight dinner' },
   { value: 'midnight-celebration', label: 'Midnight Celebration' },
   { value: 'other', label: 'Other Special Occasion' },
 ];
@@ -72,7 +73,8 @@ export function BookingForm({ domain, pageTitle, variant = 'default', onClose }:
     const occasionLabel = occasionOptions.find(o => o.value === data.occasion)?.label || data.occasion;
     
     let message = `🎉 *New Booking Inquiry*\n\n`;
-    message += `👤 *Name:* ${data.name}\n`;
+    message += `👤 *Your Name:* ${data.name}\n`;
+    message += `💑 *Partner's Name:* ${data.partnerName}\n`;
     message += `📱 *Phone:* ${data.phone}\n`;
     message += `📅 *Date:* ${data.occasionDate}\n`;
     message += `🎊 *Occasion:* ${occasionLabel}\n`;
@@ -157,7 +159,7 @@ export function BookingForm({ domain, pageTitle, variant = 'default', onClose }:
       
       <CardContent className={`${variant === 'modal' ? 'p-6' : 'p-6'}`}>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-          {/* Name Field */}
+          {/* Your Name Field */}
           <div className="space-y-2">
             <Label htmlFor="name" className="flex items-center gap-2">
               <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
@@ -165,12 +167,29 @@ export function BookingForm({ domain, pageTitle, variant = 'default', onClose }:
             </Label>
             <Input
               id="name"
-              placeholder="Enter your full name"
+              placeholder="Enter your name"
               {...register('name')}
               className={errors.name ? 'border-red-500' : ''}
             />
             {errors.name && (
               <p className="text-red-500 text-sm">{errors.name.message}</p>
+            )}
+          </div>
+
+          {/* Partner's Name Field */}
+          <div className="space-y-2">
+            <Label htmlFor="partnerName" className="flex items-center gap-2">
+              <User className="h-4 w-4" style={{ color: domain.colors.primary }} />
+              Your Partner's Name *
+            </Label>
+            <Input
+              id="partnerName"
+              placeholder="Enter your partner's name"
+              {...register('partnerName')}
+              className={errors.partnerName ? 'border-red-500' : ''}
+            />
+            {errors.partnerName && (
+              <p className="text-red-500 text-sm">{errors.partnerName.message}</p>
             )}
           </div>
 

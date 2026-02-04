@@ -143,7 +143,7 @@ export default function FFCContactPage() {
                             <p>4 PM - 7 PM | 5 PM - 8 PM | 6 PM - 9 PM</p>
                           </div>
                           <div>
-                            <p className="font-semibold text-yellow-900 mb-1">🌙 Dinner (Indoor/Rooftop)</p>
+                            <p className="font-semibold text-yellow-900 mb-1">🌙 Dinner (Indoor)</p>
                             <p>7 PM - 10 PM | 7:30 PM - 10:30 PM | 8 PM - 11 PM</p>
                           </div>
                         </div>

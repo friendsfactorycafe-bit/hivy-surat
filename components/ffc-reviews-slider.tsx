@@ -26,7 +26,7 @@ const reviews = [
     initial: "P",
     color: "bg-pink-500",
     date: "2 months ago",
-    review: "My husband surprised me here for our anniversary. The rooftop setup was magical! Highly recommend for couples! ❤️"
+    review: "My husband surprised me here for our anniversary. The private setup was magical! Highly recommend for couples! ❤️"
   },
   {
     name: "Rahul Desai",

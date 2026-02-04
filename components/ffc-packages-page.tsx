@@ -47,6 +47,8 @@ export default function FFCPackagesPage() {
                       alt={pkg.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+                      quality={90}
                     />
                     <Badge className="absolute top-2 left-2 md:top-4 md:left-4 bg-yellow-800 text-white text-xs">
                       Setup {index + 1}

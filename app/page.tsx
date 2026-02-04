@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/ffc-config";
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${siteConfig.name} | Best Candlelight Dinner & Romantic Celebration Venue in Surat`,
-    description: `${siteConfig.tagline}. Surat's #1 couples-only celebration venue. Book candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, romantic date nights & private rooftop dining. 100% private venue with 4.9★ rating.`,
+    description: `${siteConfig.tagline}. Surat's #1 couples-only celebration venue. Book candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, romantic date nights & private dining. 100% venue with 4.9★ rating.`,
     keywords: [
       'hivy surat',
       'candlelight dinner surat',
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'anniversary celebration surat',
       'proposal setup surat',
       'couples only cafe surat',
-      'rooftop dinner surat',
+      'candlelight dinner surat',
       'private dining surat',
       'romantic restaurant surat',
       'birthday party venues surat',
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       'candlelight dinner for couples surat',
       'best romantic places surat',
       'private celebration venue surat',
-      'romantic rooftop cafe surat',
+      'romantic romantic cafe surat',
       'couple friendly restaurants surat',
       'birthday room decoration surat',
       'marriage proposal venue surat',

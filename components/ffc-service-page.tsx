@@ -99,7 +99,7 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { emoji: "🔒", title: "100% Private", desc: "Exclusive booking for couples" },
-              { emoji: "🌙", title: "Stunning Setup", desc: "Rooftop & glass house options" },
+              { emoji: "🌙", title: "Stunning Setup", desc: "elegant indoor options" },
               { emoji: "🍽️", title: "Delicious Food", desc: "Curated café-style menu" },
               { emoji: "📸", title: "Photo-Ready", desc: "Instagram-worthy décor" },
             ].map((item, index) => (

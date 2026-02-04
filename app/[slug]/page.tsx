@@ -72,7 +72,7 @@ export async function generateMetadata({
   const area = getAreaBySlug(slug);
   if (area) {
     const areaTitle = `Romantic Celebration in ${area.name}, Surat | HIVY - Place for Celebrations`;
-    const areaDescription = `Book romantic celebrations, candlelight dinners, birthday surprises & anniversary parties in ${area.name}, Surat at HIVY - Place for Celebrations. Private rooftop venue with stunning setups. Call +91 74878 88730.`;
+    const areaDescription = `Book romantic celebrations, candlelight dinners, birthday surprises & anniversary parties in ${area.name}, Surat at HIVY - Place for Celebrations. venue with stunning setups. Call +91 74878 88730.`;
     
     return {
       title: areaTitle,

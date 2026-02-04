@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "birthday surprise surat",
     "anniversary celebration surat",
     "romantic proposal surat",
-    "rooftop dinner surat",
+    "candlelight dinner surat",
     "private dining surat",
     "romantic restaurant surat",
     "date night surat",

@@ -80,7 +80,7 @@ function generateAreaIntroduction(domain: DomainConfig, areaName: string, areaSl
     
     `<p class="text-lg leading-relaxed mb-4">Discover the magic of romance in <strong>${areaName}</strong>, one of ${city}'s most beloved localities! Our mission is simple yet powerful – to help couples in ${areaName} celebrate their love in the most beautiful way possible. From the moment you contact us to the final photograph of your celebration, we ensure every detail is perfect.</p>
     <p class="mb-4">The couples of ${areaName} have trusted us with their most precious moments – proposals, anniversaries, birthdays, and countless romantic surprises. Each celebration we organize in this area is a testament to our commitment to excellence. We don't just decorate spaces; we create atmospheres where love can flourish and memories can be made.</p>
-    <p class="mb-4">${areaName} offers a unique blend of accessibility and charm that makes it ideal for romantic celebrations. Whether you want to host your special event at a private venue, a restaurant, or even in the comfort of your home in ${areaName}, our team brings the same level of expertise and creativity to every setup.</p>`,
+    <p class="mb-4">${areaName} offers a unique blend of accessibility and charm that makes it ideal for romantic celebrations. Whether you want to host your special event at our venue, a restaurant, or even in the comfort of your home in ${areaName}, our team brings the same level of expertise and creativity to every setup.</p>`,
     
     `<p class="text-lg leading-relaxed mb-4">Looking for exceptional romantic celebration services in <strong>${areaName}</strong>? You've found ${city}'s most trusted team for creating magical romantic moments! We've been serving the wonderful community of ${areaName} with premium celebration services, and every event we organize reinforces our reputation for excellence.</p>
     <p class="mb-4">What makes our ${areaName} services special is our deep understanding of what modern couples want. Gone are the days of generic celebrations – today's couples deserve personalized experiences that reflect their unique love stories. Our team specializes in creating these tailored experiences, combining traditional romantic elements with contemporary touches.</p>
@@ -368,13 +368,13 @@ function generateAboutAreaSection(domain: DomainConfig, areaName: string, areaSl
     content: `
       <p class="mb-4">${areaDescription}</p>
       
-      <p class="mb-4">Our deep familiarity with ${areaName} allows us to recommend the best spots and venues for your celebration. Whether you prefer your home, a private venue, or a rooftop setting, we know exactly how to create the perfect romantic atmosphere in this locality.</p>
+      <p class="mb-4">Our deep familiarity with ${areaName} allows us to recommend the best spots and venues for your celebration. Whether you prefer your home, a private venue, or a intimate setting, we know exactly how to create the perfect romantic atmosphere in this locality.</p>
       
       <h4 class="text-lg font-semibold mt-6 mb-3">Popular Celebration Venues in ${areaName}:</h4>
       <ul class="list-disc list-inside space-y-2 mb-4">
         <li>Private apartments and homes with balcony or terrace</li>
         <li>Partner restaurants and cafes in ${areaName}</li>
-        <li>Rooftop venues with city views</li>
+        <li>private spaces with city views</li>
         <li>Garden and poolside spaces</li>
         <li>Hotel suites and private dining areas</li>
       </ul>

@@ -25,14 +25,14 @@ function getServiceTypeName(domainSlug: string): string {
   if (domainSlug.includes('candlelight')) return 'Candlelight Dinner';
   if (domainSlug.includes('surprise-date')) return 'Surprise Date';
   if (domainSlug.includes('anniversary')) return 'Anniversary Dinner';
-  if (domainSlug.includes('rooftop')) return 'Rooftop Date';
+  if (domainSlug.includes('private venue')) return 'Romantic Date';
   return 'Romantic Experience';
 }
 
 // Get service type description
 function getServiceDescription(domainSlug: string): string {
   if (domainSlug.includes('birthday')) {
-    return 'Create magical birthday celebrations for your partner with beautiful decorations, customized cakes, and an intimate private venue.';
+    return 'Create magical birthday celebrations for your partner with beautiful decorations, customized cakes, and an intimate venue.';
   }
   if (domainSlug.includes('candlelight')) {
     return 'Experience romantic dining with candlelight ambiance, gourmet cuisine, and an exclusive setting designed for couples.';
@@ -43,10 +43,10 @@ function getServiceDescription(domainSlug: string): string {
   if (domainSlug.includes('anniversary')) {
     return 'Celebrate your love journey with elegant anniversary dinners featuring special decorations and intimate celebrations.';
   }
-  if (domainSlug.includes('rooftop')) {
-    return 'Dine under the stars with stunning city views, romantic ambiance, and exclusive rooftop experiences for couples.';
+  if (domainSlug.includes('private venue')) {
+    return 'Dine under the stars with stunning city views, romantic ambiance, and exclusive romantic experiences for couples.';
   }
-  return 'Create memorable romantic experiences with private venues, beautiful decorations, and personalized celebrations.';
+  return 'Create memorable romantic experiences with private spaces, beautiful decorations, and personalized celebrations.';
 }
 
 // Sample packages based on service type
@@ -65,9 +65,9 @@ function getPackages(domainSlug: string) {
       { name: 'Luxury Dinner', price: '₹6,999', features: ['Luxury setup', '5-course gourmet', 'Full decoration', 'Live music', 'Champagne'] }
     ];
   }
-  if (domainSlug.includes('rooftop')) {
+  if (domainSlug.includes('private venue')) {
     return [
-      { name: 'Starlight Basic', price: '₹2,999', features: ['Basic rooftop setup', 'Snacks & drinks', '1.5 hours', 'City view'] },
+      { name: 'Starlight Basic', price: '₹2,999', features: ['Basic private setup', 'Snacks & drinks', '1.5 hours', 'City view'] },
       { name: 'Moonlight Premium', price: '₹4,999', features: ['Premium setup', 'Full dinner', '2.5 hours', 'Decoration', 'Photography'], popular: true },
       { name: 'Sky Luxury', price: '₹7,999', features: ['Luxury experience', 'Gourmet dinner', '4 hours', 'Full setup', 'Musician'] }
     ];
@@ -242,7 +242,7 @@ export function DomainHomePageTemplate({ domain }: DomainHomePageTemplateProps) 
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Packages</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Choose the perfect package for your celebration. All packages include private venue access.
+              Choose the perfect package for your celebration. All packages include exclusive access.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
