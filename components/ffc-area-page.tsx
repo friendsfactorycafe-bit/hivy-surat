@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, Star, Check, Phone, MessageCircle, MapPin, Heart, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -120,8 +121,20 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/slider2.webp"
+            alt={`Romantic celebration venue near ${area.name} Surat`}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
@@ -160,14 +173,9 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 mx-auto mb-2" />
-                  <span className="text-2xl font-serif">{area.name}</span>
-                </div>
-              </div>
+            {/* Booking Form */}
+            <div className="hidden lg:block">
+              <FFCBookingForm pageTitle={`${area.name} Area Page`} />
             </div>
           </div>
         </div>
@@ -293,9 +301,15 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {getVisiblePackages().slice(0, 4).map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-amber-100 group bg-white">
-                        <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 flex items-center justify-center">
-                          <span className="text-5xl">{pkg.emoji}</span>
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-amber-100 group bg-white overflow-hidden">
+                        <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
+                          <Image
+                            src={pkg.thumbnail}
+                            alt={pkg.name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                         <CardContent className="p-4">
                           <h3 className="font-semibold mb-1 group-hover:text-amber-800 transition-colors">

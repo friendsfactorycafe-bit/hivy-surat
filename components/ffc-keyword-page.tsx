@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight, Star, Check, Phone, MessageCircle, MapPin, Gift, Clock, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -118,8 +119,20 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/slider1.webp"
+            alt={`${keyword.title} at HIVY Surat`}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <Badge className="mb-4 bg-white/20 text-white border-white/30">
@@ -158,11 +171,9 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
               </div>
             </div>
             
-            {/* Hero Visual */}
-            <div className="hidden lg:flex justify-center">
-              <div className="w-72 h-72 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="text-[7rem]">{service.emoji}</span>
-              </div>
+            {/* Booking Form */}
+            <div className="hidden lg:block">
+              <FFCBookingForm pageTitle={keyword.title} />
             </div>
           </div>
         </div>
@@ -300,9 +311,15 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {relatedPackages.map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-amber-100 group">
-                        <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 flex items-center justify-center">
-                          <span className="text-5xl">{pkg.emoji}</span>
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-amber-100 group overflow-hidden">
+                        <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
+                          <Image
+                            src={pkg.thumbnail}
+                            alt={pkg.name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                         <CardContent className="p-4">
                           <h3 className="font-semibold mb-1 group-hover:text-amber-800 transition-colors">
