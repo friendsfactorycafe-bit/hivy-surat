@@ -22,7 +22,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
-  themeColor: "#78716C", // Warm Stone for HIVY
+  themeColor: "#92400E", // Warm Stone for HIVY
 };
 
 export const metadata: Metadata = {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description: "Best romantic celebration venue in Surat. Birthday surprises, candlelight dinners, anniversaries, proposals. Premium private experiences.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "HIVY - Place for Celebrations - Best Romantic Celebrations in Surat",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HIVY - Place for Celebrations Surat | Best Romantic Celebration Venue",
     description: "Best romantic celebration venue in Surat. Birthday surprises, candlelight dinners, proposals & more!",
-    images: ["/images/twitter-image.jpg"],
+    images: ["/images/twitter-image.webp"],
     creator: "@hivysurat",
     site: "@hivysurat",
   },
@@ -145,7 +145,7 @@ const jsonLd = {
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, UPI, GPay, PhonePe",
       "image": [
-        "https://hivy.co.in/images/og-image.jpg"
+        "https://hivy.co.in/images/og-image.webp"
       ],
       "address": {
         "@type": "PostalAddress",

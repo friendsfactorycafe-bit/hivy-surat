@@ -16,7 +16,7 @@ export default function FFCContactPage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16">
+      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-4 bg-white/20 text-white border-white/30">
             <MessageCircle className="h-4 w-4 mr-2" /> Get In Touch
@@ -46,14 +46,14 @@ export default function FFCContactPage() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                        <Phone className="h-6 w-6 text-yellow-800" />
+                        <Phone className="h-6 w-6 text-amber-800" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Call Us</h3>
                         <p className="text-gray-600 mb-2">We're available for calls and booking inquiries</p>
                         <a 
                           href={`tel:${siteConfig.phone}`}
-                          className="text-xl font-bold text-yellow-800 hover:text-yellow-900"
+                          className="text-xl font-bold text-amber-800 hover:text-amber-900"
                         >
                           {siteConfig.phone}
                         </a>
@@ -91,14 +91,14 @@ export default function FFCContactPage() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                        <Mail className="h-6 w-6 text-yellow-800" />
+                        <Mail className="h-6 w-6 text-amber-800" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Email</h3>
                         <p className="text-gray-600 mb-2">For detailed inquiries and partnerships</p>
                         <a 
                           href={`mailto:${siteConfig.email}`}
-                          className="text-yellow-800 hover:text-yellow-900"
+                          className="text-amber-800 hover:text-amber-900"
                         >
                           {siteConfig.email}
                         </a>
@@ -112,7 +112,7 @@ export default function FFCContactPage() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="h-6 w-6 text-yellow-800" />
+                        <MapPin className="h-6 w-6 text-amber-800" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
@@ -129,21 +129,21 @@ export default function FFCContactPage() {
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                        <Clock className="h-6 w-6 text-yellow-800" />
+                        <Clock className="h-6 w-6 text-amber-800" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg mb-2">Available Time Slots</h3>
                         <div className="text-gray-600 space-y-2 text-sm">
                           <div>
-                            <p className="font-semibold text-yellow-900 mb-1">🍽️ Lunch (Indoor)</p>
+                            <p className="font-semibold text-amber-900 mb-1">🍽️ Lunch (Indoor)</p>
                             <p>12 PM - 3 PM | 1 PM - 4 PM | 2 PM - 5 PM</p>
                           </div>
                           <div>
-                            <p className="font-semibold text-yellow-900 mb-1">🌅 Evening (Indoor)</p>
+                            <p className="font-semibold text-amber-900 mb-1">🌅 Evening (Indoor)</p>
                             <p>4 PM - 7 PM | 5 PM - 8 PM | 6 PM - 9 PM</p>
                           </div>
                           <div>
-                            <p className="font-semibold text-yellow-900 mb-1">🌙 Dinner (Indoor)</p>
+                            <p className="font-semibold text-amber-900 mb-1">🌙 Dinner (Indoor)</p>
                             <p>7 PM - 10 PM | 7:30 PM - 10:30 PM | 8 PM - 11 PM</p>
                           </div>
                         </div>
@@ -158,7 +158,7 @@ export default function FFCContactPage() {
                     href={siteConfig.socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-gradient-to-br from-stone-1000 to-pink-500 flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                    className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-900 to-pink-500 flex items-center justify-center text-white hover:opacity-90 transition-opacity"
                   >
                     <Instagram className="h-6 w-6" />
                   </a>
@@ -212,7 +212,7 @@ export default function FFCContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="bg-yellow-800 hover:bg-yellow-900">
+                <Button className="bg-amber-800 hover:bg-amber-900">
                   <MapPin className="h-4 w-4 mr-2" />
                   Get Directions
                 </Button>

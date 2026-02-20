@@ -20,25 +20,92 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
   // Get nearby areas (excluding current)
   const nearbyAreas = suratAreas.filter(a => a.slug !== area.slug).slice(0, 8);
 
+  // JSON-LD Structured Data for area page
+  const areaJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": `https://hivy.co.in/${area.slug}#business`,
+        "name": `HIVY - Place for Celebrations - ${area.name}`,
+        "description": `Premium romantic celebration venue serving ${area.name}, Surat. Birthday surprises, candlelight dinners, anniversary celebrations, proposals & more.`,
+        "url": `https://hivy.co.in/${area.slug}`,
+        "telephone": "+91-9727027278",
+        "priceRange": "₹₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "252/253, 2nd Floor, The Boulevard, Near Pratham Circle",
+          "addressLocality": `${area.name}, Surat`,
+          "addressRegion": "Gujarat",
+          "postalCode": "394510",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "21.1702",
+          "longitude": "72.8311"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "150",
+          "bestRating": "5"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": `${area.name}, Surat, Gujarat`
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hivy.co.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Areas",
+            "item": "https://hivy.co.in/areas"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": area.name,
+            "item": `https://hivy.co.in/${area.slug}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(areaJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
       <div className="bg-stone-100 py-4">
         <div className="container mx-auto px-4">
           <nav className="flex items-center gap-2 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-500 hover:text-amber-800">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/areas" className="text-gray-500 hover:text-yellow-800">Areas</Link>
+            <Link href="/areas" className="text-gray-500 hover:text-amber-800">Areas</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <span className="text-yellow-800 font-medium">{area.name}</span>
+            <span className="text-amber-800 font-medium">{area.name}</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16 md:py-20">
+      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
@@ -55,7 +122,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <FFCBookNowButton 
                   pageTitle={`${area.name} Area Page`} 
-                  className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6" 
+                  className="bg-white text-amber-800 hover:bg-amber-50 text-lg px-8 py-6" 
                 />
                 <a href={`tel:${siteConfig.phone}`}>
                   <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white w-full sm:w-auto">
@@ -106,10 +173,10 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {serviceCategories.map((service) => (
               <Link key={service.slug} href={`/services/${service.slug}`}>
-                <Card className="h-full hover:shadow-lg transition-all border-stone-200 group text-center">
+                <Card className="h-full hover:shadow-lg transition-all border-amber-100 group text-center">
                   <CardContent className="p-4 md:p-6">
                     <span className="text-4xl md:text-5xl mb-3 md:mb-4 block">{service.emoji}</span>
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2 group-hover:text-yellow-800 transition-colors line-clamp-2">
+                    <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2 group-hover:text-amber-800 transition-colors line-clamp-2">
                       {service.name}
                     </h3>
                     <p className="text-gray-600 text-xs md:text-sm line-clamp-1 hidden md:block">
@@ -144,7 +211,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
 
                 <div className="bg-white rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Gift className="h-5 w-5 text-yellow-800" />
+                    <Gift className="h-5 w-5 text-amber-800" />
                     What We Offer in {area.name}
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
@@ -159,7 +226,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                       "Custom Celebrations"
                     ].map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-yellow-800 flex-shrink-0" />
+                        <Check className="h-4 w-4 text-amber-800 flex-shrink-0" />
                         <span className="text-gray-700">{item}</span>
                       </div>
                     ))}
@@ -172,19 +239,19 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-800 font-bold">•</span>
+                    <span className="text-amber-800 font-bold">•</span>
                     <span><strong>Convenient Location:</strong> Easy access from {area.name} and all parts of Surat.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-800 font-bold">•</span>
+                    <span className="text-amber-800 font-bold">•</span>
                     <span><strong>100% Privacy:</strong> Your celebration is completely private with exclusive booking.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-800 font-bold">•</span>
+                    <span className="text-amber-800 font-bold">•</span>
                     <span><strong>6 Unique Setups:</strong> Choose from elegant indoor experiences.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-yellow-800 font-bold">•</span>
+                    <span className="text-amber-800 font-bold">•</span>
                     <span><strong>All-Inclusive Packages:</strong> Food, decorations, music, and more included.</span>
                   </li>
                 </ul>
@@ -199,18 +266,18 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 <div className="grid md:grid-cols-2 gap-6">
                   {getVisiblePackages().slice(0, 4).map((pkg) => (
                     <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-stone-200 group bg-white">
+                      <Card className="h-full hover:shadow-lg transition-all hover:-translate-y-1 border-amber-100 group bg-white">
                         <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-100 flex items-center justify-center">
                           <span className="text-5xl">{pkg.emoji}</span>
                         </div>
                         <CardContent className="p-4">
-                          <h3 className="font-semibold mb-1 group-hover:text-yellow-800 transition-colors">
+                          <h3 className="font-semibold mb-1 group-hover:text-amber-800 transition-colors">
                             {pkg.name}
                           </h3>
                           <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                             {pkg.shortDescription}
                           </p>
-                          <p className="text-lg font-bold text-yellow-800">
+                          <p className="text-lg font-bold text-amber-800">
                             {formatPrice(pkg.price)}
                           </p>
                         </CardContent>
@@ -221,7 +288,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                 
                 <div className="text-center mt-6">
                   <Link href="/packages">
-                    <Button className="bg-yellow-800 hover:bg-yellow-900">
+                    <Button className="bg-amber-800 hover:bg-amber-900">
                       View All Packages <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
                   </Link>
@@ -274,14 +341,14 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               <Link 
                 key={nearbyArea.slug}
                 href={`/${nearbyArea.slug}`}
-                className="px-4 py-2 bg-stone-100 rounded-full text-gray-700 hover:bg-yellow-800 hover:text-white transition-colors border border-stone-300"
+                className="px-4 py-2 bg-amber-50 rounded-full text-gray-700 hover:bg-amber-800 hover:text-white transition-colors border border-stone-300"
               >
                 {nearbyArea.name}
               </Link>
             ))}
             <Link 
               href="/areas"
-              className="px-4 py-2 bg-yellow-800 rounded-full text-white hover:bg-yellow-900 transition-colors"
+              className="px-4 py-2 bg-amber-800 rounded-full text-white hover:bg-amber-900 transition-colors"
             >
               View All Areas
             </Link>

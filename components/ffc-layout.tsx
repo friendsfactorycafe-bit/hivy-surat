@@ -63,7 +63,7 @@ export function FFCHeader() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-yellow-800 font-medium transition-colors"
+                className="text-gray-700 hover:text-amber-800 font-medium transition-colors"
               >
                 {item.name}
               </Link>
@@ -74,12 +74,12 @@ export function FFCHeader() {
           <div className="flex items-center gap-4">
             {/* Phone CTA */}
             <div className="hidden md:flex items-center gap-3">
-              <Heart className="h-8 w-8 text-yellow-700 fill-yellow-700" />
+              <Heart className="h-8 w-8 text-amber-700 fill-amber-700" />
               <div className="text-right">
                 <p className="text-xs text-gray-500">Call and Book in Minutes</p>
                 <a 
                   href={`tel:${siteConfig.phone}`}
-                  className="text-lg font-bold text-yellow-800 hover:text-yellow-900"
+                  className="text-lg font-bold text-amber-800 hover:text-amber-900"
                 >
                   {siteConfig.phone}
                 </a>
@@ -112,7 +112,7 @@ export function FFCHeader() {
                           key={item.name}
                           href={item.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-yellow-800 hover:bg-stone-100 rounded-lg transition-colors"
+                          className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-amber-800 hover:bg-amber-50 rounded-lg transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -125,7 +125,7 @@ export function FFCHeader() {
                   <div className="border-t py-4">
                     <a 
                       href={`tel:${siteConfig.phone}`}
-                      className="flex items-center gap-3 px-4 py-3 bg-yellow-800 text-white rounded-lg hover:bg-yellow-900 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 bg-amber-800 text-white rounded-lg hover:bg-amber-900 transition-colors"
                     >
                       <Phone className="h-5 w-5" />
                       <span className="font-medium">{siteConfig.phone}</span>
@@ -174,7 +174,7 @@ export function FFCFooter() {
               {siteConfig.tagline}
             </p>
             <div className="flex items-center gap-2">
-              <Heart className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+              <Heart className="h-5 w-5 text-amber-400 fill-amber-400" />
               <span className="text-gray-300">Couples Only Experience</span>
             </div>
           </div>
@@ -187,7 +187,7 @@ export function FFCFooter() {
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-400 hover:text-yellow-300 transition-colors"
+                    className="text-gray-400 hover:text-amber-300 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -204,7 +204,7 @@ export function FFCFooter() {
                 <li key={item.name}>
                   <Link 
                     href={item.href}
-                    className="text-gray-400 hover:text-yellow-300 transition-colors"
+                    className="text-gray-400 hover:text-amber-300 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -221,7 +221,7 @@ export function FFCFooter() {
                 <p className="text-gray-500 text-sm">Phone</p>
                 <a 
                   href={`tel:${siteConfig.phone}`}
-                  className="text-yellow-300 font-medium hover:text-yellow-200"
+                  className="text-amber-300 font-medium hover:text-amber-200"
                 >
                   {siteConfig.phone}
                 </a>
@@ -230,7 +230,7 @@ export function FFCFooter() {
                 <p className="text-gray-500 text-sm">Email</p>
                 <a 
                   href={`mailto:${siteConfig.email}`}
-                  className="text-yellow-300 hover:text-yellow-200"
+                  className="text-amber-300 hover:text-amber-200"
                 >
                   {siteConfig.email}
                 </a>
@@ -251,7 +251,7 @@ export function FFCFooter() {
               <Link 
                 key={keyword.slug}
                 href={`/${keyword.slug}`}
-                className="text-xs text-gray-500 hover:text-yellow-300 transition-colors"
+                className="text-xs text-gray-500 hover:text-amber-300 transition-colors"
               >
                 {keyword.title}
               </Link>
@@ -260,7 +260,7 @@ export function FFCFooter() {
           {allKeywords.length > 20 && (
             <button 
               onClick={() => setShowAllKeywords(!showAllKeywords)}
-              className="mt-3 text-xs text-yellow-300 hover:text-yellow-200 flex items-center gap-1"
+              className="mt-3 text-xs text-amber-300 hover:text-amber-200 flex items-center gap-1"
             >
               {showAllKeywords ? (
                 <>Show Less <ChevronUp className="h-3 w-3" /></>
@@ -279,7 +279,7 @@ export function FFCFooter() {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
-                className="text-xs text-gray-500 hover:text-yellow-300 transition-colors"
+                className="text-xs text-gray-500 hover:text-amber-300 transition-colors"
               >
                 {area.name}
               </Link>
@@ -288,7 +288,7 @@ export function FFCFooter() {
           {suratAreas.length > 15 && (
             <button 
               onClick={() => setShowAllAreas(!showAllAreas)}
-              className="mt-3 text-xs text-yellow-300 hover:text-yellow-200 flex items-center gap-1"
+              className="mt-3 text-xs text-amber-300 hover:text-amber-200 flex items-center gap-1"
             >
               {showAllAreas ? (
                 <>Show Less <ChevronUp className="h-3 w-3" /></>

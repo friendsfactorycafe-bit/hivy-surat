@@ -41,7 +41,7 @@ export default function FFCVirtualTourPage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-4 bg-white/20 text-white border-white/30">
             <Camera className="h-4 w-4 mr-2" /> Explore Our Spaces
@@ -97,9 +97,9 @@ export default function FFCVirtualTourPage() {
                   className="w-20 h-20 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
                 >
                   {isPlaying ? (
-                    <Pause className="w-10 h-10 text-yellow-800" fill="currentColor" />
+                    <Pause className="w-10 h-10 text-amber-800" fill="currentColor" />
                   ) : (
-                    <Play className="w-10 h-10 text-yellow-800 ml-1" fill="currentColor" />
+                    <Play className="w-10 h-10 text-amber-800 ml-1" fill="currentColor" />
                   )}
                 </button>
                 
@@ -148,7 +148,7 @@ export default function FFCVirtualTourPage() {
                     </div>
                   </div>
                   <CardContent className="p-4">
-                    <h3 className="font-semibold text-sm line-clamp-1 group-hover:text-yellow-800 transition-colors">
+                    <h3 className="font-semibold text-sm line-clamp-1 group-hover:text-amber-800 transition-colors">
                       {pkg.name}
                     </h3>
                   </CardContent>
@@ -196,7 +196,7 @@ export default function FFCVirtualTourPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/packages">
-              <Button size="lg" className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800 text-white">
                 View All Packages <ChevronRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>

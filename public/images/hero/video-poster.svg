@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#78716C;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#92400E;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#57534E;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#CA8A04;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="sparkleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
@@ -40,7 +40,7 @@
   <!-- HIVY Logo area -->
   <circle cx="540" cy="860" r="80" fill="white" opacity="0.9"/>
   <path d="M540 810 L548 850 L588 860 L548 870 L540 910 L532 870 L492 860 L532 850 Z" fill="url(#sparkleGrad)"/>
-  <circle cx="540" cy="860" r="12" fill="#CA8A04"/>
+  <circle cx="540" cy="860" r="12" fill="#D97706"/>
   
   <!-- Text: HIVY -->
   <text x="540" y="990" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">HIVY</text>
@@ -54,7 +54,7 @@
   <!-- Play button hint -->
   <g transform="translate(540, 1300)">
     <circle cx="0" cy="0" r="60" fill="white" opacity="0.9"/>
-    <path d="M-15 -25 L25 0 L-15 25 Z" fill="#CA8A04"/>
+    <path d="M-15 -25 L25 0 L-15 25 Z" fill="#D97706"/>
   </g>
   
   <!-- Bottom text -->

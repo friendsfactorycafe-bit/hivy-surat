@@ -193,8 +193,8 @@ export default function LeadsPage() {
             <p className="text-2xl font-bold text-gray-800">{leads.length}</p>
           </div>
           <div className="bg-white p-4 rounded-xl shadow">
-            <p className="text-yellow-600 text-sm">New</p>
-            <p className="text-2xl font-bold text-yellow-600">{leads.filter(l => !l.status || l.status === 'new').length}</p>
+            <p className="text-amber-600 text-sm">New</p>
+            <p className="text-2xl font-bold text-amber-600">{leads.filter(l => !l.status || l.status === 'new').length}</p>
           </div>
           <div className="bg-white p-4 rounded-xl shadow">
             <p className="text-green-600 text-sm">Converted</p>
@@ -257,7 +257,7 @@ export default function LeadsPage() {
                           className={`px-2 py-1 rounded text-xs font-medium border-0 cursor-pointer ${
                             lead.status === 'converted' ? 'bg-green-100 text-green-700' :
                             lead.status === 'rejected' ? 'bg-red-100 text-red-700' :
-                            'bg-yellow-100 text-yellow-700'
+                            'bg-amber-100 text-amber-700'
                           }`}
                         >
                           <option value="new">🕐 New</option>

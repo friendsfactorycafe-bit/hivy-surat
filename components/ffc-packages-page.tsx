@@ -13,13 +13,65 @@ import { getVisiblePackages, formatPrice } from '@/lib/ffc-config';
 
 export default function FFCPackagesPage() {
   const visiblePackages = getVisiblePackages();
+
+  // JSON-LD Schema for packages listing
+  const packagesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ItemList",
+        "name": "HIVY Romantic Celebration Packages",
+        "description": "5 unique romantic celebration setups at HIVY Surat",
+        "numberOfItems": visiblePackages.length,
+        "itemListElement": visiblePackages.map((pkg, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Product",
+            "name": pkg.name,
+            "description": pkg.shortDescription,
+            "url": `https://hivy.co.in/packages/${pkg.slug}`,
+            "image": `https://hivy.co.in${pkg.thumbnail}`,
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "INR",
+              "price": pkg.price,
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hivy.co.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Packages",
+            "item": "https://hivy.co.in/packages"
+          }
+        ]
+      }
+    ]
+  };
   
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(packagesJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16">
+      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-4 bg-white/20 text-white border-white/30">
             <Gift className="h-4 w-4 mr-2" /> 5 Unique Setups
@@ -39,7 +91,7 @@ export default function FFCPackagesPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
             {visiblePackages.map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                <Card className="overflow-hidden border-stone-200 hover:shadow-xl transition-all group h-full">
+                <Card className="overflow-hidden border-amber-100 hover:shadow-xl transition-all group h-full">
                   {/* Image */}
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
                     <Image
@@ -50,22 +102,22 @@ export default function FFCPackagesPage() {
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                       quality={90}
                     />
-                    <Badge className="absolute top-2 left-2 md:top-4 md:left-4 bg-yellow-800 text-white text-xs">
+                    <Badge className="absolute top-2 left-2 md:top-4 md:left-4 bg-amber-800 text-white text-xs">
                       Setup {index + 1}
                     </Badge>
                   </div>
                   
                   {/* Content */}
-                  <CardContent className="p-3 md:p-4">
-                    <h2 className="text-sm md:text-base lg:text-lg font-bold mb-1 group-hover:text-yellow-800 transition-colors line-clamp-2">
-                      {pkg.name} {pkg.emoji}
+                  <CardContent className="p-2 sm:p-3 md:p-4">
+                    <h2 className="text-[11px] sm:text-sm md:text-base lg:text-lg font-bold mb-0.5 md:mb-1 group-hover:text-amber-800 transition-colors leading-tight">
+                      {pkg.name} <span className="hidden sm:inline">{pkg.emoji}</span>
                     </h2>
-                    <p className="text-gray-600 text-xs md:text-sm mb-2 line-clamp-2 hidden md:block">
+                    <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm mb-1 md:mb-2 line-clamp-2 hidden md:block">
                       {pkg.shortDescription}
                     </p>
                     
                     {/* Price */}
-                    <p className="text-lg md:text-xl font-bold text-yellow-800">
+                    <p className="text-sm sm:text-lg md:text-xl font-bold text-amber-800">
                       {formatPrice(pkg.price)}
                     </p>
                   </CardContent>

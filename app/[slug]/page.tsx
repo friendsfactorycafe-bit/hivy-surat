@@ -72,7 +72,7 @@ export async function generateMetadata({
   const area = getAreaBySlug(slug);
   if (area) {
     const areaTitle = `Romantic Celebration in ${area.name}, Surat | HIVY - Place for Celebrations`;
-    const areaDescription = `Book romantic celebrations, candlelight dinners, birthday surprises & anniversary parties in ${area.name}, Surat at HIVY - Place for Celebrations. venue with stunning setups. Call +91 74878 88730.`;
+    const areaDescription = `Book romantic celebrations, candlelight dinners, birthday surprises & anniversary parties in ${area.name}, Surat at HIVY - Place for Celebrations. venue with stunning setups. Call +91 9727027278.`;
     
     return {
       title: areaTitle,
@@ -88,12 +88,12 @@ export async function generateMetadata({
         `private dining ${area.name}`
       ],
       alternates: {
-        canonical: `https://hivy.com/areas/${area.slug}`,
+        canonical: `https://hivy.co.in/${area.slug}`,
       },
       openGraph: {
         title: areaTitle,
         description: `Premium romantic celebration services for couples in ${area.name}, Surat. Birthday surprises, candlelight dinners & more!`,
-        url: `https://hivy.com/areas/${area.slug}`,
+        url: `https://hivy.co.in/${area.slug}`,
         type: "website",
         locale: "en_IN",
         siteName: "HIVY - Place for Celebrations",
@@ -124,12 +124,12 @@ export async function generateMetadata({
         `${keywordData.service.name.toLowerCase()} near me surat`
       ],
       alternates: {
-        canonical: `https://hivy.com/${keywordData.keyword.slug}`,
+        canonical: `https://hivy.co.in/${keywordData.keyword.slug}`,
       },
       openGraph: {
         title: keywordTitle,
         description: keywordDescription,
-        url: `https://hivy.com/${keywordData.keyword.slug}`,
+        url: `https://hivy.co.in/${keywordData.keyword.slug}`,
         type: "website",
         locale: "en_IN",
         siteName: "HIVY - Place for Celebrations",

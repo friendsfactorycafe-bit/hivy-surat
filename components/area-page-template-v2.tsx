@@ -87,7 +87,7 @@ export function AreaPageTemplateV2({ domain, areaName, areaSlug }: AreaPageTempl
       {/* Hero Section */}
       <section className={`${gradientClass} text-white py-16 md:py-24 relative overflow-hidden`}>
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{ backgroundImage: 'url("/images/hero/pattern.png")', backgroundSize: '100px' }} />
+          <div className="absolute inset-0" style={{ backgroundImage: 'url("/images/hero/pattern.webp")', backgroundSize: '100px' }} />
         </div>
         <div className="container mx-auto px-4 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -138,7 +138,7 @@ export function AreaPageTemplateV2({ domain, areaName, areaSlug }: AreaPageTempl
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[1,2,3,4,5].map(i => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <span className="text-sm font-medium">4.9/5 Rating</span>

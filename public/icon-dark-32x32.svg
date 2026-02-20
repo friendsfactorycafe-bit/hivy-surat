@@ -1,16 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <linearGradient id="hivyGrad32" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#D6D3D1"/>
-      <stop offset="100%" style="stop-color:#FCD34D"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5F5F4"/>
+      <stop offset="100%" style="stop-color:#D6D3D1"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D97706"/>
+      <stop offset="100%" style="stop-color:#92400E"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="6" fill="url(#hivyGrad32)"/>
-  <!-- Celebration Sparkle -->
-  <path d="M16 5 L17 14 L26 16 L17 18 L16 27 L15 18 L6 16 L15 14 Z" fill="#292524" opacity="0.95"/>
-  <circle cx="16" cy="16" r="2" fill="#CA8A04"/>
-  <circle cx="8" cy="8" r="1" fill="#57534E" opacity="0.6"/>
-  <circle cx="24" cy="8" r="1" fill="#57534E" opacity="0.6"/>
-  <circle cx="8" cy="24" r="1" fill="#57534E" opacity="0.6"/>
-  <circle cx="24" cy="24" r="1" fill="#57534E" opacity="0.6"/>
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+  <!-- Heart -->
+  <path d="M16 26 C16 26 5 18 5 11.5 C5 8 8 5.5 11 5.5 C13 5.5 15 7 16 8.5 C17 7 19 5.5 21 5.5 C24 5.5 27 8 27 11.5 C27 18 16 26 16 26Z" fill="url(#heart)"/>
+  <!-- Highlight -->
+  <path d="M11 7.5 C9 7.5 7 9 7 11.5 C7 12.5 7.3 13.5 8 14.5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Sparkle -->
+  <path d="M7 5 L7.5 6.5 L9 7 L7.5 7.5 L7 9 L6.5 7.5 L5 7 L6.5 6.5Z" fill="#D97706" opacity="0.6"/>
+  <circle cx="26" cy="6" r="0.8" fill="#D97706" opacity="0.5"/>
 </svg>

@@ -8,6 +8,17 @@ import { siteConfig } from '@/lib/ffc-config';
 export const metadata: Metadata = {
   title: 'Privacy Policy | HIVY - Place for Celebrations Surat',
   description: 'Privacy Policy for HIVY - Place for Celebrations - Learn how we collect, use, and protect your personal information when booking candlelight dinners and romantic celebrations in Surat.',
+  alternates: {
+    canonical: 'https://hivy.co.in/privacy-policy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | HIVY - Place for Celebrations Surat',
+    description: 'Privacy Policy for HIVY - Place for Celebrations.',
+    url: 'https://hivy.co.in/privacy-policy',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'HIVY - Place for Celebrations',
+  },
 };
 
 export default function PrivacyPolicyPage() {
@@ -41,7 +52,7 @@ export default function PrivacyPolicyPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">1. Introduction</h2>
             <p className="text-gray-600 mb-6">
-              Welcome to HIVY - Place for Celebrations ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at hivy.com or use our services for candlelight dinners, romantic celebrations, and event bookings in Surat, Gujarat.
+              Welcome to HIVY - Place for Celebrations ("we," "our," or "us"). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at hivy.co.in or use our services for candlelight dinners, romantic celebrations, and event bookings in Surat, Gujarat.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">2. Information We Collect</h2>

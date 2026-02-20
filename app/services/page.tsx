@@ -17,12 +17,61 @@ export const metadata: Metadata = {
     'anniversary celebration surat',
     'proposal setup surat',
     'friends factory cafe services'
-  ]
+  ],
+  alternates: {
+    canonical: 'https://hivy.co.in/services',
+  },
+  openGraph: {
+    title: 'Our Services | HIVY - Place for Celebrations Surat',
+    description: 'Explore all romantic celebration services at HIVY - Place for Celebrations Surat.',
+    url: 'https://hivy.co.in/services',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'HIVY - Place for Celebrations',
+  },
 };
 
 export default function ServicesPage() {
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: 'Our Celebration Services | HIVY',
+        description: 'Explore all romantic celebration services at HIVY - Place for Celebrations Surat.',
+        url: 'https://hivy.co.in/services',
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: serviceCategories.map((service, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: service.name,
+            url: `https://hivy.co.in/services/${service.slug}`,
+            description: service.description,
+          })),
+        },
+        provider: {
+          '@type': 'LocalBusiness',
+          name: 'HIVY - Place for Celebrations',
+          url: 'https://hivy.co.in',
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hivy.co.in' },
+          { '@type': 'ListItem', position: 2, name: 'Our Services', item: 'https://hivy.co.in/services' },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}

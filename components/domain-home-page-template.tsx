@@ -405,7 +405,7 @@ export function DomainHomePageTemplate({ domain }: DomainHomePageTemplateProps) 
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[1,2,3,4,5].map(i => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
                   <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>

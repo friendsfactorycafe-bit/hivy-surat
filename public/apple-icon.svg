@@ -1,29 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
   <defs>
-    <linearGradient id="hivyGradApple" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#78716C;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#CA8A04;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400E"/>
+      <stop offset="100%" style="stop-color:#78350F"/>
     </linearGradient>
-    <linearGradient id="sparkleGradApple" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="50%" style="stop-color:#D97706"/>
+      <stop offset="100%" style="stop-color:#B45309"/>
     </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#D97706" flood-opacity="0.35"/>
+    </filter>
   </defs>
   <!-- Background -->
-  <rect width="180" height="180" rx="40" fill="url(#hivyGradApple)"/>
-  <!-- Celebration Sparkle/Star Burst -->
-  <!-- Main 4-pointed star -->
-  <path d="M90 36 L95.5 79 L139 90 L95.5 101 L90 144 L84.5 101 L41 90 L84.5 79 Z" fill="white" opacity="0.95"/>
-  <!-- Diagonal sparkles -->
-  <path d="M58 58 L63 83 L83 63 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
-  <path d="M122 58 L117 83 L97 63 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
-  <path d="M58 122 L63 97 L83 117 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
-  <path d="M122 122 L117 97 L97 117 Z" fill="url(#sparkleGradApple)" opacity="0.8"/>
-  <!-- Center accent -->
-  <circle cx="90" cy="90" r="7" fill="#CA8A04"/>
-  <!-- Small accent dots -->
-  <circle cx="50" cy="50" r="4" fill="white" opacity="0.7"/>
-  <circle cx="130" cy="50" r="4" fill="white" opacity="0.7"/>
-  <circle cx="50" cy="130" r="4" fill="white" opacity="0.7"/>
-  <circle cx="130" cy="130" r="4" fill="white" opacity="0.7"/>
+  <rect width="180" height="180" rx="40" fill="url(#bg)"/>
+  <rect x="3" y="3" width="174" height="174" rx="38" fill="none" stroke="#D97706" stroke-width="1.5" opacity="0.25"/>
+  <!-- Soft glow -->
+  <ellipse cx="90" cy="85" rx="50" ry="46" fill="url(#glow)"/>
+  <!-- Heart -->
+  <path d="M90 142 C90 142 30 98 30 64 C30 44 46 32 62 32 C74 32 83 39 90 48 C97 39 106 32 118 32 C134 32 150 44 150 64 C150 98 90 142 90 142Z" fill="url(#heart)" filter="url(#shadow)"/>
+  <!-- Heart highlight -->
+  <path d="M62 38 C50 38 36 47 36 65 C36 70 37.5 75 40 80" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+  <!-- Sparkle top-left -->
+  <path d="M38 28 L40 34 L46 36 L40 38 L38 44 L36 38 L30 36 L36 34Z" fill="#FEF08A" opacity="0.85"/>
+  <!-- Sparkle top-right -->
+  <path d="M140 22 L141.5 27 L146 28.5 L141.5 30 L140 35 L138.5 30 L134 28.5 L138.5 27Z" fill="#FEF08A" opacity="0.65"/>
+  <!-- Small accents -->
+  <circle cx="152" cy="48" r="2.5" fill="#FEF08A" opacity="0.7"/>
+  <circle cx="26" cy="56" r="2" fill="#FEF08A" opacity="0.5"/>
 </svg>

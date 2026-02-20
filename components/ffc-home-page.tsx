@@ -88,22 +88,22 @@ const faqs = [
 // Gallery items data - Optimized for faster loading (reduced to 16 items)
 const galleryItems = [
   // Featured Images from packages
-  { type: 'image', src: '/packages/swing-of-love/images/28.png', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/boho-chic/images/46.png', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.png', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/28.webp', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/packages/boho-chic/images/46.webp', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/2.webp', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
   { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/12.png', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/29.png', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/12.webp', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/29.webp', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
   { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/47.png', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.png', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.png', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/47.webp', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/3.webp', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/13.webp', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
   { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'romantic celebration reel Surat', title: 'Romantic Vibes', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/30.png', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/48.png', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.png', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
+  { type: 'image', src: '/packages/swing-of-love/images/30.webp', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
+  { type: 'image', src: '/packages/boho-chic/images/48.webp', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
+  { type: 'image', src: '/packages/fairy-tale-proposals/4.webp', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
   { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.png', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
+  { type: 'image', src: '/packages/tent-of-romance/images/14.webp', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
 ];
 
 // Gallery Section Component
@@ -124,7 +124,7 @@ function GallerySection() {
     <section className="py-20 bg-gradient-to-br from-stone-100 via-white to-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+          <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
             <ImageIcon className="h-4 w-4 mr-2" /> Romantic Celebration Gallery
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -141,8 +141,8 @@ function GallerySection() {
             variant={activeFilter === 'all' ? 'default' : 'outline'}
             onClick={() => setActiveFilter('all')}
             className={activeFilter === 'all' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+              ? 'bg-amber-900 hover:bg-amber-800 text-white' 
+              : 'border-amber-200 text-amber-900 hover:bg-amber-50'}
           >
             <Sparkles className="h-4 w-4 mr-2" />
             All ({galleryItems.length})
@@ -151,8 +151,8 @@ function GallerySection() {
             variant={activeFilter === 'photos' ? 'default' : 'outline'}
             onClick={() => setActiveFilter('photos')}
             className={activeFilter === 'photos' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+              ? 'bg-amber-900 hover:bg-amber-800 text-white' 
+              : 'border-amber-200 text-amber-900 hover:bg-amber-50'}
           >
             <ImageIcon className="h-4 w-4 mr-2" />
             Photos ({photoCount})
@@ -161,8 +161,8 @@ function GallerySection() {
             variant={activeFilter === 'videos' ? 'default' : 'outline'}
             onClick={() => setActiveFilter('videos')}
             className={activeFilter === 'videos' 
-              ? 'bg-stone-1000 hover:bg-yellow-800 text-white' 
-              : 'border-yellow-200 text-yellow-900 hover:bg-stone-100'}
+              ? 'bg-amber-900 hover:bg-amber-800 text-white' 
+              : 'border-amber-200 text-amber-900 hover:bg-amber-50'}
           >
             <Play className="h-4 w-4 mr-2" />
             Videos ({videoCount})
@@ -209,7 +209,7 @@ function GallerySection() {
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                     <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Play className="h-5 w-5 text-yellow-800 ml-1" fill="currentColor" />
+                      <Play className="h-5 w-5 text-amber-800 ml-1" fill="currentColor" />
                     </div>
                   </div>
                   <div className="absolute bottom-3 left-3 text-white opacity-0 group-hover:opacity-100 transition-opacity">
@@ -224,7 +224,7 @@ function GallerySection() {
         {/* View More Button */}
         <div className="text-center mt-10">
           <Link href="/virtual-tour">
-            <Button className="bg-gradient-to-r from-stone-1000 to-stone-500 hover:from-yellow-800 hover:to-yellow-700 text-white px-8 py-6 text-lg">
+            <Button className="bg-gradient-to-r from-amber-900 to-amber-700 hover:from-amber-800 hover:to-amber-700 text-white px-8 py-6 text-lg">
               <Camera className="h-5 w-5 mr-2" />
               View Virtual Tour
               <ArrowRight className="h-5 w-5 ml-2" />
@@ -244,7 +244,7 @@ function BlogSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+          <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
             Romantic Celebration Blog
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -267,12 +267,12 @@ function BlogSection() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-3 left-3 bg-stone-1000 text-white">
+                  <Badge className="absolute top-3 left-3 bg-amber-900 text-white">
                     {post.category}
                   </Badge>
                 </div>
                 <CardContent className="p-5">
-                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-yellow-800 transition-colors">
+                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-800 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-4 line-clamp-2">
@@ -300,7 +300,7 @@ function BlogSection() {
         {/* View More Button */}
         <div className="text-center">
           <Link href="/blog">
-            <Button className="bg-gradient-to-r from-stone-1000 to-stone-500 hover:from-yellow-800 hover:to-yellow-700 text-white px-8 py-6 text-lg">
+            <Button className="bg-gradient-to-r from-amber-900 to-amber-700 hover:from-amber-800 hover:to-amber-700 text-white px-8 py-6 text-lg">
               View More Articles
               <ArrowRight className="h-5 w-5 ml-2" />
             </Button>
@@ -316,8 +316,8 @@ export default function FFCHomePage() {
   
   // Hero slider images
   const heroSlides = [
-    { src: '/images/hero/slider2.png', alt: 'romantic celebration Setup with Fairy Lights Surat' },
-    { src: '/images/hero/slider1.png', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
+    { src: '/images/hero/slider2.webp', alt: 'romantic celebration Setup with Fairy Lights Surat' },
+    { src: '/images/hero/slider1.webp', alt: 'Romantic Candlelight Dinner Setup at HIVY - Place for Celebrations Surat' },
   ];
 
   // Auto-slide effect
@@ -328,12 +328,31 @@ export default function FFCHomePage() {
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
+  // FAQ Schema (FAQPage structured data)
+  const homeFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white overflow-hidden">
         {/* Background Image Slider */}
         <div className="absolute inset-0">
           {heroSlides.map((slide, index) => (
@@ -387,7 +406,7 @@ export default function FFCHomePage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link href="/packages">
-                  <Button size="lg" className="bg-white text-yellow-800 hover:bg-stone-100 text-lg px-8 py-6 w-full sm:w-auto">
+                  <Button size="lg" className="bg-white text-amber-800 hover:bg-amber-50 text-lg px-8 py-6 w-full sm:w-auto">
                     <Gift className="h-5 w-5 mr-2" />
                     View Packages
                   </Button>
@@ -432,7 +451,7 @@ export default function FFCHomePage() {
       <section className="py-12 md:py-20 bg-gradient-to-b from-stone-100 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
               Candlelight Dinner & Celebration Packages
             </Badge>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-serif">
@@ -446,7 +465,7 @@ export default function FFCHomePage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
             {getVisiblePackages().map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
-                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-stone-200 group overflow-hidden">
+                <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-amber-100 group overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
                     <Image
                       src={pkg.thumbnail}
@@ -456,18 +475,18 @@ export default function FFCHomePage() {
                       sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
                       quality={90}
                     />
-                    <Badge className="absolute top-2 left-2 bg-yellow-800 text-white text-xs">
+                    <Badge className="absolute top-2 left-2 bg-amber-800 text-white text-xs">
                       Setup {index + 1}
                     </Badge>
                   </div>
-                  <CardContent className="p-2 md:p-4">
-                    <h3 className="font-semibold text-sm md:text-lg mb-1 group-hover:text-yellow-800 transition-colors line-clamp-2">
+                  <CardContent className="p-2 sm:p-3 md:p-4">
+                    <h3 className="font-semibold text-[11px] sm:text-sm md:text-lg mb-0.5 md:mb-1 group-hover:text-amber-800 transition-colors leading-tight">
                       {pkg.name}
                     </h3>
-                    <p className="text-gray-600 text-xs md:text-sm line-clamp-2 mb-2 hidden md:block">
+                    <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm line-clamp-2 mb-1 md:mb-2 hidden md:block">
                       {pkg.shortDescription}
                     </p>
-                    <p className="text-base md:text-xl font-bold text-yellow-800">
+                    <p className="text-sm sm:text-base md:text-xl font-bold text-amber-800">
                       {formatPrice(pkg.price)}
                     </p>
                   </CardContent>
@@ -478,7 +497,7 @@ export default function FFCHomePage() {
           
           <div className="text-center mt-6 md:mt-10">
             <Link href="/packages">
-              <Button size="lg" className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800 text-white">
+              <Button size="lg" className="bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800 text-white">
                 View All Packages <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
@@ -490,7 +509,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
               Romantic Celebration Services in Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -503,7 +522,7 @@ export default function FFCHomePage() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {serviceCategories.map((service) => (
-              <Card key={service.slug} className="h-full border-stone-200 group">
+              <Card key={service.slug} className="h-full border-amber-100 group">
                 <CardContent className="p-4 md:p-6 text-center">
                   <div className="text-3xl md:text-4xl mb-3 md:mb-4">{service.emoji}</div>
                   <h3 className="font-semibold text-sm md:text-lg mb-1 md:mb-2">
@@ -523,7 +542,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
               Why Couples Choose HIVY Surat
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -538,7 +557,7 @@ export default function FFCHomePage() {
             {experienceFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-stone-200 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-yellow-800" />
+                  <feature.icon className="h-8 w-8 text-amber-800" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
@@ -553,7 +572,7 @@ export default function FFCHomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-stone-1000/20 text-yellow-300 border-stone-1000/30">
+              <Badge className="mb-4 bg-amber-900/20 text-amber-300 border-amber-900/30">
                 Romantic Dinner Menu
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
@@ -565,8 +584,8 @@ export default function FFCHomePage() {
               
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Wine className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-amber-900/20 flex items-center justify-center flex-shrink-0">
+                    <Wine className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Welcome Drink</h4>
@@ -575,8 +594,8 @@ export default function FFCHomePage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Utensils className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-amber-900/20 flex items-center justify-center flex-shrink-0">
+                    <Utensils className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Cheese Fondue</h4>
@@ -585,8 +604,8 @@ export default function FFCHomePage() {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-stone-1000/20 flex items-center justify-center flex-shrink-0">
-                    <Gift className="h-5 w-5 text-yellow-300" />
+                  <div className="w-10 h-10 rounded-full bg-amber-900/20 flex items-center justify-center flex-shrink-0">
+                    <Gift className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
                     <h4 className="font-semibold">Dessert with Chocolate Bite</h4>
@@ -596,7 +615,7 @@ export default function FFCHomePage() {
               </div>
               
               <Link href="/menu" className="inline-block mt-8">
-                <Button size="lg" className="bg-stone-1000 hover:bg-yellow-800 text-white">
+                <Button size="lg" className="bg-amber-900 hover:bg-amber-800 text-white">
                   View Full Menu <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
@@ -621,7 +640,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-stone-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
               <MapPin className="h-4 w-4 mr-2" /> Candlelight Dinner & Celebrations Near You
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -637,7 +656,7 @@ export default function FFCHomePage() {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
-                className="px-4 py-2 bg-white rounded-full text-gray-700 hover:bg-yellow-800 hover:text-white transition-colors border border-stone-300"
+                className="px-4 py-2 bg-white rounded-full text-gray-700 hover:bg-amber-800 hover:text-white transition-colors border border-stone-300"
               >
                 {area.name}
               </Link>
@@ -659,7 +678,7 @@ export default function FFCHomePage() {
       <section className="py-20 bg-stone-100">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
               FAQ - Candlelight Dinner & Celebrations
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
@@ -686,7 +705,7 @@ export default function FFCHomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-yellow-800 to-yellow-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-amber-800 to-amber-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-serif">
             Book Your Candlelight Dinner or Birthday Surprise Today

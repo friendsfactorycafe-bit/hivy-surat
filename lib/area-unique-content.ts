@@ -311,7 +311,7 @@ function generateTestimonialsSection(domain: DomainConfig, areaName: string): Ar
   
   const testimonialsHTML = testimonials.map(t => `
     <div class="bg-card border rounded-xl p-6">
-      <div class="flex items-center gap-1 mb-3 text-yellow-500">
+      <div class="flex items-center gap-1 mb-3 text-amber-500">
         ${'★'.repeat(t.rating)}
       </div>
       <p class="text-muted-foreground mb-4">"${t.text}"</p>
@@ -436,22 +436,22 @@ function generateAreaFAQs(domain: DomainConfig, areaName: string): AreaFAQ[] {
 function generateAreaImages(domain: DomainConfig, areaName: string): AreaImageData[] {
   return [
     {
-      src: `/images/area/romantic-setup-1.jpg`,
+      src: `/images/area/romantic-setup-1.webp`,
       alt: `Romantic celebration setup in ${areaName}`,
       caption: `Our premium decoration setup in ${areaName}`,
     },
     {
-      src: `/images/area/candlelight-2.jpg`,
+      src: `/images/area/candlelight-2.webp`,
       alt: `Candlelight dinner arrangement in ${areaName}`,
       caption: `Elegant candlelight dinner setting`,
     },
     {
-      src: `/images/area/birthday-3.jpg`,
+      src: `/images/area/birthday-3.webp`,
       alt: `Birthday surprise decoration in ${areaName}`,
       caption: `Birthday celebration setup`,
     },
     {
-      src: `/images/area/anniversary-4.jpg`,
+      src: `/images/area/anniversary-4.webp`,
       alt: `Anniversary celebration in ${areaName}`,
       caption: `Anniversary special decoration`,
     },

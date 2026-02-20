@@ -8,6 +8,17 @@ import { siteConfig } from '@/lib/ffc-config';
 export const metadata: Metadata = {
   title: 'Terms & Conditions | HIVY - Place for Celebrations Surat',
   description: 'Terms and Conditions for HIVY - Place for Celebrations - Booking policies, cancellation rules, and service agreements for candlelight dinners and romantic celebrations in Surat.',
+  alternates: {
+    canonical: 'https://hivy.co.in/terms-conditions',
+  },
+  openGraph: {
+    title: 'Terms & Conditions | HIVY - Place for Celebrations Surat',
+    description: 'Terms and Conditions for HIVY - Place for Celebrations.',
+    url: 'https://hivy.co.in/terms-conditions',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'HIVY - Place for Celebrations',
+  },
 };
 
 export default function TermsConditionsPage() {
@@ -41,7 +52,7 @@ export default function TermsConditionsPage() {
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">1. Acceptance of Terms</h2>
             <p className="text-gray-600 mb-6">
-              By accessing our website hivy.com or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
+              By accessing our website hivy.co.in or booking our services for candlelight dinners, romantic celebrations, and events at HIVY - Place for Celebrations, Surat, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
             </p>
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">2. Our Services</h2>

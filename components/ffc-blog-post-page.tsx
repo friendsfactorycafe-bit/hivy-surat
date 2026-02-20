@@ -24,17 +24,80 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
   // Generate article content based on the post
   const articleContent = generateArticleContent(post);
 
+  // JSON-LD Structured Data for blog post
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://hivy.co.in/blog/${post.slug}#article`,
+        "headline": post.title,
+        "description": post.metaDescription,
+        "image": `https://hivy.co.in${post.coverImage}`,
+        "datePublished": post.publishedAt,
+        "dateModified": post.publishedAt,
+        "author": {
+          "@type": "Organization",
+          "name": "HIVY - Place for Celebrations",
+          "url": "https://hivy.co.in"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HIVY - Place for Celebrations",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hivy.co.in/icon.svg"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://hivy.co.in/blog/${post.slug}`
+        },
+        "keywords": post.tags.join(", "),
+        "articleSection": post.category
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hivy.co.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://hivy.co.in/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": post.title,
+            "item": `https://hivy.co.in/blog/${post.slug}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Breadcrumb */}
       <div className="pt-20 bg-gray-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-yellow-800">Home</Link>
+            <Link href="/" className="hover:text-amber-800">Home</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-yellow-800">Blog</Link>
+            <Link href="/blog" className="hover:text-amber-800">Blog</Link>
             <span>/</span>
             <span className="text-gray-900 truncate max-w-[200px]">{post.title}</span>
           </div>
@@ -47,7 +110,7 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
           <div className="max-w-4xl mx-auto">
             {/* Category & Meta */}
             <div className="flex flex-wrap items-center gap-4 mb-6">
-              <Badge className="bg-stone-200 text-stone-900">
+              <Badge className="bg-amber-100 text-amber-900">
                 {post.category}
               </Badge>
               <span className="flex items-center gap-1 text-sm text-gray-500">
@@ -86,7 +149,7 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
             </div>
 
             {/* Article Content */}
-            <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-yellow-800 prose-strong:text-gray-900">
+            <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-amber-800 prose-strong:text-gray-900">
               <div dangerouslySetInnerHTML={{ __html: articleContent }} />
             </div>
 
@@ -109,14 +172,14 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
                 </div>
                 <div className="flex gap-3">
                   <Button 
-                    className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800"
+                    className="bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800"
                     asChild
                   >
                     <Link href="/packages">View Packages</Link>
                   </Button>
                   <Button 
                     variant="outline"
-                    className="border-yellow-800 text-yellow-800 hover:bg-stone-100"
+                    className="border-amber-800 text-amber-800 hover:bg-amber-50"
                     asChild
                   >
                     <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer">
@@ -149,7 +212,7 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
                         />
                       </div>
                       <CardContent className="p-4">
-                        <h3 className="font-semibold text-gray-900 line-clamp-2 group-hover:text-yellow-800 transition-colors">
+                        <h3 className="font-semibold text-gray-900 line-clamp-2 group-hover:text-amber-800 transition-colors">
                           {relatedPost.title}
                         </h3>
                         <p className="text-sm text-gray-500 mt-2">{relatedPost.readTime} read</p>
@@ -168,7 +231,7 @@ export default function FFCBlogPostPage({ post }: FFCBlogPostPageProps) {
         <div className="container mx-auto px-4">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 text-yellow-800 hover:text-yellow-900 font-medium"
+            className="inline-flex items-center gap-2 text-amber-800 hover:text-amber-900 font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to all articles

@@ -111,7 +111,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-pink-900",
       text: "text-pink-600"
     },
-    heroImages: ["/images/hero/birthday1.jpg", "/images/hero/birthday2.jpg", "/images/hero/birthday3.jpg"],
+    heroImages: ["/images/hero/birthday1.webp", "/images/hero/birthday2.webp", "/images/hero/birthday3.webp"],
     keywords: [
       { slug: "birthday-surprise-for-boyfriend-surat", title: "Birthday Surprise for Boyfriend", h1: "Best Birthday Surprise for Boyfriend in Surat", metaTitle: "Birthday Surprise for Boyfriend in Surat | Romantic Celebration", metaDescription: "Plan the perfect birthday surprise for your boyfriend in Surat. Romantic decorations, cake, and intimate celebration at our couple-friendly cafe." },
       { slug: "birthday-surprise-for-girlfriend-surat", title: "Birthday Surprise for Girlfriend", h1: "Romantic Birthday Surprise for Girlfriend in Surat", metaTitle: "Birthday Surprise for Girlfriend Surat | Make Her Day Special", metaDescription: "Create unforgettable birthday memories for your girlfriend in Surat with balloon decorations, cake, flowers and romantic setup." },
@@ -155,13 +155,13 @@ export const domains: DomainConfig[] = [
       primary: "#F59E0B", // Amber/Golden
       secondary: "#FBBF24",
       accent: "#D97706",
-      gradient: "from-stone-1000 to-orange-600",
+      gradient: "from-amber-900 to-orange-600",
       gradientHover: "from-amber-600 to-orange-700",
       lightBg: "bg-stone-100",
       darkBg: "bg-stone-900",
       text: "text-amber-600"
     },
-    heroImages: ["/images/hero/candle1.jpg", "/images/hero/candle2.jpg", "/images/hero/candle3.jpg"],
+    heroImages: ["/images/hero/candle1.webp", "/images/hero/candle2.webp", "/images/hero/candle3.webp"],
     keywords: [
       { slug: "candlelight-dinner-in-surat", title: "Candlelight Dinner", h1: "Candlelight Dinner in Surat", metaTitle: "Candlelight Dinner in Surat | Romantic Dining Experience", metaDescription: "Book the perfect candlelight dinner in Surat for couples. Romantic ambiance, delicious food, and intimate setting." },
       { slug: "romantic-dinner-surat", title: "Romantic Dinner", h1: "Romantic Dinner in Surat", metaTitle: "Romantic Dinner Surat | Best Couple Dining", metaDescription: "Enjoy a romantic dinner in Surat with candlelight, flowers, and exquisite cuisine for couples." },
@@ -211,7 +211,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-red-900",
       text: "text-red-600"
     },
-    heroImages: ["/images/hero/date1.jpg", "/images/hero/date2.jpg", "/images/hero/date3.jpg"],
+    heroImages: ["/images/hero/date1.webp", "/images/hero/date2.webp", "/images/hero/date3.webp"],
     keywords: [
       { slug: "surprise-date-in-surat", title: "Surprise Date", h1: "Surprise Date in Surat", metaTitle: "Surprise Date in Surat | Romantic Experience", metaDescription: "Plan a surprise date in Surat for your partner. Romantic setup, private venue, and memorable moments." },
       { slug: "romantic-date-ideas-surat", title: "Romantic Date Ideas", h1: "Romantic Date Ideas in Surat", metaTitle: "Romantic Date Ideas Surat | Best Options", metaDescription: "Get the best romantic date ideas in Surat for couples seeking special experiences." },
@@ -261,7 +261,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-gray-800",
       text: "text-gray-600"
     },
-    heroImages: ["/images/hero/anniversary1.jpg", "/images/hero/anniversary2.jpg", "/images/hero/anniversary3.jpg"],
+    heroImages: ["/images/hero/anniversary1.webp", "/images/hero/anniversary2.webp", "/images/hero/anniversary3.webp"],
     keywords: [
       { slug: "anniversary-dinner-in-surat", title: "Anniversary Dinner", h1: "Anniversary Dinner in Surat", metaTitle: "Anniversary Dinner in Surat | Celebrate Your Love", metaDescription: "Book a romantic anniversary dinner in Surat with special decorations and intimate setting." },
       { slug: "anniversary-celebration-for-couples-surat", title: "Anniversary Celebration for Couples", h1: "Anniversary Celebration for Couples in Surat", metaTitle: "Anniversary Celebration for Couples Surat | Special Day", metaDescription: "Plan a special anniversary celebration for couples in Surat with romantic setup." },
@@ -305,13 +305,13 @@ export const domains: DomainConfig[] = [
       primary: "#8B5CF6", // Royal Purple
       secondary: "#A78BFA",
       accent: "#7C3AED",
-      gradient: "from-stone-1000 to-yellow-600",
-      gradientHover: "from-amber-600 to-yellow-600",
+      gradient: "from-amber-900 to-amber-600",
+      gradientHover: "from-amber-600 to-amber-600",
       lightBg: "bg-stone-100",
       darkBg: "bg-stone-900",
       text: "text-amber-600"
     },
-    heroImages: ["/images/hero/anniversary1.jpg", "/images/hero/anniversary2.jpg", "/images/hero/anniversary3.jpg"],
+    heroImages: ["/images/hero/anniversary1.webp", "/images/hero/anniversary2.webp", "/images/hero/anniversary3.webp"],
     keywords: [
       { slug: "anniversary-dinner-in-surat", title: "Anniversary Dinner", h1: "Anniversary Dinner in Surat", metaTitle: "Anniversary Dinner in Surat | Celebrate Your Love", metaDescription: "Book a romantic anniversary dinner in Surat with special decorations and intimate setting." },
       { slug: "anniversary-celebration-for-couples-surat", title: "Anniversary Celebration for Couples", h1: "Anniversary Celebration for Couples in Surat", metaTitle: "Anniversary Celebration for Couples Surat | Special Day", metaDescription: "Plan a special anniversary celebration for couples in Surat with romantic setup." },
@@ -355,13 +355,13 @@ export const domains: DomainConfig[] = [
       primary: "#7C3AED", // Deep Purple/Violet
       secondary: "#8B5CF6",
       accent: "#6D28D9",
-      gradient: "from-yellow-500 to-amber-600",
-      gradientHover: "from-yellow-600 to-yellow-700",
-      lightBg: "bg-yellow-50",
-      darkBg: "bg-yellow-900",
-      text: "text-yellow-600"
+      gradient: "from-amber-500 to-amber-600",
+      gradientHover: "from-amber-600 to-amber-700",
+      lightBg: "bg-amber-50",
+      darkBg: "bg-amber-900",
+      text: "text-amber-600"
     },
-    heroImages: ["/images/hero/date1.jpg", "/images/hero/date2.jpg", "/images/hero/date3.jpg"],
+    heroImages: ["/images/hero/date1.webp", "/images/hero/date2.webp", "/images/hero/date3.webp"],
     keywords: [
       { slug: "surprise-date-in-surat", title: "Surprise Date", h1: "Surprise Date in Surat", metaTitle: "Surprise Date in Surat | Romantic Experience", metaDescription: "Plan a surprise date in Surat for your partner. Romantic setup, private venue, and memorable moments." },
       { slug: "romantic-date-ideas-surat", title: "Romantic Date Ideas", h1: "Romantic Date Ideas in Surat", metaTitle: "Romantic Date Ideas Surat | Best Options", metaDescription: "Get the best romantic date ideas in Surat for couples seeking special experiences." },
@@ -411,7 +411,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-blue-950",
       text: "text-blue-700"
     },
-    heroImages: ["/images/hero/private venue1.jpg", "/images/hero/private venue2.jpg", "/images/hero/private venue3.jpg"],
+    heroImages: ["/images/hero/private venue1.webp", "/images/hero/private venue2.webp", "/images/hero/private venue3.webp"],
     keywords: [
       { slug: "romantic-date-in-surat", title: "Romantic Date", h1: "Romantic Date in Surat", metaTitle: "Romantic Date in Surat | Sky High Romance", metaDescription: "Enjoy a romantic Romantic Date in Surat with stunning city views and intimate ambiance." },
       { slug: "candlelight-dinner-for-couples-surat", title: "candlelight dinner for Couples", h1: "candlelight dinner for Couples in Surat", metaTitle: "candlelight dinner for Couples Surat | Romantic Evening", metaDescription: "Book a candlelight dinner for couples in Surat with beautiful decorations and views." },
@@ -461,7 +461,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-orange-900",
       text: "text-orange-600"
     },
-    heroImages: ["/images/hero/candle1.jpg", "/images/hero/candle2.jpg", "/images/hero/candle3.jpg"],
+    heroImages: ["/images/hero/candle1.webp", "/images/hero/candle2.webp", "/images/hero/candle3.webp"],
     keywords: [
       { slug: "candlelight-dinner-in-surat", title: "Candlelight Dinner", h1: "Candlelight Dinner in Surat", metaTitle: "Candlelight Dinner in Surat | Romantic Dining Experience", metaDescription: "Book the perfect candlelight dinner in Surat for couples. Romantic ambiance, delicious food, and intimate setting." },
       { slug: "romantic-dinner-surat", title: "Romantic Dinner", h1: "Romantic Dinner in Surat", metaTitle: "Romantic Dinner Surat | Best Couple Dining", metaDescription: "Enjoy a romantic dinner in Surat with candlelight, flowers, and exquisite cuisine for couples." },
@@ -511,7 +511,7 @@ export const domains: DomainConfig[] = [
       darkBg: "bg-teal-900",
       text: "text-teal-600"
     },
-    heroImages: ["/images/hero/birthday1.jpg", "/images/hero/birthday2.jpg", "/images/hero/birthday3.jpg"],
+    heroImages: ["/images/hero/birthday1.webp", "/images/hero/birthday2.webp", "/images/hero/birthday3.webp"],
     keywords: [
       { slug: "birthday-surprise-for-boyfriend-surat", title: "Birthday Surprise for Boyfriend", h1: "Best Birthday Surprise for Boyfriend in Surat", metaTitle: "Birthday Surprise for Boyfriend in Surat | Romantic Celebration", metaDescription: "Plan the perfect birthday surprise for your boyfriend in Surat. Romantic decorations, cake, and intimate celebration at our couple-friendly cafe." },
       { slug: "birthday-surprise-for-girlfriend-surat", title: "Birthday Surprise for Girlfriend", h1: "Romantic Birthday Surprise for Girlfriend in Surat", metaTitle: "Birthday Surprise for Girlfriend Surat | Make Her Day Special", metaDescription: "Create unforgettable birthday memories for your girlfriend in Surat with balloon decorations, cake, flowers and romantic setup." },

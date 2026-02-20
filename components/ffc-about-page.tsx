@@ -18,7 +18,7 @@ export default function FFCAboutPage() {
       <FFCHeader />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-800 via-stone-500 to-yellow-900 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-amber-800 via-amber-950 to-amber-900 text-white py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-4 bg-white/20 text-white border-white/30">
             <Heart className="h-4 w-4 mr-2" /> About Us
@@ -37,7 +37,7 @@ export default function FFCAboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+              <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
                 Our Story
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
@@ -53,13 +53,13 @@ export default function FFCAboutPage() {
                 <p>
                   From heartfelt <strong>birthday surprises</strong> and <strong>anniversary celebrations</strong> to unforgettable <strong>marriage proposals</strong>, engagement reveals, <strong>pre-wedding shoots</strong>, pregnancy announcements, and last candlelight dinners before marriage, we've hosted <strong>500+ magical evenings</strong>.
                 </p>
-                <p className="font-medium text-yellow-900">
+                <p className="font-medium text-amber-900">
                   Our mission: Create spaces where love stories unfold naturally.
                 </p>
               </div>
               <div className="mt-6">
                 <Link href="/contact">
-                  <Button className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800 text-white">
+                  <Button className="bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800 text-white">
                     Book Your Moment - Call {siteConfig.phone}
                   </Button>
                 </Link>
@@ -68,7 +68,7 @@ export default function FFCAboutPage() {
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/30.png"
+                  src="/packages/swing-of-love/images/30.webp"
                   alt="HIVY - Place for Celebrations Surat - Romantic Swing of Love Setup for Candlelight Dinner"
                   fill
                   className="object-cover"
@@ -96,9 +96,9 @@ export default function FFCAboutPage() {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-stone-200 flex items-center justify-center mx-auto mb-3">
-                  <stat.icon className="h-7 w-7 md:h-8 md:w-8 text-yellow-800" />
+                  <stat.icon className="h-7 w-7 md:h-8 md:w-8 text-amber-800" />
                 </div>
-                <p className="text-2xl md:text-3xl font-bold text-yellow-800">{stat.number}</p>
+                <p className="text-2xl md:text-3xl font-bold text-amber-800">{stat.number}</p>
                 <p className="text-gray-600 text-sm md:text-base">{stat.label}</p>
               </div>
             ))}
@@ -113,7 +113,7 @@ export default function FFCAboutPage() {
             <div className="order-1">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/35.png"
+                  src="/packages/swing-of-love/images/35.webp"
                   alt="HIVY - Place for Celebrations Team - Romantic Setup Surat"
                   fill
                   className="object-cover"
@@ -126,7 +126,7 @@ export default function FFCAboutPage() {
               </div>
             </div>
             <div className="order-2">
-              <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+              <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
                 Our Team
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
@@ -142,7 +142,7 @@ export default function FFCAboutPage() {
                 <p>
                   Whether you're planning a <strong>candlelight dinner in Surat</strong>, a <strong>birthday surprise for your girlfriend</strong>, an <strong>anniversary celebration</strong>, or a <strong>romantic proposal</strong>, our team handles everything from setup to cleanup so you can focus on love.
                 </p>
-                <p className="font-medium text-yellow-900">
+                <p className="font-medium text-amber-900">
                   Join us and let us make your evening truly extraordinary.
                 </p>
               </div>
@@ -156,7 +156,7 @@ export default function FFCAboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <Badge className="mb-4 bg-stone-200 text-yellow-900 border-stone-300">
+              <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
                 Why Choose Us
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif">
@@ -165,7 +165,7 @@ export default function FFCAboutPage() {
               <div className="space-y-4">
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-5 w-5 text-yellow-800" />
+                    <MapPin className="h-5 w-5 text-amber-800" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Prime Gotri Venue Location</h3>
@@ -175,7 +175,7 @@ export default function FFCAboutPage() {
                 
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                    <Award className="h-5 w-5 text-yellow-800" />
+                    <Award className="h-5 w-5 text-amber-800" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Custom Celebration Packages</h3>
@@ -185,7 +185,7 @@ export default function FFCAboutPage() {
                 
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                    <Heart className="h-5 w-5 text-yellow-800" />
+                    <Heart className="h-5 w-5 text-amber-800" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Pan-India Appeal, Local Heart</h3>
@@ -195,7 +195,7 @@ export default function FFCAboutPage() {
                 
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center flex-shrink-0">
-                    <Star className="h-5 w-5 text-yellow-800" />
+                    <Star className="h-5 w-5 text-amber-800" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">5-Star Experience Guaranteed</h3>
@@ -207,7 +207,7 @@ export default function FFCAboutPage() {
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/40.png"
+                  src="/packages/swing-of-love/images/40.webp"
                   alt="Why Choose HIVY - Place for Celebrations - Romantic Setup Surat"
                   fill
                   className="object-cover"
@@ -237,7 +237,7 @@ export default function FFCAboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={`tel:${siteConfig.phone}`}>
-              <Button size="lg" className="bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800 text-white w-full sm:w-auto">
+              <Button size="lg" className="bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800 text-white w-full sm:w-auto">
                 <Phone className="h-5 w-5 mr-2" />
                 Call {siteConfig.phone}
               </Button>
@@ -263,7 +263,7 @@ export default function FFCAboutPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-stone-300">
                 <CardContent className="p-6 text-center">
-                  <MapPin className="h-8 w-8 text-yellow-800 mx-auto mb-4" />
+                  <MapPin className="h-8 w-8 text-amber-800 mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Location</h3>
                   <p className="text-gray-600 text-sm">{siteConfig.address}</p>
                 </CardContent>
@@ -271,9 +271,9 @@ export default function FFCAboutPage() {
               
               <Card className="border-stone-300">
                 <CardContent className="p-6 text-center">
-                  <Phone className="h-8 w-8 text-yellow-800 mx-auto mb-4" />
+                  <Phone className="h-8 w-8 text-amber-800 mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Phone</h3>
-                  <a href={`tel:${siteConfig.phone}`} className="text-yellow-800 hover:text-yellow-900 font-medium">
+                  <a href={`tel:${siteConfig.phone}`} className="text-amber-800 hover:text-amber-900 font-medium">
                     {siteConfig.phone}
                   </a>
                 </CardContent>
@@ -281,9 +281,9 @@ export default function FFCAboutPage() {
               
               <Card className="border-stone-300">
                 <CardContent className="p-6 text-center">
-                  <Mail className="h-8 w-8 text-yellow-800 mx-auto mb-4" />
+                  <Mail className="h-8 w-8 text-amber-800 mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href={`mailto:${siteConfig.email}`} className="text-yellow-800 hover:text-yellow-900">
+                  <a href={`mailto:${siteConfig.email}`} className="text-amber-800 hover:text-amber-900">
                     {siteConfig.email}
                   </a>
                 </CardContent>

@@ -18,15 +18,69 @@ export default function FFCBlogPage() {
 
   const categories = Array.from(new Set(posts.map(p => p.category)));
 
+  // JSON-LD Schema for blog listing
+  const blogListJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "HIVY Blog - Celebration Ideas & Inspiration",
+        "description": "Tips, guides, and romantic celebration ideas for couples in Surat",
+        "url": "https://hivy.co.in/blog",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HIVY - Place for Celebrations"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "itemListElement": posts.slice(0, 10).map((post, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.excerpt,
+            "url": `https://hivy.co.in/blog/${post.slug}`,
+            "image": `https://hivy.co.in${post.coverImage}`,
+            "datePublished": post.publishedAt
+          }
+        }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hivy.co.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://hivy.co.in/blog"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* JSON-LD Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListJsonLd) }}
+      />
       <FFCHeader />
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-stone-100 via-stone-50 to-stone-200">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <Badge className="bg-stone-200 text-stone-900 mb-4">
+            <Badge className="bg-amber-100 text-amber-900 mb-4">
               Our Blog
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -44,14 +98,14 @@ export default function FFCBlogPage() {
       <section className="py-6 border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
-            <Badge variant="outline" className="cursor-pointer hover:bg-stone-100 px-4 py-2">
+            <Badge variant="outline" className="cursor-pointer hover:bg-amber-50 px-4 py-2">
               All Posts
             </Badge>
             {categories.map((category) => (
               <Badge 
                 key={category} 
                 variant="outline" 
-                className="cursor-pointer hover:bg-stone-100 px-4 py-2"
+                className="cursor-pointer hover:bg-amber-50 px-4 py-2"
               >
                 {category}
               </Badge>
@@ -73,7 +127,7 @@ export default function FFCBlogPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <Badge className="absolute top-4 left-4 bg-stone-1000">
+                  <Badge className="absolute top-4 left-4 bg-amber-900">
                     Featured
                   </Badge>
                 </div>
@@ -81,7 +135,7 @@ export default function FFCBlogPage() {
                   <Badge variant="outline" className="w-fit mb-4">
                     {featuredPost.category}
                   </Badge>
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-yellow-800 transition-colors">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-amber-800 transition-colors">
                     {featuredPost.title}
                   </h2>
                   <p className="text-gray-600 mb-6 line-clamp-3">
@@ -101,7 +155,7 @@ export default function FFCBlogPage() {
                       {featuredPost.readTime} read
                     </span>
                   </div>
-                  <Button className="w-fit bg-gradient-to-r from-yellow-800 to-yellow-700 hover:from-yellow-900 hover:to-yellow-800">
+                  <Button className="w-fit bg-gradient-to-r from-amber-800 to-amber-700 hover:from-amber-900 hover:to-amber-800">
                     Read Article <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </CardContent>
@@ -124,7 +178,7 @@ export default function FFCBlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-yellow-800 to-yellow-700">
+      <section className="py-16 bg-gradient-to-r from-amber-800 to-amber-700">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Plan Your Celebration?
@@ -136,7 +190,7 @@ export default function FFCBlogPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-yellow-800 hover:bg-stone-100"
+              className="bg-white text-amber-800 hover:bg-amber-50"
               asChild
             >
               <Link href="/packages">View Packages</Link>
@@ -172,12 +226,12 @@ function BlogCard({ post }: { post: BlogPost }) {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <Badge className="absolute top-3 left-3 bg-stone-1000">
+          <Badge className="absolute top-3 left-3 bg-amber-900">
             {post.category}
           </Badge>
         </div>
         <CardContent className="p-5">
-          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-yellow-800 transition-colors">
+          <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-amber-800 transition-colors">
             {post.title}
           </h3>
           <p className="text-sm text-gray-600 mb-4 line-clamp-2">

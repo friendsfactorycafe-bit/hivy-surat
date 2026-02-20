@@ -10,14 +10,14 @@ const reviews = [
   {
     name: "Yoma Patel",
     initial: "Y",
-    color: "bg-yellow-600",
+    color: "bg-amber-600",
     date: "1 month ago",
     review: "Cutest set up and amazing food service."
   },
   {
     name: "Krishn Sharma",
     initial: "K",
-    color: "bg-stone-600",
+    color: "bg-amber-700",
     date: "2 months ago",
     review: "Best candlelight dinner experience in Surat! The decoration was stunning and staff was very helpful. Proposed here and she said YES! 💍"
   },
@@ -84,8 +84,8 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-8">
-            <Badge className="mb-3 bg-stone-200 text-yellow-900 border-stone-300">
-              <Star className="h-4 w-4 mr-2 fill-yellow-400 text-yellow-400" /> Google Reviews
+            <Badge className="mb-3 bg-amber-100 text-amber-900 border-amber-200">
+              <Star className="h-4 w-4 mr-2 fill-amber-400 text-amber-400" /> Google Reviews
             </Badge>
             <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">
               What Our Guests Say
@@ -93,7 +93,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
             <div className="flex items-center justify-center gap-2">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={star} className="h-5 w-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <span className="text-lg font-bold">5.0</span>
@@ -146,7 +146,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
                   </div>
                   <div className="flex gap-0.5 mb-2">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className={`${compact ? 'h-3 w-3' : 'h-4 w-4'} fill-yellow-400 text-yellow-400`} />
+                      <Star key={star} className={`${compact ? 'h-3 w-3' : 'h-4 w-4'} fill-amber-400 text-amber-400`} />
                     ))}
                     <span className="ml-2 text-green-500 text-sm">✓</span>
                   </div>
@@ -165,7 +165,7 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
             href="https://www.google.com/maps/place/HIVY+-+Place+For+Celebration/@21.1895149,72.7828283,17z/data=!4m8!3m7!1s0x3be04d4fc7b5dbb9:0xb1aa92785a2443b8!8m2!3d21.1895149!4d72.7854032!9m1!1b1!16s%2Fg%2F11y3glr3jq"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-yellow-700 hover:text-yellow-800 font-medium text-sm"
+            className="inline-flex items-center gap-2 text-amber-700 hover:text-amber-800 font-medium text-sm"
           >
             <GoogleIcon />
             Review Us on Google →

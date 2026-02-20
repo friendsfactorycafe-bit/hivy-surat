@@ -27,9 +27,16 @@ export async function generateMetadata({ params }: PackagePageProps): Promise<Me
     title: `${pkg.name} ${pkg.emoji} | HIVY - Place for Celebrations Surat`,
     description: `${pkg.shortDescription} Book ${pkg.name} at HIVY - Place for Celebrations Surat for ₹${pkg.price.toLocaleString()}. Perfect for ${pkg.perfectFor.join(', ')}.`,
     keywords: `${pkg.name}, ${pkg.perfectFor.join(', ')}, romantic celebration surat, friends factory cafe`,
+    alternates: {
+      canonical: `https://hivy.co.in/packages/${slug}`,
+    },
     openGraph: {
       title: `${pkg.name} | HIVY - Place for Celebrations`,
       description: pkg.shortDescription,
+      url: `https://hivy.co.in/packages/${slug}`,
+      type: 'website',
+      locale: 'en_IN',
+      siteName: 'HIVY - Place for Celebrations',
     },
   };
 }

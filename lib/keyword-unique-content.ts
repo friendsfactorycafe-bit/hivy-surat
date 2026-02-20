@@ -411,32 +411,32 @@ function generateImages(domain: DomainConfig, keyword: KeywordConfig): ImageData
   
   return [
     {
-      src: `/images/${imageCategory}/hero-1.jpg`,
+      src: `/images/${imageCategory}/hero-1.webp`,
       alt: `${kw} setup in ${domain.city}`,
       caption: `Beautiful ${kw} decoration with candles and flowers`,
     },
     {
-      src: `/images/${imageCategory}/setup-2.jpg`,
+      src: `/images/${imageCategory}/setup-2.webp`,
       alt: `Premium ${kw} arrangement`,
       caption: `Our premium ${kw} package with elegant decorations`,
     },
     {
-      src: `/images/${imageCategory}/couple-3.jpg`,
+      src: `/images/${imageCategory}/couple-3.webp`,
       alt: `Couple enjoying ${kw}`,
       caption: `Creating magical moments for couples`,
     },
     {
-      src: `/images/${imageCategory}/decoration-4.jpg`,
+      src: `/images/${imageCategory}/decoration-4.webp`,
       alt: `${kw} venue decoration`,
       caption: `Stunning venue transformation for ${kw}`,
     },
     {
-      src: `/images/${imageCategory}/dinner-5.jpg`,
+      src: `/images/${imageCategory}/dinner-5.webp`,
       alt: `Romantic dinner during ${kw}`,
       caption: `Gourmet dining experience included`,
     },
     {
-      src: `/images/${imageCategory}/cake-6.jpg`,
+      src: `/images/${imageCategory}/cake-6.webp`,
       alt: `Custom cake for ${kw}`,
       caption: `Designer cakes for your special occasion`,
     },

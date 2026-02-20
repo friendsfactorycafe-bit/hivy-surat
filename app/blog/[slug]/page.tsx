@@ -27,12 +27,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.tags.join(', '),
+    alternates: {
+      canonical: `https://hivy.co.in/blog/${slug}`,
+    },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
+      url: `https://hivy.co.in/blog/${slug}`,
       images: [post.coverImage],
       type: 'article',
       publishedTime: post.publishedAt,
+      locale: 'en_IN',
+      siteName: 'HIVY - Place for Celebrations',
     },
   };
 }
