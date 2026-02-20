@@ -16,6 +16,8 @@ export default function FFCVirtualTourPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [showControls, setShowControls] = useState(true);
+  const [videoError, setVideoError] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const tourFaqs = [
@@ -101,14 +103,32 @@ export default function FFCVirtualTourPage() {
                 muted={isMuted}
                 loop
                 playsInline
-                preload="metadata"
+                preload="auto"
+                poster="/images/virtual-tour-poster.webp"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
+                onLoadedData={() => setVideoLoaded(true)}
+                onError={() => setVideoError(true)}
               >
                 <source src="/videos/virtual-tour.mp4" type="video/mp4" />
-                <source src="/videos/InShot_20250111_162317353.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              
+              {/* Error fallback */}
+              {videoError && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-amber-950/90 text-white text-center p-6">
+                  <Play className="w-12 h-12 mb-3 opacity-60" />
+                  <p className="text-sm font-medium">Video could not be loaded</p>
+                  <a 
+                    href="/videos/virtual-tour.mp4" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-3 text-xs underline text-amber-300 hover:text-amber-200"
+                  >
+                    Open video directly
+                  </a>
+                </div>
+              )}
               
               {/* Custom Controls Overlay */}
               <div 

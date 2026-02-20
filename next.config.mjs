@@ -29,6 +29,15 @@ const nextConfig = {
         ],
       },
       {
+        // Video files - proper MIME type and caching
+        source: '/videos/:path*',
+        headers: [
+          { key: 'Content-Type', value: 'video/mp4' },
+          { key: 'Accept-Ranges', value: 'bytes' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
         // All pages - AI friendly indexing headers
         source: '/:path*',
         headers: [

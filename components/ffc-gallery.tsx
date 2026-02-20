@@ -182,11 +182,10 @@ export function FFCGallery({
                     loop
                     playsInline
                     preload="metadata"
-                    poster={galleryItems.find(g => g.type === 'image')?.src}
+                    poster={`/images/video-thumbs/${item.src.split('/').pop()?.replace('.mp4', '.webp')}`}
                     className="w-full h-full object-cover"
                     onMouseEnter={(e) => e.currentTarget.play()}
                     onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
-                    onLoadedData={(e) => { e.currentTarget.currentTime = 0.5; }}
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
