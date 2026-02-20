@@ -454,17 +454,10 @@ export default function FFCHomePage() {
             </div>
             
             {/* Hero Booking Form */}
-            <div className="hidden lg:block">
+            <div>
               <FFCBookingForm variant="hero" />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Mobile Booking Form */}
-      <section className="lg:hidden bg-stone-100 py-8">
-        <div className="container mx-auto px-4">
-          <FFCBookingForm />
         </div>
       </section>
 

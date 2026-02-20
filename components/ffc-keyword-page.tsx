@@ -172,7 +172,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
             </div>
             
             {/* Booking Form */}
-            <div className="hidden lg:block">
+            <div>
               <FFCBookingForm pageTitle={keyword.title} />
             </div>
           </div>

@@ -174,7 +174,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
             </div>
             
             {/* Booking Form */}
-            <div className="hidden lg:block">
+            <div>
               <FFCBookingForm pageTitle={`${area.name} Area Page`} />
             </div>
           </div>

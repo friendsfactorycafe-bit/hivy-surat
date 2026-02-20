@@ -95,7 +95,7 @@ export default function FFCServicePage({ service }: ServicePageProps) {
             </div>
             
             {/* Booking Form */}
-            <div className="hidden lg:block">
+            <div>
               <FFCBookingForm pageTitle={`${service.name} Page`} />
             </div>
           </div>
