@@ -2,16 +2,16 @@
  * HIVY - PLACE FOR CELEBRATIONS - SEO OPTIMIZED SITEMAP
  * Domain: hivy.co.in
  * 
- * Total Pages: Comprehensive sitemap including:
+ * Total Pages: ~204 Comprehensive sitemap including:
  * - 1 Homepage (priority 1.0)
  * - 9 Static pages (priority 0.7-0.9)
  * - 8 Service category pages (priority 0.9)
- * - 6 Package detail pages (priority 0.85)
- * - 113 Service keyword pages (priority 0.8)
+ * - 5 Package detail pages (priority 0.85)
+ * - 116 Service keyword pages (priority 0.8)
  * - 40 Surat area pages (priority 0.7)
  * - 25 Blog posts (priority 0.6)
  * 
- * Last Updated: January 2026
+ * Last Updated: February 2026
  */
 
 import { MetadataRoute } from "next";

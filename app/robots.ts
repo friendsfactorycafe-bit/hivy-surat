@@ -2,20 +2,20 @@
  * HIVY - PLACE FOR CELEBRATIONS - SEO OPTIMIZED ROBOTS.TXT
  * Domain: hivy.co.in
  * 
- * Configuration for search engine crawlers:
+ * Configuration for search engine & AI crawlers:
  * - Allow all public pages including service keywords & area pages
  * - Block admin, API, and private routes
  * - Specify sitemap location
- * - Optimized for maximum SEO visibility
+ * - Optimized for maximum SEO + AI visibility (ChatGPT, Gemini, Claude, Perplexity)
  * 
- * Total Indexable Pages: ~202
- * - Homepage, Static pages, Service categories
- * - 113 Service keyword pages
+ * Total Indexable Pages: ~204
+ * - Homepage, 9 Static pages, 8 Service categories
+ * - 116 Service keyword pages
  * - 40 Surat area pages  
- * - 6 Package pages
+ * - 5 Package pages
  * - 25 Blog posts
  * 
- * Last Updated: January 2026
+ * Last Updated: February 2026
  */
 
 import { MetadataRoute } from "next";
@@ -46,6 +46,9 @@ export default function robots(): MetadataRoute.Robots {
           // Blog pages
           "/blog",
           "/blog/*",
+          // AI & discovery files
+          "/llms.txt",
+          "/.well-known/*",
           // Service keyword pages (birthday, anniversary, proposal, etc.)
           "/birthday-*",
           "/anniversary-*",
@@ -133,9 +136,6 @@ export default function robots(): MetadataRoute.Robots {
           "/private/",
           "/_next/",
           "/leads/",
-          "/*.json$",
-          "/*.js$",
-          "/*.css$",
         ],
       },
       {
@@ -274,12 +274,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         // Amazon Alexa crawler
         userAgent: "Amazonbot",
-        allow: "/",
-        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
-      },
-      {
-        // Microsoft AI / Copilot crawler
-        userAgent: "Bingbot",
         allow: "/",
         disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
       },
