@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "HIVY - Place for Celebrations",
+  "name_for_model": "hivy_celebrations",
+  "description_for_human": "Book romantic celebrations, candlelight dinners, birthday surprises, and anniversary events at HIVY in Surat, Gujarat, India.",
+  "description_for_model": "HIVY is a romantic celebration venue in Surat, Gujarat, India. It provides private, decorated tent setups for candlelight dinners, birthday surprises, anniversary celebrations, proposals, pre-wedding photoshoots, baby showers, and Valentine's Day events. Packages range from ₹999 to ₹6,999. The venue is 100% vegetarian, open 11AM-11PM daily, located at Adajan-Pal, Surat. Contact: +91 9727027278. Website: https://hivy.co.in",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "website",
+    "url": "https://hivy.co.in"
+  },
+  "logo_url": "https://hivy.co.in/icon.svg",
+  "contact_email": "hello@hivy.co.in",
+  "legal_info_url": "https://hivy.co.in/terms-conditions"
+}

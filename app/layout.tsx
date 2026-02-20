@@ -250,8 +250,127 @@ const jsonLd = {
               "description": "Special anniversary celebration with decorations and intimate dining"
             },
             "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Proposal Planning",
+              "description": "Romantic proposal setups with 'Marry Me' neon signs, rose petals, and ring presentation"
+            },
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pre-Wedding Photoshoot",
+              "description": "Romantic pre-wedding and engagement photoshoot venue with themed backdrops"
+            },
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Baby Shower & Gender Reveal",
+              "description": "Baby shower celebrations, gender reveal parties, and godh bharai events"
+            },
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Valentine's Day Celebration",
+              "description": "Special Valentine's Week celebrations including Rose Day, Propose Day, and Valentine's Day"
+            },
+            "priceCurrency": "INR"
           }
         ]
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Silver Love Package",
+          "price": "999",
+          "priceCurrency": "INR",
+          "description": "Basic celebration with decorated tent, welcome drink, 500gm cake, 1 hour duration",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Golden Romance Package",
+          "price": "1999",
+          "priceCurrency": "INR",
+          "description": "Premium tent, mocktails, 1kg cake, rose petals, personalised banner, 1.5 hours",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Diamond Celebration Package",
+          "price": "2999",
+          "priceCurrency": "INR",
+          "description": "Luxury tent with floral decoration, snacks, designer cake, photo frame, 2 hours",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Platinum Experience Package",
+          "price": "3999",
+          "priceCurrency": "INR",
+          "description": "Royal themed tent, multi-course dinner for 2, designer cake, background music, 2.5 hours",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Royal Celebration Package",
+          "price": "4999",
+          "priceCurrency": "INR",
+          "description": "Premium royal tent, 4-course dinner, 2kg cake, neon sign, unlimited time",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Ultimate Dream Package",
+          "price": "6999",
+          "priceCurrency": "INR",
+          "description": "Most premium experience with gourmet dinner, imported flowers, photographer, unlimited time",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
+      "knowsAbout": [
+        "Romantic celebrations",
+        "Candlelight dinners in Surat",
+        "Birthday surprise planning",
+        "Anniversary celebrations",
+        "Proposal planning",
+        "Pre-wedding photoshoots",
+        "Baby shower venues in Surat",
+        "Valentine's Day celebrations",
+        "Couple date night experiences",
+        "Private dining experiences",
+        "Romantic venue decoration",
+        "Gender reveal party planning"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Surat",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Gujarat",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "India"
+          }
+        }
+      },
+      "slogan": "Your Celebration, Our Passion",
+      "foundingDate": "2023",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 5,
+        "maxValue": 15
       }
     },
     {
@@ -283,13 +402,39 @@ const jsonLd = {
         "width": "512",
         "height": "512"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9727027278",
-        "contactType": "reservations",
-        "areaServed": "Surat",
-        "availableLanguage": ["English", "Hindi", "Gujarati"]
-      }
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9727027278",
+          "contactType": "reservations",
+          "areaServed": "Surat",
+          "availableLanguage": ["English", "Hindi", "Gujarati"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9727027278",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi", "Gujarati"]
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/hivy_placeforcelebration/",
+        "https://www.facebook.com/p/Hivy-placeforcelebration-61553052747625/"
+      ],
+      "knowsAbout": [
+        "Romantic celebration venue management",
+        "Candlelight dinner setup and service",
+        "Birthday surprise event planning",
+        "Anniversary celebration planning",
+        "Marriage proposal coordination",
+        "Pre-wedding photography venue",
+        "Baby shower and gender reveal events",
+        "Valentine's Day celebration planning",
+        "Private dining experience curation",
+        "Romantic tent decoration and theming"
+      ],
+      "description": "HIVY is Surat's premier romantic celebration venue offering private candlelight dinners, birthday surprises, anniversary celebrations, proposals, pre-wedding shoots, and baby shower experiences since 2023."
     },
     {
       "@type": "BreadcrumbList",

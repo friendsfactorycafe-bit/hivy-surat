@@ -11,6 +11,7 @@ import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat, FFCBookNowButton } from '@/components/ffc-booking-form';
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
 import { AreaConfig, getVisiblePackages, serviceCategories, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
+import { generateAreaPageContent } from '@/lib/ffc-unique-content';
 
 interface AreaPageProps {
   area: AreaConfig;
@@ -19,6 +20,9 @@ interface AreaPageProps {
 export default function FFCAreaPage({ area }: AreaPageProps) {
   // Get nearby areas (excluding current)
   const nearbyAreas = suratAreas.filter(a => a.slug !== area.slug).slice(0, 8);
+
+  // Generate unique rich content for this area
+  const uniqueContent = generateAreaPageContent(area);
 
   // JSON-LD Structured Data for area page
   const areaJsonLd = {
@@ -78,6 +82,17 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
             "item": `https://hivy.co.in/${area.slug}`
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": uniqueContent.faqContent.map((faq: { question: string; answer: string }) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
       }
     ]
   };
@@ -201,13 +216,20 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   Romantic Celebrations Near {area.name}
                 </h2>
                 
-                <p className="text-gray-600 mb-6">
-                  Are you looking for the perfect romantic celebration venue near {area.name}, Surat? HIVY - Place for Celebrations is your destination for creating unforgettable moments with your loved one.
-                </p>
+                {/* Rich Introduction */}
+                <div className="text-gray-600 mb-6 whitespace-pre-line">
+                  {uniqueContent.introduction}
+                </div>
 
-                <p className="text-gray-600 mb-6">
-                  Whether you're celebrating a birthday, anniversary, proposal, or simply want a romantic candlelight dinner, our venue offers stunning private setups and elegant glass houses that provide the perfect ambiance for your special moments.
-                </p>
+                {/* Dynamic Content Sections */}
+                {uniqueContent.sections.map((section, idx) => (
+                  <div key={idx} className="mb-8">
+                    <h3 className="text-xl font-bold mb-4">{section.heading}</h3>
+                    <div className="text-gray-600 whitespace-pre-line">
+                      {section.content}
+                    </div>
+                  </div>
+                ))}
 
                 <div className="bg-white rounded-xl p-6 mb-8">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -215,16 +237,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                     What We Offer in {area.name}
                   </h3>
                   <div className="grid md:grid-cols-2 gap-3">
-                    {[
-                      "Birthday Surprise Celebrations",
-                      "Candlelight Dinner Dates",
-                      "Anniversary Celebrations",
-                      "Romantic Proposal Setups",
-                      "Surprise Date Nights",
-                      "Pre-Wedding Photoshoots",
-                      "Baby Moment Celebrations",
-                      "Custom Celebrations"
-                    ].map((item, index) => (
+                    {uniqueContent.servicesList.map((item, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <Check className="h-4 w-4 text-amber-800 flex-shrink-0" />
                         <span className="text-gray-700">{item}</span>
@@ -233,28 +246,42 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-4">
-                  Why Couples in {area.name} Love Us
-                </h3>
-                
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start gap-3">
-                    <span className="text-amber-800 font-bold">•</span>
-                    <span><strong>Convenient Location:</strong> Easy access from {area.name} and all parts of Surat.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-amber-800 font-bold">•</span>
-                    <span><strong>100% Privacy:</strong> Your celebration is completely private with exclusive booking.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-amber-800 font-bold">•</span>
-                    <span><strong>6 Unique Setups:</strong> Choose from elegant indoor experiences.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-amber-800 font-bold">•</span>
-                    <span><strong>All-Inclusive Packages:</strong> Food, decorations, music, and more included.</span>
-                  </li>
-                </ul>
+                {/* Local Tips */}
+                <div className="bg-amber-50 rounded-xl p-6 mb-8 border border-amber-200">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-amber-800" />
+                    Local Tips for {area.name} Visitors
+                  </h3>
+                  <ul className="space-y-3">
+                    {uniqueContent.localTips.map((tip, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="text-amber-800 font-bold">•</span>
+                        <span className="text-gray-700">{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Testimonials */}
+                <div className="bg-stone-100 rounded-xl p-6 mb-8 border border-stone-200">
+                  <h3 className="text-xl font-bold mb-4">💬 What {area.name} Couples Say</h3>
+                  <div className="text-gray-600 italic whitespace-pre-line">
+                    {uniqueContent.testimonialContent}
+                  </div>
+                </div>
+
+                {/* Nearby Areas Info */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold mb-4">Serving Couples Across Surat</h3>
+                  <p className="text-gray-600">{uniqueContent.nearbyAreas}</p>
+                </div>
+
+                {/* Closing CTA */}
+                <div className="bg-gradient-to-r from-amber-800 to-amber-700 text-white rounded-xl p-6 mb-8">
+                  <div className="whitespace-pre-line">
+                    {uniqueContent.closingCta}
+                  </div>
+                </div>
               </article>
 
               {/* Packages */}
@@ -366,24 +393,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                question: `How do couples from ${area.name} reach HIVY - Place for Celebrations?`,
-                answer: `HIVY - Place for Celebrations is conveniently located in Surat and easily accessible from ${area.name}. You can reach us by car, auto, or cab in a short time. Contact us for exact directions.`
-              },
-              {
-                question: "Do you offer pickup services?",
-                answer: "Currently, we don't offer pickup services, but we can help guide you with the best routes from your location."
-              },
-              {
-                question: "What are the booking options available?",
-                answer: `Couples from ${area.name} can book via WhatsApp, phone call, or our online form. We recommend booking 2-3 days in advance for your preferred slot.`
-              },
-              {
-                question: "Is the venue private?",
-                answer: "Yes! Your celebration is 100% private. No other guests will be present during your booking slot."
-              }
-            ].map((faq, index) => (
+            {uniqueContent.faqContent.map((faq, index) => (
               <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}

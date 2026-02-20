@@ -81,7 +81,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
       },
       {
         "@type": "FAQPage",
-        "mainEntity": uniqueContent.faq?.map((faq: { question: string; answer: string }) => ({
+        "mainEntity": uniqueContent.faqContent?.map((faq: { question: string; answer: string }) => ({
           "@type": "Question",
           "name": faq.question,
           "acceptedAnswer": {
@@ -262,6 +262,32 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                   <div className="text-gray-600 italic whitespace-pre-line">
                     {uniqueContent.testimonialContent}
                   </div>
+                </div>
+
+                {/* Booking Process */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold mb-4">How to Book Your {keyword.title}</h3>
+                  <div className="space-y-4">
+                    {uniqueContent.process.map((step, index) => (
+                      <div key={index} className="flex items-start gap-4">
+                        <div className="w-8 h-8 rounded-full bg-amber-800 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                          {index + 1}
+                        </div>
+                        <div>
+                          <p className="font-semibold text-gray-900">{step.step}</p>
+                          <p className="text-gray-600 text-sm">{step.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Pricing Info */}
+                <div className="bg-amber-50 rounded-xl p-6 mb-8 border border-amber-200">
+                  <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                    💰 {keyword.title} Pricing
+                  </h3>
+                  <p className="text-gray-600">{uniqueContent.pricingIntro}</p>
                 </div>
               </article>
 

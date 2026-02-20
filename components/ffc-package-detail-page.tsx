@@ -8,9 +8,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import { SetupPackage, packages, formatPrice, siteConfig } from '@/lib/ffc-config';
+import { generatePackagePageContent } from '@/lib/ffc-unique-content';
 
 interface PackageDetailPageProps {
   package: SetupPackage;
@@ -24,6 +26,23 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
   const thumbnailContainerRef = useRef<HTMLDivElement>(null);
   const imagesPerPage = 5;
   const totalPages = Math.ceil(pkg.images.length / imagesPerPage);
+
+  // Generate unique rich content
+  const pageContent = generatePackagePageContent(pkg);
+
+  // 10 unique FAQs for this package
+  const packageFaqs = [
+    { question: `What is included in the ${pkg.name} package?`, answer: `The ${pkg.name} package (₹${pkg.price.toLocaleString()}) includes 3 hours of private venue access, themed ${pkg.name} decoration with fairy lights, candles, balloons and flowers, a three-course meal for two, welcome drinks, mocktails, ${pkg.cakeIncluded ? 'a complimentary celebration cake, ' : ''}background music via Bluetooth speaker, and a personalised welcome board.` },
+    { question: `How do I book the ${pkg.name} package?`, answer: `Call ${siteConfig.phone}, send a WhatsApp message, or fill out the booking form on our website. Share your preferred date, time slot, and any customisation requests. Our team confirms availability within minutes.` },
+    { question: `Can I customise the ${pkg.name} decorations?`, answer: `Yes! You can request specific colour themes, neon signs, custom banners, particular flower varieties, extra balloons, and personalised props. Our team will match your vision for the ${pkg.name} setup.` },
+    { question: `What occasions is the ${pkg.name} best suited for?`, answer: `The ${pkg.name} is perfect for ${pkg.perfectFor.join(', ')}. Each occasion gets tailored decoration touches within the ${pkg.name} framework.` },
+    { question: `Is photography included in the ${pkg.name} package?`, answer: `Professional photography is included in select premium packages. For the ${pkg.name}, you can add a photographer at a nominal cost or bring your own. Our setup is designed to be highly photogenic.` },
+    { question: `How many guests can the ${pkg.name} accommodate?`, answer: `The ${pkg.name} is designed for couples (2 people). For celebrations with up to 4 guests, we can discuss special arrangements. Contact us for group requirements.` },
+    { question: `What food is served with the ${pkg.name}?`, answer: `The ${pkg.name} includes a full three-course meal: starters (cheese fondue, paneer tortilla), mains (peri peri fries, mac & cheese, tangy loaf), and dessert (chocolate brownie). All dishes are freshly prepared vegetarian cuisine. Jain options available.` },
+    { question: `Can I reschedule my ${pkg.name} booking?`, answer: `Yes, rescheduling is free if informed at least 24 hours before your slot. The new date must fall within one month. Call ${siteConfig.phone} to reschedule. Note: no-refund policy applies.` },
+    { question: `What time slots are available for the ${pkg.name}?`, answer: `Lunch (12–5 PM), Evening (4–9 PM), and Dinner (7–11 PM) slots are available. Evening and dinner slots are most popular for the ${pkg.name} due to the enhanced candlelight ambiance.` },
+    { question: `How does the ${pkg.name} differ from other HIVY packages?`, answer: `Each HIVY package features a unique tent style and decoration aesthetic. The ${pkg.name} has its own distinctive design, layout, and atmosphere. Visit our virtual tour page or call us to compare setups and find your perfect match.` },
+  ];
 
   // JSON-LD Structured Data for this package
   const packageJsonLd = {
@@ -81,6 +100,14 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
             "item": `https://hivy.co.in/packages/${pkg.slug}`
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": packageFaqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+        }))
       }
     ]
   };
@@ -420,6 +447,77 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Rich Experience Description */}
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 font-serif">
+                ✨ The Complete {pkg.name} Experience
+              </h2>
+              <div className="text-gray-600 whitespace-pre-line leading-relaxed text-sm md:text-base">
+                {pageContent.experienceDescription}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Ideal For Section */}
+      <section className="py-8 md:py-12 bg-stone-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 font-serif">
+                🎉 Who Is {pkg.name} Perfect For?
+              </h2>
+              <div className="text-gray-600 whitespace-pre-line leading-relaxed text-sm md:text-base">
+                {pageContent.idealFor}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Booking Guide */}
+      <section className="py-8 md:py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6 font-serif">
+                📋 How to Book {pkg.name}
+              </h2>
+              <div className="text-gray-600 whitespace-pre-line leading-relaxed text-sm md:text-base">
+                {pageContent.bookingGuide}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-16 bg-stone-100">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold font-serif">
+              {pkg.name} — Frequently Asked Questions
+            </h2>
+          </div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {packageFaqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
+                <AccordionTrigger className="text-left font-medium hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
 

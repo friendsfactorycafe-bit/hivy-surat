@@ -11,6 +11,7 @@ import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
 import { ServiceCategory, getVisiblePackages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
+import { generateServicePageContent } from '@/lib/ffc-unique-content';
 
 interface ServicePageProps {
   service: ServiceCategory;
@@ -19,6 +20,9 @@ interface ServicePageProps {
 export default function FFCServicePage({ service }: ServicePageProps) {
   // Get related packages
   const relatedPackages = getVisiblePackages().slice(0, 4);
+
+  // Generate unique rich content for this service
+  const serviceContent = generateServicePageContent(service);
 
   return (
     <div className="min-h-screen bg-white">
@@ -158,6 +162,49 @@ export default function FFCServicePage({ service }: ServicePageProps) {
         </div>
       </section>
 
+      {/* Rich Service Content */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none">
+              <div className="text-gray-600 mb-8 whitespace-pre-line">
+                {serviceContent.introduction}
+              </div>
+
+              {serviceContent.sections.map((section, idx) => (
+                <div key={idx} className="mb-8">
+                  <h2 className="text-2xl font-bold mb-4 font-serif">{section.heading}</h2>
+                  <div className="text-gray-600 whitespace-pre-line">
+                    {section.content}
+                  </div>
+                </div>
+              ))}
+
+              {/* What's Included */}
+              <div className="bg-stone-100 rounded-xl p-6 mb-8">
+                <h3 className="text-xl font-bold mb-4">✨ What Every {service.name} Package Includes</h3>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {serviceContent.inclusions.map((item, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-amber-800 flex-shrink-0" />
+                      <span className="text-gray-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Testimonials */}
+              <div className="bg-amber-50 rounded-xl p-6 mb-8 border border-amber-200">
+                <h3 className="text-xl font-bold mb-4">💬 What Couples Say About Our {service.name}</h3>
+                <div className="text-gray-600 italic whitespace-pre-line">
+                  {serviceContent.testimonials}
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Keywords/Related Pages */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -257,6 +304,71 @@ export default function FFCServicePage({ service }: ServicePageProps) {
         </div>
       </section>
 
+      {/* FAQ Schema for SEO & AI visibility */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": serviceContent.faqs.map((faq: { question: string; answer: string }) => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+          }))
+        }) }}
+      />
+
+      {/* HowTo Schema for AI visibility */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": `How to Book ${service.name} at HIVY in Surat`,
+          "description": `Step-by-step guide to book a ${service.name.toLowerCase()} experience at HIVY – Place for Celebrations, Surat's best romantic celebration venue.`,
+          "totalTime": "PT10M",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "INR",
+            "value": "999"
+          },
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Choose Your Package",
+              "text": `Browse HIVY's celebration packages starting from ₹999 to ₹6,999. Select a package that matches your ${service.name.toLowerCase()} needs — Silver Love for basic, up to Ultimate Dream for premium experiences.`,
+              "url": "https://hivy.co.in/packages"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Contact HIVY to Book",
+              "text": "WhatsApp or call +91 9727027278 with your preferred date, time slot, and package choice. Our team responds within 30 minutes during operating hours (11 AM – 11 PM).",
+              "url": "https://hivy.co.in/contact"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Confirm with Advance Deposit",
+              "text": "Pay a 50% advance deposit via UPI (GPay/PhonePe), bank transfer, or cash to confirm your booking. You'll receive a confirmation message with all details."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 4,
+              "name": "Share Your Customisation Requests",
+              "text": `Tell us about any special requests for your ${service.name.toLowerCase()} — personalised banners, specific flowers, cake flavour preferences, Jain food requirements, or custom decorations.`
+            },
+            {
+              "@type": "HowToStep",
+              "position": 5,
+              "name": "Arrive and Celebrate",
+              "text": `Arrive at HIVY, Adajan-Pal, Surat at your booked time. Your private ${service.name.toLowerCase()} tent will be fully prepared with decorations, dining setup, and your personal host ready to welcome you.`
+            }
+          ]
+        }) }}
+      />
+
       {/* FAQ Section */}
       <section className="py-16 bg-stone-100">
         <div className="container mx-auto px-4 max-w-3xl">
@@ -267,24 +379,7 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           </div>
           
           <Accordion type="single" collapsible className="space-y-4">
-            {[
-              {
-                question: `How can I book a ${service.name.toLowerCase()} at HIVY - Place for Celebrations?`,
-                answer: `Booking is easy! Call us at ${siteConfig.phone}, WhatsApp us, or fill out our online form. We recommend booking 2-3 days in advance.`
-              },
-              {
-                question: `What is included in the ${service.name.toLowerCase()} package?`,
-                answer: "Our packages include 3 hours of private celebration, welcome drink, celebration cake, romantic decorations, comfortable seating, and soft music."
-              },
-              {
-                question: "Is the venue completely private?",
-                answer: "Yes! Our venue is exclusively for couples. You'll have complete privacy during your celebration with no other guests present."
-              },
-              {
-                question: "Can I customize the decorations?",
-                answer: "Absolutely! We love creating personalized experiences. Share your ideas and preferences, and we'll make them happen."
-              }
-            ].map((faq, index) => (
+            {serviceContent.faqs.map((faq, index) => (
               <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
                 <AccordionTrigger className="text-left font-medium hover:no-underline">
                   {faq.question}

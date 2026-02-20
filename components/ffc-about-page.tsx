@@ -7,14 +7,40 @@ import { Heart, Star, Users, Award, Clock, MapPin, Phone, Mail } from 'lucide-re
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCWhatsAppFloat } from '@/components/ffc-booking-form';
 import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig } from '@/lib/ffc-config';
 
 export default function FFCAboutPage() {
+  const aboutFaqs = [
+    { question: "What is HIVY - Place for Celebrations?", answer: "HIVY is Surat's premier private celebration venue for couples, located on Sevasi-Canal Road in Gotri. We specialise in candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, pre-wedding photoshoots, and baby shower events — all in fully private, beautifully decorated tent setups." },
+    { question: "When did HIVY open and how long has it been operating?", answer: "HIVY has been creating memorable celebrations since 2020 — that's over 5 years of hosting romantic experiences for Surat couples. In that time, we've served over 3,000 couples and maintained a consistent 4.9-star Google rating." },
+    { question: "Where is HIVY located in Surat?", answer: "HIVY is located at 252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Green City Road, Sevasi-Canal Road, Gotri, Surat 394510. It's easily accessible from all major Surat areas within 15-30 minutes." },
+    { question: "What kind of celebrations does HIVY host?", answer: "We host candlelight dinners, birthday surprises (for boyfriend, girlfriend, husband, wife), anniversary celebrations (1st to 25th+), marriage proposals, engagement reveals, pre-wedding photoshoots, baby showers, pregnancy announcements, Valentine's Day specials, and romantic date nights." },
+    { question: "Is HIVY a couples-only venue?", answer: "Yes, HIVY is exclusively designed for couples seeking privacy and romance. Each celebration tent is fully enclosed and reserved only for your booking slot. No other guests are present in your space." },
+    { question: "How many celebration setups does HIVY offer?", answer: "We offer 5-6 unique celebration setups including Swing of Love, Garden of Dreams, Boho Chic, Royal Celebration, Tent of Romance, and Fairy Tale Proposals. Each has a distinct aesthetic and personality." },
+    { question: "What are HIVY's operating hours?", answer: "HIVY operates from 11 AM to 11 PM daily, 7 days a week. We offer Lunch (12-5 PM), Evening (4-9 PM), and Dinner (7-11 PM) celebration slots, each lasting 3 hours." },
+    { question: "What makes HIVY different from restaurants in Surat?", answer: "Unlike restaurants, HIVY provides 100% private, pre-decorated celebration spaces with professional ambiance. No shared dining halls, no eavesdropping, no time pressure. Everything — decorations, food, music, photography — is included in a single transparent package price." },
+    { question: "What is HIVY's Google rating?", answer: "HIVY maintains a 4.9-star rating on Google with 150+ verified reviews. Our consistently high rating reflects our commitment to delivering exceptional romantic celebration experiences for every couple." },
+    { question: "Can I visit HIVY to see the setups before booking?", answer: "Yes! Walk-in venue previews are available on weekday afternoons. Call +91 9727027278 to schedule a tour. You can view the tent setups, discuss customisations, and choose the perfect package in person." },
+  ];
+
+  const aboutFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": aboutFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* FAQ Schema for AI & SEO visibility */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqJsonLd) }} />
       <FFCHeader />
       
       {/* Hero Section */}
@@ -223,8 +249,105 @@ export default function FFCAboutPage() {
         </div>
       </section>
 
+      {/* Rich SEO Content Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif text-gray-900">
+                The HIVY Story — How Surat Got Its Own Romantic Celebration Venue
+              </h2>
+              <p>
+                When HIVY first opened its doors on Sevasi-Canal Road in Gotri, Surat, the romantic celebration scene in the city looked very different. Couples searching for a <strong>candlelight dinner in Surat</strong> were limited to noisy restaurant corners or expensive hotel packages that came with zero privacy. There was no dedicated space where two people could sit surrounded by fairy lights, flowers, and soft music — without strangers at the next table. HIVY was born to fill that gap, and five years later it remains the most trusted <strong>private celebration venue for couples in Surat</strong>.
+              </p>
+              <p>
+                The idea was simple: build a venue that feels like stepping into a dream. A space where every candle is hand-placed, every rose petal is freshly scattered, and every couple feels like the only two people in the world. From that single motivation, HIVY has grown into a full-service romantic experience company, hosting everything from intimate <strong>candlelight dinners</strong> and <strong>birthday surprises</strong> to elaborate <strong>marriage proposals</strong>, <strong>anniversary celebrations</strong>, <strong>pre-wedding photoshoots</strong>, and even <strong>baby shower events</strong>.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
+                Our Philosophy — Romance Should Be Effortless
+              </h3>
+              <p>
+                Planning a surprise takes weeks of mental energy: finding the venue, choosing decorations, coordinating food, organising a photographer, and praying nothing goes wrong. At HIVY, we absorb all of that stress. When you book a celebration with us, our team manages every detail — from the themed tent decoration and balloon arches to the three-course meal, the background playlist, and the professional photographer who captures your partner's expression the moment they walk in.
+              </p>
+              <p>
+                This "zero-stress romance" philosophy is why we've served <strong>over 500 couples in Surat</strong> with a consistent <strong>4.9-star rating on Google</strong>. Whether it's a husband planning an <strong>anniversary surprise for his wife</strong>, a girlfriend organising a <strong>birthday surprise for her boyfriend</strong>, or a young man rehearsing how he'll drop to one knee during a <strong>romantic proposal dinner</strong>, the outcome is always the same — genuine tears, wide smiles, and a memory that lasts forever.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
+                What Happens Inside HIVY — A Peek Behind the Fairy Lights
+              </h3>
+              <p>
+                Every setup at HIVY follows a three-hour arc designed to build emotion gradually. Here's what a typical evening looks like:
+              </p>
+              <ul className="space-y-2 my-4">
+                <li className="flex items-start gap-2"><span className="text-amber-800 font-bold">1.</span> <strong>The Grand Reveal (First 30 Minutes)</strong> — Your partner is led blindfolded (if you choose) into a tent glowing with candles, fairy lights, and their favourite colours. A personalised message board greets them. The photographer captures the surprise.</li>
+                <li className="flex items-start gap-2"><span className="text-amber-800 font-bold">2.</span> <strong>The Dining Experience (Next 90 Minutes)</strong> — A three-course café-style meal arrives at your private table: starters, a main course, and a dessert platter with a custom cake. Mocktails or sparkling beverages complement the food. Background music shifts from upbeat to soft as the evening deepens.</li>
+                <li className="flex items-start gap-2"><span className="text-amber-800 font-bold">3.</span> <strong>The Celebration Moment (Final 60 Minutes)</strong> — Whether it's cake-cutting, a ring reveal, a photo session, or simply holding hands under the lights, this is the time the space is purely yours. No interruptions, no strangers — just you and the person you love.</li>
+              </ul>
+
+              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
+                Why Surat Couples Choose HIVY Over Hotels and Restaurants
+              </h3>
+              <p>
+                <strong>Privacy</strong> is the number-one reason. Hotels charge premium rates but seat you in a semi-public banquet hall. Restaurants let other diners eavesdrop on your proposal speech. HIVY's individual tent setups — including the popular <em>Swing of Love</em>, <em>Garden of Dreams</em>, <em>Royal Celebration</em>, and <em>Starlight Canopy</em> — are enclosed, decorated, and reserved exclusively for your booking slot.
+              </p>
+              <p>
+                <strong>Affordability</strong> is the second reason. Packages start from just ₹4,700 and include everything: decoration, food, cake, mocktails, photographer, and a Bluetooth speaker for your playlist. There are no hidden charges, no service tax surprises. What you see on our packages page is what you pay.
+              </p>
+              <p>
+                <strong>Customisation</strong> seals the deal. Want a neon sign saying "Marry Me"? Done. Need a specific cake flavour? Arranged. Prefer a particular colour palette for the balloons? Our team matches it. We've handled requests as unique as recreating a couple's first-date seating arrangement and placing handwritten love letters inside balloon pops — and we delivered every single one.
+              </p>
+
+              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
+                Serving Every Corner of Surat — From Adajan to Varachha
+              </h3>
+              <p>
+                Located on Sevasi-Canal Road in Gotri, HIVY is easily accessible from virtually every part of Surat. Couples from <strong>Vesu, Adajan, Althan, Piplod, City Light, Pal, and Dumas Road</strong> reach us in under 30 minutes. Even residents of <strong>Varachha, Katargam, Udhna, Pandesara, and Amroli</strong> find the drive worth it once they see the setup in person. Free parking, clear Google Maps directions, and a well-lit approach road make the journey effortless — especially for surprise planners bringing a blindfolded partner.
+              </p>
+              <p>
+                Over the past five years, we have hosted couples from every major locality in the Surat district and even visitors from Navsari, Valsad, Bharuch, and Ahmedabad who discovered us on Instagram. Our <strong>couple-friendly café</strong> has become a landmark on the Gotri celebration circuit, and we intend to keep raising the bar — one fairy light at a time.
+              </p>
+
+              <div className="mt-10 p-6 bg-amber-50 border border-amber-200 rounded-xl text-center">
+                <p className="text-lg font-semibold text-amber-900 mb-2">
+                  Ready to experience the HIVY difference?
+                </p>
+                <p className="text-gray-600">
+                  Call <a href={`tel:${siteConfig.phone}`} className="text-amber-800 font-bold hover:underline">{siteConfig.phone}</a> or{' '}
+                  <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-green-600 font-bold hover:underline">WhatsApp us</a> to book your celebration today.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Google Reviews Slider Section */}
       <FFCReviewsSlider />
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-stone-100">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4 font-serif">
+              About HIVY — Frequently Asked Questions
+            </h2>
+          </div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {aboutFaqs.map((faq, index) => (
+              <AccordionItem key={index} value={`faq-${index}`} className="bg-white rounded-lg border border-stone-200 px-6">
+                <AccordionTrigger className="text-left font-medium hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white">

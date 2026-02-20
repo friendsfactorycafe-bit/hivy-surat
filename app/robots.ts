@@ -198,6 +198,91 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "Pinterestbot",
         allow: "/",
       },
+      // ========== AI CRAWLERS - ALLOW FOR AI VISIBILITY ==========
+      {
+        // OpenAI GPTBot (used to train and power ChatGPT)
+        userAgent: "GPTBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // OpenAI ChatGPT user-initiated browsing
+        userAgent: "ChatGPT-User",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Google AI / Gemini training crawler
+        userAgent: "Google-Extended",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Anthropic AI / Claude crawler
+        userAgent: "anthropic-ai",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Anthropic ClaudeBot
+        userAgent: "ClaudeBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Perplexity AI crawler
+        userAgent: "PerplexityBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Cohere AI crawler
+        userAgent: "cohere-ai",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Common Crawl (used by many AI models)
+        userAgent: "CCBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // ByteDance / TikTok AI crawler
+        userAgent: "Bytespider",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // You.com AI search engine
+        userAgent: "YouBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Apple extended crawler (Siri, Apple Intelligence)
+        userAgent: "Applebot-Extended",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Meta AI crawler
+        userAgent: "FacebookBot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Amazon Alexa crawler
+        userAgent: "Amazonbot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
+      {
+        // Microsoft AI / Copilot crawler
+        userAgent: "Bingbot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/leads/"],
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,

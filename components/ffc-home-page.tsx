@@ -342,12 +342,33 @@ export default function FFCHomePage() {
     }))
   };
 
+  // Speakable schema for voice assistants (Google Assistant, Siri, Alexa)
+  const speakableJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "HIVY - Place for Celebrations | Best Romantic Venue in Surat",
+    "url": "https://hivy.co.in",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-description", ".faq-section", ".services-heading"]
+    },
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "@id": "https://hivy.co.in/#business"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* FAQ Schema for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqJsonLd) }}
+      />
+      {/* Speakable Schema for Voice Assistants & AI */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableJsonLd) }}
       />
       <FFCHeader />
       
@@ -670,6 +691,56 @@ export default function FFCHomePage() {
 
       {/* Gallery Section */}
       <GallerySection />
+
+      {/* Rich SEO Content */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <article className="prose prose-lg max-w-none">
+              <h2 className="text-3xl font-bold mb-6 font-serif text-center">
+                HIVY — Surat's Premier Romantic Celebration Venue for Couples
+              </h2>
+              
+              <p className="text-gray-600 mb-6">
+                Surat, the Diamond City of India, is a city that knows how to celebrate. From grand weddings to intimate gatherings, the people of Surat understand that every milestone deserves recognition. Yet for years, couples looking for truly private romantic celebrations faced a gap — restaurants felt public, hotels were impersonal, and home celebrations lacked the wow factor. HIVY - Place for Celebrations was born to fill this gap, offering Surat's couples a dedicated space where romance, privacy, and memorable experiences come together seamlessly.
+              </p>
+
+              <p className="text-gray-600 mb-6">
+                Located on the 2nd Floor of The Boulevard, near Pratham Circle on Galleria Street in Adajan, our venue has quickly become the most trusted name for romantic celebrations in Surat. Whether couples are looking for a candlelight dinner to reignite the spark, a birthday surprise that leaves their partner speechless, an anniversary celebration that honours their journey, or a proposal setting that guarantees a "yes" — HIVY delivers experiences that exceed expectations every single time.
+              </p>
+
+              <h3 className="text-2xl font-bold mb-4 font-serif">What Makes HIVY Different from Restaurants & Hotels</h3>
+              <p className="text-gray-600 mb-6">
+                The fundamental difference lies in exclusivity. When you book a celebration at HIVY, the entire setup is exclusively yours. Unlike restaurants where other diners surround you, or hotels where event spaces feel corporate, our venue provides a genuinely private romantic experience. No strangers at the next table, no background noise from other parties, and no rushing to vacate for the next booking. Your three-hour celebration window is yours to enjoy at your own pace.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Our setups are not simply tables and chairs with candles thrown in. Each of our six unique celebration packages represents a distinct aesthetic vision — from the bohemian warmth of our Tent of Romance to the elegant sophistication of our Swing of Love. These setups are designed by our creative team, tested through thousands of celebrations, and continuously enhanced based on couple feedback and current trends.
+              </p>
+
+              <h3 className="text-2xl font-bold mb-4 font-serif">The HIVY Experience — From Booking to Goodbye</h3>
+              <p className="text-gray-600 mb-6">
+                Every HIVY celebration follows a thoughtful journey. It begins when you contact us — typically via WhatsApp, which allows for quick, conversational planning. Our team understands your occasion, recommends suitable packages, discusses any personalisation requests, and confirms your preferred date and time slot. We offer four daily slots — Lunch (12-3 PM), Evening (4-7 PM), Dinner (7-10 PM), and Late Night (10 PM-1 AM) — ensuring flexibility for every schedule.
+              </p>
+              <p className="text-gray-600 mb-6">
+                On celebration day, our team begins setup preparation three hours before your arrival. Every balloon is placed, every candle is positioned, every flower is arranged, and your personalised touches are incorporated. When you and your partner arrive, you walk into a fully realised romantic setting with soft music already playing and drinks ready to be served. The next three hours unfold with delicious food, meaningful conversations, photograph-worthy moments, and the kind of undivided togetherness that modern life rarely allows.
+              </p>
+
+              <h3 className="text-2xl font-bold mb-4 font-serif">Celebrations We Specialise In</h3>
+              <p className="text-gray-600 mb-6">
+                Our most popular celebrations include birthday surprises (where we coordinate with the planning partner to maintain the element of surprise), candlelight dinners (perfect for date nights and special occasions), anniversary celebrations (from 1st to 50th), marriage proposals (with ring reveal coordination), surprise dates (for keeping the romance alive), and pre-wedding photoshoots (with multiple setup options in one venue). We also host baby announcement parties, gender reveals, Valentine's Week celebrations, and any occasion where love needs to be celebrated.
+              </p>
+
+              <h3 className="text-2xl font-bold mb-4 font-serif">Trusted by Over 3,000 Surat Couples</h3>
+              <p className="text-gray-600 mb-6">
+                Numbers speak volumes, but the stories behind them speak louder. Over 3,000 couples from across Surat — from Adajan, Vesu, and Athwa to Varachha, Althan, and Pal — have celebrated their special moments with us. Many return for multiple occasions, turning HIVY into their go-to celebration venue. Our 4.9-star rating on Google, built entirely on genuine reviews, reflects the consistency of experiences we deliver. We invite you to read those reviews and see why Surat's couples trust HIVY for their most important moments.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Whether today is a birthday, an anniversary, a proposal day, or simply a day you want to make special for someone you love — HIVY - Place for Celebrations is ready to turn your vision into a beautiful reality. Contact us at {siteConfig.phone} to begin planning your celebration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
       {/* Blog Section */}
       <BlogSection />
