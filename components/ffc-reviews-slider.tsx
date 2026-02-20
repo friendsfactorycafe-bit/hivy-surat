@@ -40,7 +40,7 @@ const reviews = [
     initial: "D",
     color: "bg-cyan-500",
     date: "3 weeks ago",
-    review: "Such a great time!!!! Thanks to my hubby and the team of friends factory cafe!!!"
+    review: "Such a great time!!!! Thanks to my hubby and the team of HIVY!!!!"
   },
   {
     name: "Vraj Patel",
@@ -96,8 +96,8 @@ export default function FFCReviewsSlider({ showTitle = true, compact = false }: 
                   <Star key={star} className="h-5 w-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-lg font-bold">5.0</span>
-              <span className="text-gray-500 text-sm">• 1256 reviews</span>
+              <span className="text-lg font-bold">4.9</span>
+              <span className="text-gray-500 text-sm">• 150+ reviews</span>
             </div>
           </div>
         )}

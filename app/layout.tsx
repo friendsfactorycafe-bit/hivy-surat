@@ -292,50 +292,42 @@ const jsonLd = {
       "makesOffer": [
         {
           "@type": "Offer",
-          "name": "Silver Love Package",
-          "price": "999",
+          "name": "Swing of Love Package",
+          "price": "5100",
           "priceCurrency": "INR",
-          "description": "Basic celebration with decorated tent, welcome drink, 500gm cake, 1 hour duration",
+          "description": "Romantic swing setup with fairy lights, flower garlands, rose petals, 3-course dinner, mocktails, cake, and professional photography",
           "availability": "https://schema.org/InStock"
         },
         {
           "@type": "Offer",
-          "name": "Golden Romance Package",
-          "price": "1999",
+          "name": "Elite Group Setup Package",
+          "price": "5400",
           "priceCurrency": "INR",
-          "description": "Premium tent, mocktails, 1kg cake, rose petals, personalised banner, 1.5 hours",
+          "description": "Custom group celebration setup with themed decorations, food, cake, and photography for small groups",
           "availability": "https://schema.org/InStock"
         },
         {
           "@type": "Offer",
-          "name": "Diamond Celebration Package",
-          "price": "2999",
+          "name": "BoHo Chic Package",
+          "price": "5700",
           "priceCurrency": "INR",
-          "description": "Luxury tent with floral decoration, snacks, designer cake, photo frame, 2 hours",
+          "description": "Bohemian-themed celebration with macramé drapes, rustic candles, boho decorations, 3-course dinner, and photography",
           "availability": "https://schema.org/InStock"
         },
         {
           "@type": "Offer",
-          "name": "Platinum Experience Package",
-          "price": "3999",
+          "name": "Fairy Tale Proposals Package",
+          "price": "6300",
           "priceCurrency": "INR",
-          "description": "Royal themed tent, multi-course dinner for 2, designer cake, background music, 2.5 hours",
+          "description": "Premium proposal and celebration setup with rose petal pathway, Marry Me neon sign, floral arches, dinner, and photography",
           "availability": "https://schema.org/InStock"
         },
         {
           "@type": "Offer",
-          "name": "Royal Celebration Package",
-          "price": "4999",
+          "name": "Tent of Romance Package",
+          "price": "6500",
           "priceCurrency": "INR",
-          "description": "Premium royal tent, 4-course dinner, 2kg cake, neon sign, unlimited time",
-          "availability": "https://schema.org/InStock"
-        },
-        {
-          "@type": "Offer",
-          "name": "Ultimate Dream Package",
-          "price": "6999",
-          "priceCurrency": "INR",
-          "description": "Most premium experience with gourmet dinner, imported flowers, photographer, unlimited time",
+          "description": "Most premium tent experience with luxury decorations, gourmet dinner, designer cake, and professional photography",
           "availability": "https://schema.org/InStock"
         }
       ],

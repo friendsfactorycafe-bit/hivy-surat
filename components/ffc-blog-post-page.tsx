@@ -277,7 +277,7 @@ function generateArticleContent(post: BlogPost): string {
       <p>We offer various packages starting from ₹6,500 that include decorations, cake, mocktails, and a private 3-hour celebration slot. Each package can be customized to match your vision.</p>
       
       <h3>Book Your Birthday Celebration</h3>
-      <p>Don't let another birthday pass by without making it special. Contact us today to book your birthday surprise at Surat's most romantic romantic cafe.</p>
+      <p>Don't let another birthday pass by without making it special. Contact us today to book your birthday surprise at Surat's most romantic cafe.</p>
     `,
     'Proposal': `
       <h2>Planning the Perfect Proposal in Surat</h2>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'candlelight dinner surat',
     'anniversary celebration surat',
     'proposal setup surat',
-    'friends factory cafe services'
+    'hivy place for celebrations services'
   ],
   alternates: {
     canonical: 'https://hivy.co.in/services',

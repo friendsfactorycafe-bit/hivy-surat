@@ -16,9 +16,4 @@ dist
 .env.local
 .env.*.local
 
-# Large video files (exclude for faster git push)
-public/videos/*.mp4
-public/videos/*.MP4
-public/videos/*.mov
-public/videos/*.MOV
 public.zip

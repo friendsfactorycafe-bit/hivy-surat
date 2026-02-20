@@ -81,7 +81,7 @@ export async function generateMetadata({
         `romantic celebration ${area.name}`,
         `candlelight dinner ${area.name}`,
         `birthday surprise ${area.name}`,
-        `friends factory cafe ${area.name}`,
+        `hivy place for celebrations ${area.name}`,
         `couple cafe ${area.name} surat`,
         `anniversary dinner ${area.name}`,
         `romantic restaurant ${area.name}`,
@@ -119,7 +119,7 @@ export async function generateMetadata({
         keywordData.keyword.title.toLowerCase(),
         `${keywordData.keyword.title.toLowerCase()} surat`,
         `${keywordData.service.name.toLowerCase()} surat`,
-        `friends factory cafe ${keywordData.keyword.title.toLowerCase()}`,
+        `hivy place for celebrations ${keywordData.keyword.title.toLowerCase()}`,
         `best ${keywordData.keyword.title.toLowerCase()} surat`,
         `${keywordData.service.name.toLowerCase()} near me surat`
       ],

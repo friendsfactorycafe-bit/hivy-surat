@@ -19,7 +19,7 @@ export default function FFCContactPage() {
     { question: "Is there a booking deposit required?", answer: "Yes, a small advance payment of ₹500-₹1,000 secures your slot. The remaining balance is due on the day of celebration. We accept UPI (Google Pay, PhonePe), bank transfer, credit/debit cards, and cash." },
     { question: "Can I reschedule my booking at HIVY?", answer: "Yes, rescheduling is free if informed at least 24 hours before your booked slot. The new date must fall within one month of the original booking, subject to availability. Call +91 9727027278 to reschedule." },
     { question: "What is HIVY's refund policy?", answer: "Please note that a no-refund policy applies to all bookings. However, free rescheduling is available with 24 hours notice. We encourage couples to confirm their dates before booking." },
-    { question: "How do I reach HIVY from different parts of Surat?", answer: "HIVY is located on Sevasi-Canal Road in Gotri. From Vesu, Adajan, City Light, or Althan, the drive is 15-25 minutes. From Varachha, Katargam, or Udhna, allow 20-30 minutes. Search 'HIVY Place for Celebrations' on Google Maps for turn-by-turn navigation." },
+    { question: "How do I reach HIVY from different parts of Surat?", answer: "HIVY is located near Pratham Circle, Green City Road, Adajan. From Vesu, Adajan, City Light, or Althan, the drive is 15-25 minutes. From Varachha, Katargam, or Udhna, allow 20-30 minutes. Search 'HIVY Place for Celebrations' on Google Maps for turn-by-turn navigation." },
     { question: "Is parking available at HIVY?", answer: "Yes, ample free parking is available for both cars and two-wheelers right at the venue entrance. There is no need for street parking or walking long distances." },
     { question: "Can I visit HIVY before booking to see the setups?", answer: "Absolutely! Walk-in venue previews are available on weekday afternoons. Call +91 9727027278 to schedule a tour. You can view the tent setups, meet the team, and choose the perfect package." },
     { question: "What information do I need to provide when booking?", answer: "Please share: your name, contact number, occasion type (birthday, anniversary, proposal, etc.), preferred date and time slot, preferred package, and any special customisation requests. Our team handles everything from there." },
@@ -220,23 +220,23 @@ export default function FFCContactPage() {
                 How to Reach HIVY — Surat's Best Private Celebration Venue for Couples
               </h2>
               <p>
-                Finding the perfect <strong>candlelight dinner venue in Surat</strong> is only half the journey — getting there stress-free matters just as much, especially when you're planning a surprise. HIVY - Place for Celebrations is located on Sevasi-Canal Road in the heart of Gotri, one of Surat's fastest-developing residential hubs. Whether you're driving from <strong>Vesu, Adajan, City Light, Althan, or Pal</strong>, you'll find us within a comfortable 15-to-25-minute drive, with clearly marked road signs and full Google Maps navigation support.
+                Finding the perfect <strong>candlelight dinner venue in Surat</strong> is only half the journey — getting there stress-free matters just as much, especially when you're planning a surprise. HIVY - Place for Celebrations is located near Pratham Circle on Green City Road in Adajan, one of Surat's most well-connected residential areas. Whether you're driving from <strong>Vesu, Adajan, City Light, Althan, or Pal</strong>, you'll find us within a comfortable 15-to-25-minute drive, with clearly marked road signs and full Google Maps navigation support.
               </p>
 
               <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
                 Step-by-Step Driving Directions from Key Surat Locations
               </h3>
               <p>
-                <strong>From VR Surat Mall / Dumas Road:</strong> Take the Surat–Dumas Road towards Citylight, continue on Ring Road past Althan Circle, and follow the Gotri exit onto Sevasi-Canal Road. Total distance: approximately 14 km, or about 25 minutes in moderate traffic.
+                <strong>From VR Surat Mall / Dumas Road:</strong> Take the Surat–Dumas Road towards Citylight, continue on Ring Road past Althan Circle, and follow the Adajan exit towards Green City Road. Total distance: approximately 14 km, or about 25 minutes in moderate traffic.
               </p>
               <p>
-                <strong>From Adajan / Rander:</strong> Head east on Adajan–Pal Road, merge with Ring Road towards Gotri, and take the Sevasi-Canal Road exit. The journey is around 10 km and typically takes 20 minutes.
+                <strong>From Adajan / Rander:</strong> Head towards Green City Road near Pratham Circle. The journey is around 5 km and typically takes 10-15 minutes.
               </p>
               <p>
-                <strong>From Varachha / Katargam:</strong> Use the Varachha Main Road to connect with the Surat Outer Ring Road, then take the Gotri / Sevasi exit. Distance is roughly 12 km, approximately 22 minutes.
+                <strong>From Varachha / Katargam:</strong> Use the Varachha Main Road to connect with the Surat Ring Road, then take the Adajan / Green City Road exit. Distance is roughly 12 km, approximately 22 minutes.
               </p>
               <p>
-                <strong>From Udhna / Surat Railway Station:</strong> Follow Ring Road westbound past Puna Kumbharia, then exit at Gotri. About 16 km, or 30 minutes. If you're arriving by train and planning a surprise, our team can coordinate the timing so decorations are ready exactly when you walk in.
+                <strong>From Udhna / Surat Railway Station:</strong> Follow Ring Road westbound past Puna Kumbharia, then exit at Adajan. About 16 km, or 30 minutes. If you're arriving by train and planning a surprise, our team can coordinate the timing so decorations are ready exactly when you walk in.
               </p>
 
               <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">

@@ -15,12 +15,12 @@ import { siteConfig } from '@/lib/ffc-config';
 
 export default function FFCAboutPage() {
   const aboutFaqs = [
-    { question: "What is HIVY - Place for Celebrations?", answer: "HIVY is Surat's premier private celebration venue for couples, located on Sevasi-Canal Road in Gotri. We specialise in candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, pre-wedding photoshoots, and baby shower events — all in fully private, beautifully decorated tent setups." },
-    { question: "When did HIVY open and how long has it been operating?", answer: "HIVY has been creating memorable celebrations since 2020 — that's over 5 years of hosting romantic experiences for Surat couples. In that time, we've served over 3,000 couples and maintained a consistent 4.9-star Google rating." },
-    { question: "Where is HIVY located in Surat?", answer: "HIVY is located at 252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Green City Road, Sevasi-Canal Road, Gotri, Surat 394510. It's easily accessible from all major Surat areas within 15-30 minutes." },
+    { question: "What is HIVY - Place for Celebrations?", answer: "HIVY is Surat's premier private celebration venue for couples, located at The Boulevard, Near Pratham Circle, Green City Road, Adajan, Pal Gam. We specialise in candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals, pre-wedding photoshoots, and baby shower events — all in fully private, beautifully decorated tent setups." },
+    { question: "When did HIVY open and how long has it been operating?", answer: "HIVY has been creating memorable celebrations since 2023 — that's over 2 years of hosting romantic experiences for Surat couples. In that time, we've served over 500 couples and maintained a consistent 4.9-star Google rating." },
+    { question: "Where is HIVY located in Surat?", answer: "HIVY is located at 252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road, Adajan, Pal Gam, Surat 394510. It's easily accessible from all major Surat areas within 15-30 minutes." },
     { question: "What kind of celebrations does HIVY host?", answer: "We host candlelight dinners, birthday surprises (for boyfriend, girlfriend, husband, wife), anniversary celebrations (1st to 25th+), marriage proposals, engagement reveals, pre-wedding photoshoots, baby showers, pregnancy announcements, Valentine's Day specials, and romantic date nights." },
     { question: "Is HIVY a couples-only venue?", answer: "Yes, HIVY is exclusively designed for couples seeking privacy and romance. Each celebration tent is fully enclosed and reserved only for your booking slot. No other guests are present in your space." },
-    { question: "How many celebration setups does HIVY offer?", answer: "We offer 5-6 unique celebration setups including Swing of Love, Garden of Dreams, Boho Chic, Royal Celebration, Tent of Romance, and Fairy Tale Proposals. Each has a distinct aesthetic and personality." },
+    { question: "How many celebration setups does HIVY offer?", answer: "We offer 5 unique celebration setups including Swing of Love, BoHo Chic, Fairy Tale Proposals, Tent of Romance, and Elite Group Setup. Each has a distinct aesthetic and personality." },
     { question: "What are HIVY's operating hours?", answer: "HIVY operates from 11 AM to 11 PM daily, 7 days a week. We offer Lunch (12-5 PM), Evening (4-9 PM), and Dinner (7-11 PM) celebration slots, each lasting 3 hours." },
     { question: "What makes HIVY different from restaurants in Surat?", answer: "Unlike restaurants, HIVY provides 100% private, pre-decorated celebration spaces with professional ambiance. No shared dining halls, no eavesdropping, no time pressure. Everything — decorations, food, music, photography — is included in a single transparent package price." },
     { question: "What is HIVY's Google rating?", answer: "HIVY maintains a 4.9-star rating on Google with 150+ verified reviews. Our consistently high rating reflects our commitment to delivering exceptional romantic celebration experiences for every couple." },
@@ -71,10 +71,10 @@ export default function FFCAboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  At <strong>HIVY - Place for Celebrations</strong> in Surat's Gotri area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
+                  At <strong>HIVY - Place for Celebrations</strong> in Surat's Adajan area, we understand the chaos of modern life leaves little room for romance. Couples crave intimate moments to express love, but finding the right venue—a place blending privacy, beauty, and magic—remains elusive.
                 </p>
                 <p>
-                  That's why we transformed a stunning <strong>venue into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic romantic cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
+                  That's why we transformed a stunning <strong>venue into Surat's premier destination for candlelight dinners</strong>, complete with fairy lights, floral arches, and personalized decorations. Our romantic cafe offers the perfect escape for couples seeking a private celebration venue in Surat.
                 </p>
                 <p>
                   From heartfelt <strong>birthday surprises</strong> and <strong>anniversary celebrations</strong> to unforgettable <strong>marriage proposals</strong>, engagement reveals, <strong>pre-wedding shoots</strong>, pregnancy announcements, and last candlelight dinners before marriage, we've hosted <strong>500+ magical evenings</strong>.
@@ -102,7 +102,7 @@ export default function FFCAboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <p className="text-lg font-semibold">500+ Magical Evenings</p>
-                  <p className="text-sm opacity-90">Creating memories since 2020</p>
+                  <p className="text-sm opacity-90">Creating memories since 2023</p>
                 </div>
               </div>
             </div>
@@ -117,8 +117,8 @@ export default function FFCAboutPage() {
             {[
               { icon: Users, number: "500+", label: "Magical Evenings" },
               { icon: Star, number: "4.9", label: "Google Rating" },
-              { icon: Award, number: "8", label: "Unique Setups" },
-              { icon: Clock, number: "5+", label: "Years of Love" },
+              { icon: Award, number: "5", label: "Unique Setups" },
+              { icon: Clock, number: "2+", label: "Years of Love" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-stone-200 flex items-center justify-center mx-auto mb-3">
@@ -194,8 +194,8 @@ export default function FFCAboutPage() {
                     <MapPin className="h-5 w-5 text-amber-800" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-1">Prime Gotri Venue Location</h3>
-                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds on Sevasi-Canal Road. The best romantic cafe in Surat for couples seeking privacy.</p>
+                    <h3 className="font-semibold text-lg mb-1">Prime Adajan Venue Location</h3>
+                    <p className="text-gray-600">Breathtaking city views, private setups away from crowds near Pratham Circle, Green City Road. The best romantic cafe in Surat for couples seeking privacy.</p>
                   </div>
                 </div>
                 
@@ -258,7 +258,7 @@ export default function FFCAboutPage() {
                 The HIVY Story — How Surat Got Its Own Romantic Celebration Venue
               </h2>
               <p>
-                When HIVY first opened its doors on Sevasi-Canal Road in Gotri, Surat, the romantic celebration scene in the city looked very different. Couples searching for a <strong>candlelight dinner in Surat</strong> were limited to noisy restaurant corners or expensive hotel packages that came with zero privacy. There was no dedicated space where two people could sit surrounded by fairy lights, flowers, and soft music — without strangers at the next table. HIVY was born to fill that gap, and five years later it remains the most trusted <strong>private celebration venue for couples in Surat</strong>.
+                When HIVY first opened its doors near Pratham Circle in Adajan, Surat, the romantic celebration scene in the city looked very different. Couples searching for a <strong>candlelight dinner in Surat</strong> were limited to noisy restaurant corners or expensive hotel packages that came with zero privacy. There was no dedicated space where two people could sit surrounded by fairy lights, flowers, and soft music — without strangers at the next table. HIVY was born to fill that gap, and since 2023 it remains the most trusted <strong>private celebration venue for couples in Surat</strong>.
               </p>
               <p>
                 The idea was simple: build a venue that feels like stepping into a dream. A space where every candle is hand-placed, every rose petal is freshly scattered, and every couple feels like the only two people in the world. From that single motivation, HIVY has grown into a full-service romantic experience company, hosting everything from intimate <strong>candlelight dinners</strong> and <strong>birthday surprises</strong> to elaborate <strong>marriage proposals</strong>, <strong>anniversary celebrations</strong>, <strong>pre-wedding photoshoots</strong>, and even <strong>baby shower events</strong>.
@@ -290,7 +290,7 @@ export default function FFCAboutPage() {
                 Why Surat Couples Choose HIVY Over Hotels and Restaurants
               </h3>
               <p>
-                <strong>Privacy</strong> is the number-one reason. Hotels charge premium rates but seat you in a semi-public banquet hall. Restaurants let other diners eavesdrop on your proposal speech. HIVY's individual tent setups — including the popular <em>Swing of Love</em>, <em>Garden of Dreams</em>, <em>Royal Celebration</em>, and <em>Starlight Canopy</em> — are enclosed, decorated, and reserved exclusively for your booking slot.
+                <strong>Privacy</strong> is the number-one reason. Hotels charge premium rates but seat you in a semi-public banquet hall. Restaurants let other diners eavesdrop on your proposal speech. HIVY's individual tent setups — including the popular <em>Swing of Love</em>, <em>BoHo Chic</em>, <em>Fairy Tale Proposals</em>, and <em>Tent of Romance</em> — are enclosed, decorated, and reserved exclusively for your booking slot.
               </p>
               <p>
                 <strong>Affordability</strong> is the second reason. Packages start from just ₹4,700 and include everything: decoration, food, cake, mocktails, photographer, and a Bluetooth speaker for your playlist. There are no hidden charges, no service tax surprises. What you see on our packages page is what you pay.
@@ -303,10 +303,10 @@ export default function FFCAboutPage() {
                 Serving Every Corner of Surat — From Adajan to Varachha
               </h3>
               <p>
-                Located on Sevasi-Canal Road in Gotri, HIVY is easily accessible from virtually every part of Surat. Couples from <strong>Vesu, Adajan, Althan, Piplod, City Light, Pal, and Dumas Road</strong> reach us in under 30 minutes. Even residents of <strong>Varachha, Katargam, Udhna, Pandesara, and Amroli</strong> find the drive worth it once they see the setup in person. Free parking, clear Google Maps directions, and a well-lit approach road make the journey effortless — especially for surprise planners bringing a blindfolded partner.
+                Located near Pratham Circle in Adajan, HIVY is easily accessible from virtually every part of Surat. Couples from <strong>Vesu, Adajan, Althan, Piplod, City Light, Pal, and Dumas Road</strong> reach us in under 30 minutes. Even residents of <strong>Varachha, Katargam, Udhna, Pandesara, and Amroli</strong> find the drive worth it once they see the setup in person. Free parking, clear Google Maps directions, and a well-lit approach road make the journey effortless — especially for surprise planners bringing a blindfolded partner.
               </p>
               <p>
-                Over the past five years, we have hosted couples from every major locality in the Surat district and even visitors from Navsari, Valsad, Bharuch, and Ahmedabad who discovered us on Instagram. Our <strong>couple-friendly café</strong> has become a landmark on the Gotri celebration circuit, and we intend to keep raising the bar — one fairy light at a time.
+                Over the past five years, we have hosted couples from every major locality in the Surat district and even visitors from Navsari, Valsad, Bharuch, and Ahmedabad who discovered us on Instagram. Our <strong>couple-friendly café</strong> has become a landmark on the Adajan celebration circuit, and we intend to keep raising the bar — one fairy light at a time.
               </p>
 
               <div className="mt-10 p-6 bg-amber-50 border border-amber-200 rounded-xl text-center">

@@ -57,7 +57,7 @@ const faqs = [
   },
   {
     question: "Can I book HIVY for a marriage proposal or engagement?",
-    answer: "Absolutely! HIVY is Surat's most popular proposal venue. Our romantic proposal setups feature heart arches, fairy lights, rose petals, and champagne—perfect for creating an unforgettable 'yes' moment. We've hosted 3000+ successful proposals and engagements."
+    answer: "Absolutely! HIVY is Surat's most popular proposal venue. Our romantic proposal setups feature heart arches, fairy lights, rose petals, and champagne—perfect for creating an unforgettable 'yes' moment. We've hosted 500+ successful proposals and engagements."
   },
   {
     question: "What occasions can I celebrate at HIVY Surat?",
@@ -448,7 +448,7 @@ export default function FFCHomePage() {
                   <Star className="h-4 w-4" /> 4.9★ Rated
                 </span>
                 <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-                  <Users className="h-4 w-4" /> 3000+ Couples
+                  <Users className="h-4 w-4" /> 500+ Couples
                 </span>
               </div>
             </div>

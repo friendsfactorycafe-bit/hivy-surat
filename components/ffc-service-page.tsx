@@ -347,14 +347,14 @@ export default function FFCServicePage({ service }: ServicePageProps) {
           "estimatedCost": {
             "@type": "MonetaryAmount",
             "currency": "INR",
-            "value": "999"
+            "value": "5100"
           },
           "step": [
             {
               "@type": "HowToStep",
               "position": 1,
               "name": "Choose Your Package",
-              "text": `Browse HIVY's celebration packages starting from ₹999 to ₹6,999. Select a package that matches your ${service.name.toLowerCase()} needs — Silver Love for basic, up to Ultimate Dream for premium experiences.`,
+              "text": `Browse HIVY's celebration packages starting from ₹5,100 to ₹6,500. Select a package that matches your ${service.name.toLowerCase()} needs — Swing of Love, Elite Group Setup, BoHo Chic, Fairy Tale Proposals, or Tent of Romance.`,
               "url": "https://hivy.co.in/packages"
             },
             {

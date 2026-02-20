@@ -118,7 +118,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candlelight Dinner | Pre-Wedding Photoshoot | Valentine's Day Special
 
-📍 Best romantic tent setup Surat | Candlelight dinner Gotri | Couple-friendly venue`,
+📍 Best romantic tent setup Surat | Candlelight dinner Adajan | Couple-friendly venue`,
     price: 6500,
     cakeIncluded: true,
     features: [
@@ -196,7 +196,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candlelight Dinner | Pre-Wedding Photoshoot | Marriage Proposal
 
-📍 Best fairytale proposal venue Surat | Romantic celebration cafe Gotri | Couple-friendly venue`,
+📍 Best fairytale proposal venue Surat | Romantic celebration cafe Adajan | Couple-friendly venue`,
     price: 6300,
     cakeIncluded: true,
     features: [
@@ -273,7 +273,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candlelight Dinner | Pre-Wedding Photoshoot | Date Night
 
-📍 Best swing setup venue Surat | Romantic celebration cafe Gotri | Couple-friendly venue`,
+📍 Best swing setup venue Surat | Romantic celebration cafe Adajan | Couple-friendly venue`,
     price: 5100,
     cakeIncluded: true,
     features: [
@@ -353,7 +353,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candlelight Dinner | Pre-Wedding Photoshoot | Boho Theme Party
 
-📍 Best bohemian venue Surat | Boho celebration cafe Gotri | Couple-friendly venue`,
+📍 Best bohemian venue Surat | Boho celebration cafe Adajan | Couple-friendly venue`,
     price: 5700,
     cakeIncluded: true,
     features: [
@@ -439,7 +439,7 @@ Set the mood with soft, romantic music playing in the background, enhancing the 
 🎉 Perfect For
 Marriage Proposal Surat | Birthday Celebration | Bride-to-Be Party | Anniversary Surprise | Personal Milestones | Pre-Wedding Photoshoot
 
-📍 Best elite group setup venue Surat | Custom celebration cafe Gotri | Couple-friendly venue`,
+📍 Best elite group setup venue Surat | Custom celebration cafe Adajan | Couple-friendly venue`,
     price: 5400,
     cakeIncluded: true,
     features: [
@@ -854,7 +854,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-private venue-restaurants-surat-couples",
     title: "Best romantic restaurants in Surat for Couples",
-    excerpt: "Discover the most romantic romantic restaurants in Surat perfect for date nights and special celebrations.",
+    excerpt: "Discover the most romantic restaurants in Surat perfect for date nights and special celebrations.",
     metaTitle: "Best romantic restaurants in Surat for Couples 2026",
     metaDescription: "Looking for romantic restaurants in Surat? Find the best sky-high dining spots for romantic dinners and couple celebrations.",
     coverImage: "/packages/Elite Group Setup/78.webp",

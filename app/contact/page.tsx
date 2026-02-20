@@ -4,7 +4,7 @@ import FFCContactPage from '@/components/ffc-contact-page';
 export const metadata: Metadata = {
   title: 'Contact Us | HIVY - Place for Celebrations Surat',
   description: 'Get in touch with HIVY - Place for Celebrations Surat. Book your romantic celebration, ask questions, or visit us. Call +91 9727027278.',
-  keywords: 'contact friends factory cafe, book celebration surat, romantic venue contact, couple cafe surat contact',
+  keywords: 'contact hivy place for celebrations, book celebration surat, romantic venue contact, couple cafe surat contact',
   alternates: {
     canonical: 'https://hivy.co.in/contact',
   },
@@ -32,19 +32,19 @@ export default function ContactPage() {
           name: 'HIVY - Place for Celebrations',
           url: 'https://hivy.co.in',
           telephone: '+91-9727027278',
-          email: 'hivycelebrations@gmail.com',
+          email: 'hello@hivy.co.in',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '411-412, Platinum Point, Near Zampa Bazaar, Gotri Main Road',
-            addressLocality: 'Surat',
+            streetAddress: '252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road',
+            addressLocality: 'Adajan, Pal Gam, Surat',
             addressRegion: 'Gujarat',
-            postalCode: '395007',
+            postalCode: '394510',
             addressCountry: 'IN',
           },
           geo: {
             '@type': 'GeoCoordinates',
-            latitude: 21.2047,
-            longitude: 72.8421,
+            latitude: 21.1702,
+            longitude: 72.8311,
           },
           openingHoursSpecification: [
             {

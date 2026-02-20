@@ -74,7 +74,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
             "@type": "ListItem",
             "position": 2,
             "name": "Areas",
-            "item": "https://hivy.co.in/areas"
+            "item": "https://hivy.co.in/#areas"
           },
           {
             "@type": "ListItem",
@@ -113,7 +113,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
           <nav className="flex items-center gap-2 text-sm">
             <Link href="/" className="text-gray-500 hover:text-amber-800">Home</Link>
             <ChevronRight className="h-4 w-4 text-gray-400" />
-            <Link href="/areas" className="text-gray-500 hover:text-amber-800">Areas</Link>
+            <span className="text-gray-500">Areas</span>
             <ChevronRight className="h-4 w-4 text-gray-400" />
             <span className="text-amber-800 font-medium">{area.name}</span>
           </nav>
@@ -388,7 +388,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
               </Link>
             ))}
             <Link 
-              href="/areas"
+              href="/"
               className="px-4 py-2 bg-amber-800 rounded-full text-white hover:bg-amber-900 transition-colors"
             >
               View All Areas

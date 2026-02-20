@@ -132,7 +132,7 @@ const sectionVariations = {
 
 **Complete Privacy**: Unlike restaurants or shared venues, our ${kw.toLowerCase()} is exclusively yours. No other guests, no waiters walking by – complete privacy for your special moments.
 
-**Central Location**: Situated in Gotri, our ${kw.toLowerCase()} is easily accessible from all major areas of ${city} including Alkapuri, Akota, Fatehgunj, and beyond.
+**Central Location**: Situated in Adajan, our ${kw.toLowerCase()} is easily accessible from all major areas of ${city} including Alkapuri, Akota, Fatehgunj, and beyond.
 
 **All-Inclusive Packages**: Our packages include everything – venue, decorations, food, music, and dedicated service. No hidden costs or surprises when you book your ${kw.toLowerCase()} with us.`
     },
@@ -426,7 +426,7 @@ Each ${kwLower} package includes 3 hours of exclusive access, welcome drinks, de
 
 **Couples-Only Environment**: We maintain a strict couples-only policy, ensuring privacy and comfort for everyone celebrating their ${kwLower}.
 
-**Perfect Location**: Situated in Gotri, our venue is easily accessible from all major ${city} areas including Alkapuri, Akota, Fatehgunj, and more.
+**Perfect Location**: Situated in Adajan, our venue is easily accessible from all major ${city} areas including Alkapuri, Akota, Fatehgunj, and more.
 
 **Repeat Customers**: Many couples return for multiple celebrations – anniversaries, birthdays, special dates. That's the highest endorsement for our ${kwLower} services.`
   });
@@ -507,7 +507,7 @@ Each ${kwLower} package includes 3 hours of exclusive access, welcome drinks, de
       { question: `How long is each ${kwLower} session at HIVY?`, answer: `Each ${kwLower} session at ${venue} is 3 hours long. This includes setup time, your dining experience, photography, celebration, and cake cutting — everything fits comfortably within the 3-hour window.` },
       { question: `What time slots are available for ${kwLower}?`, answer: `We offer Lunch (12 PM–5 PM), Evening (4 PM–9 PM), and Dinner (7 PM–11 PM) sessions. Evening and dinner slots are most popular for ${kwLower} as the candle and fairy-light ambiance is at its peak.` },
       { question: `Is a photographer included in the ${kwLower} package?`, answer: `Select packages include complimentary photography. For other packages, you can add a professional photographer at a nominal cost, or bring your own. Our venue is designed to be highly photogenic for your ${kwLower}.` },
-      { question: `Where is ${venue} located and how do I reach it for my ${kwLower}?`, answer: `${venue} is located on Sevasi-Canal Road, Gotri, ${city}. It is easily accessible from all major areas of ${city} within 15-30 minutes. Ample free parking is available. Search "HIVY Place for Celebrations" on Google Maps for exact directions.` },
+      { question: `Where is ${venue} located and how do I reach it for my ${kwLower}?`, answer: `${venue} is located near Pratham Circle, Green City Road, Adajan, ${city}. It is easily accessible from all major areas of ${city} within 15-30 minutes. Ample free parking is available. Search "HIVY Place for Celebrations" on Google Maps for exact directions.` },
     ],
     // Pool B (rotated questions for variety)
     [
@@ -606,7 +606,7 @@ export function generateAreaPageContent(area: AreaConfig): FFCAreaContent {
   
   const introduction = `${openings[variationIndex]}
 
-For years, ${venue} has been the go-to destination for ${areaName} couples looking to celebrate birthdays, anniversaries, proposals, candlelight dinners, and other romantic occasions. Our convenient location in Gotri makes us easily accessible from ${areaName}, and our premium services ensure every celebration is memorable.
+For years, ${venue} has been the go-to destination for ${areaName} couples looking to celebrate birthdays, anniversaries, proposals, candlelight dinners, and other romantic occasions. Our convenient location in Adajan makes us easily accessible from ${areaName}, and our premium services ensure every celebration is memorable.
 
 Whether you're planning a surprise for your partner or want to celebrate together, ${areaName} residents can count on ${venue} for an experience that exceeds expectations. Join the thousands of happy couples from ${areaName} and across ${city} who have celebrated with us!`;
 
@@ -633,7 +633,7 @@ Every service is fully customizable to match the preferences of ${areaName} coup
       heading: `Why ${areaName} Couples Love Celebrating With Us`,
       content: `Residents of ${areaName} have specific expectations when it comes to quality and experience. Here's why we consistently meet and exceed those expectations:
 
-**Convenient Distance**: The drive from ${areaName} to our Gotri venue typically takes just 15-25 minutes. Close enough for a spontaneous date, yet far enough to feel like an escape.
+**Convenient Distance**: The drive from ${areaName} to our Adajan venue typically takes just 15-25 minutes. Close enough for a spontaneous date, yet far enough to feel like an escape.
 
 **Complete Privacy**: Unlike restaurants in ${areaName} where you might run into neighbors or colleagues, our venue is 100% private. Your celebration is exclusively yours.
 
@@ -651,7 +651,7 @@ Every service is fully customizable to match the preferences of ${areaName} coup
       heading: `Getting Here from ${areaName}`,
       content: `Planning your visit from ${areaName}? Here's everything you need to know:
 
-**Distance & Travel Time**: The journey from ${areaName} to our Gotri venue takes approximately 15-25 minutes depending on traffic. We recommend Google Maps for real-time directions.
+**Distance & Travel Time**: The journey from ${areaName} to our Adajan venue takes approximately 15-25 minutes depending on traffic. We recommend Google Maps for real-time directions.
 
 **Best Route**: Most ${areaName} residents take the main road through the city. Specific directions can be provided upon booking confirmation.
 
@@ -695,7 +695,7 @@ On your celebration day, drive from ${areaName} to our venue. Everything will be
   const nearbyAreasList = allAreas.filter((a, i) => a !== areaName && Math.abs(i - currentIndex) <= 5).slice(0, 5);
   
   const localTips = [
-    `Quick 15-25 minute drive from ${areaName} to our Gotri venue`,
+    `Quick 15-25 minute drive from ${areaName} to our Adajan venue`,
     `Evening slots popular among working couples from ${areaName}`,
     `Weekend bookings fill fast – book early if you're from ${areaName}`,
     `Surprise planners: We help ${areaName} residents coordinate perfectly`,
@@ -727,7 +727,7 @@ On your celebration day, drive from ${areaName} to our venue. Everything will be
   const areaFaqPools: { question: string; answer: string }[][] = [
     // Pool A
     [
-      { question: `How long does it take to reach ${venue} from ${areaName}?`, answer: `The drive from ${areaName} to ${venue} on Sevasi-Canal Road typically takes 15-25 minutes depending on traffic and route. We recommend searching "HIVY Place for Celebrations" on Google Maps for real-time turn-by-turn navigation.` },
+      { question: `How long does it take to reach ${venue} from ${areaName}?`, answer: `The drive from ${areaName} to ${venue} near Pratham Circle typically takes 15-25 minutes depending on traffic and route. We recommend searching "HIVY Place for Celebrations" on Google Maps for real-time turn-by-turn navigation.` },
       { question: `Do you offer any special deals for ${areaName} residents?`, answer: `Our packages and pricing are the same for all ${city} areas, ensuring fairness. However, ${areaName} couples mentioning this page receive priority booking assistance and our team will ensure the best available slot for you.` },
       { question: `Can you help plan a surprise for my partner who lives in ${areaName}?`, answer: `Absolutely! Surprise coordination is our speciality. We've helped many ${areaName} residents plan surprises — our team guides you on cover stories, timing, blindfold arrival logistics, and ensures every decoration is camera-ready before your partner walks in.` },
       { question: `What's the best time slot for couples coming from ${areaName}?`, answer: `Evening (4 PM–9 PM) and Dinner (7 PM–11 PM) slots are most popular with ${areaName} couples as they allow comfortable post-work travel. Weekend lunch slots (12 PM–3 PM) are ideal for relaxed daytime celebrations with natural lighting for photographs.` },
@@ -742,7 +742,7 @@ On your celebration day, drive from ${areaName} to our venue. Everything will be
     [
       { question: `Why do ${areaName} couples prefer HIVY over local restaurants?`, answer: `Unlike ${areaName} restaurants, ${venue} provides fully private, pre-decorated celebration tents with professional-level ambiance. No shared dining halls, no eavesdropping neighbours, no time pressure. Just 3 uninterrupted hours of romance, food, and celebration — exclusively for you.` },
       { question: `Can ${areaName} residents visit HIVY before booking?`, answer: `Yes! Walk-in venue previews are available on weekday afternoons. Call ${siteConfig.phone} to schedule a visit. You can see the tent setups, choose your preferred decoration style, taste sample items, and discuss customisations before committing.` },
-      { question: `What's the easiest route from ${areaName} to ${venue}?`, answer: `Most ${areaName} residents take Ring Road towards Gotri, then exit onto Sevasi-Canal Road. The journey is straightforward with minimal turns. Search "HIVY Place for Celebrations" on Google Maps and follow the live navigation for the fastest route based on current traffic.` },
+      { question: `What's the easiest route from ${areaName} to ${venue}?`, answer: `Most ${areaName} residents take Ring Road towards Adajan, then take the Green City Road exit. The journey is straightforward with minimal turns. Search "HIVY Place for Celebrations" on Google Maps and follow the live navigation for the fastest route based on current traffic.` },
       { question: `Are there veg and Jain food options for ${areaName} couples at HIVY?`, answer: `Absolutely. ${venue} is a 100% vegetarian café. All dishes are freshly prepared on-site. Jain options (no onion, no garlic) are available at no additional charge — simply mention your preference while booking and our kitchen team handles the rest.` },
       { question: `What payment methods does HIVY accept for ${areaName} bookings?`, answer: `We accept all modern payment methods: UPI (Google Pay, PhonePe, Paytm), bank transfers, credit and debit cards, and cash. A small advance of ₹500–₹1,000 secures your slot, with the remaining balance due on celebration day.` },
       { question: `Can ${areaName} couples bring their own cake or decorations?`, answer: `You can bring your own cake at no extra charge (most packages already include a complimentary cake). For decorations, we recommend using our professional setups, but you're welcome to bring small personal items like photo frames, letters, or specific props.` },

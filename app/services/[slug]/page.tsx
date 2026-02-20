@@ -235,10 +235,10 @@ export default async function ServiceCategoryPage({
           telephone: '+91-9727027278',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '411-412, Platinum Point, Near Zampa Bazaar, Gotri Main Road',
-            addressLocality: 'Surat',
+            streetAddress: '252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road',
+            addressLocality: 'Adajan, Pal Gam, Surat',
             addressRegion: 'Gujarat',
-            postalCode: '395007',
+            postalCode: '394510',
             addressCountry: 'IN',
           },
         },
@@ -264,7 +264,7 @@ export default async function ServiceCategoryPage({
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: '4.9',
-          reviewCount: '500',
+          reviewCount: '150',
           bestRating: '5',
         },
       },
