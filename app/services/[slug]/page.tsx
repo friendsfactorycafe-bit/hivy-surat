@@ -232,7 +232,7 @@ export default async function ServiceCategoryPage({
           '@type': 'LocalBusiness',
           name: 'HIVY - Place for Celebrations',
           url: 'https://hivy.co.in',
-          telephone: '+91-9727027278',
+          telephone: '+91 9727027278',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '252/253, 2nd Floor, The Boulevard, Near Pratham Circle, Galleria Street, Green City Road',

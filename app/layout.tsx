@@ -139,7 +139,7 @@ const jsonLd = {
       "alternateName": "HIVY Surat",
       "description": "Best romantic celebration venue in Surat, Gujarat. Birthday surprises, candlelight dinners, anniversary celebrations, proposals, pre-wedding shoots. Premium private experiences.",
       "url": "https://hivy.co.in",
-      "telephone": "+91-9727027278",
+      "telephone": "+91 9727027278",
       "email": "hello@hivy.co.in",
       "priceRange": "₹₹₹",
       "currenciesAccepted": "INR",
@@ -397,14 +397,14 @@ const jsonLd = {
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+91-9727027278",
+          "telephone": "+91 9727027278",
           "contactType": "reservations",
           "areaServed": "Surat",
           "availableLanguage": ["English", "Hindi", "Gujarati"]
         },
         {
           "@type": "ContactPoint",
-          "telephone": "+91-9727027278",
+          "telephone": "+91 9727027278",
           "contactType": "customer service",
           "areaServed": "IN",
           "availableLanguage": ["English", "Hindi", "Gujarati"]

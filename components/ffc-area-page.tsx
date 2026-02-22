@@ -35,7 +35,7 @@ export default function FFCAreaPage({ area }: AreaPageProps) {
         "name": `HIVY - Place for Celebrations - ${area.name}`,
         "description": `Premium romantic celebration venue serving ${area.name}, Surat. Birthday surprises, candlelight dinners, anniversary celebrations, proposals & more.`,
         "url": `https://hivy.co.in/${area.slug}`,
-        "telephone": "+91-9727027278",
+        "telephone": "+91 9727027278",
         "priceRange": "₹₹₹",
         "address": {
           "@type": "PostalAddress",

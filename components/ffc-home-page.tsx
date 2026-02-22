@@ -88,22 +88,22 @@ const faqs = [
 // Gallery items data - Optimized for faster loading (reduced to 16 items)
 const galleryItems = [
   // Featured Images from packages
-  { type: 'image', src: '/packages/swing-of-love/images/28.webp', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
-  { type: 'image', src: '/packages/boho-chic/images/46.webp', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/2.webp', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
+  { type: 'image', src: '/hivy-images/5100/2.webp', alt: 'Swing of Love Setup Surat', title: 'Swing of LOVE', subtitle: 'Premium Package', featured: true },
+  { type: 'image', src: '/hivy-images/5700/2.webp', alt: 'BoHo Chic Setup Surat', title: 'BoHo Chic', featured: false },
+  { type: 'image', src: '/hivy-images/6300/2.webp', alt: 'Fairy Tale Proposals Surat', title: 'Fairy Tale Proposals', featured: false },
   { type: 'video', src: '/videos/InShot_20250111_162317353.mp4', alt: 'Romantic celebration video Surat', title: 'Celebration Moments', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/12.webp', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/29.webp', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
+  { type: 'image', src: '/hivy-images/6500/2.webp', alt: 'Tent of Romance Setup Surat', title: 'Tent of Romance', featured: false },
+  { type: 'image', src: '/hivy-images/5100/3.webp', alt: 'Swing setup Surat', title: 'Swing Décor', featured: false },
   { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Anniversary celebration video Surat', title: 'Anniversary Video', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/47.webp', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/3.webp', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/13.webp', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
+  { type: 'image', src: '/hivy-images/5700/3.webp', alt: 'Bohemian ambiance cafe Surat', title: 'Boho Ambiance', featured: false },
+  { type: 'image', src: '/hivy-images/6300/3.webp', alt: 'Fairy tale setup decoration Surat', title: 'Magical Setup', featured: false },
+  { type: 'image', src: '/hivy-images/6500/3.webp', alt: 'Romantic tent decoration Surat', title: 'Romantic Décor', featured: false },
   { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'romantic celebration reel Surat', title: 'Romantic Vibes', featured: false },
-  { type: 'image', src: '/packages/swing-of-love/images/30.webp', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
-  { type: 'image', src: '/packages/boho-chic/images/48.webp', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
-  { type: 'image', src: '/packages/fairy-tale-proposals/4.webp', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
+  { type: 'image', src: '/hivy-images/5100/4.webp', alt: 'Romantic swing setup Surat', title: 'Love Swing', featured: false },
+  { type: 'image', src: '/hivy-images/5700/4.webp', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
+  { type: 'image', src: '/hivy-images/6300/4.webp', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
   { type: 'video', src: '/videos/VID_20251120_191425995.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
-  { type: 'image', src: '/packages/tent-of-romance/images/14.webp', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
+  { type: 'image', src: '/hivy-images/6500/4.webp', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },
 ];
 
 // Gallery Section Component
@@ -493,16 +493,22 @@ export default function FFCHomePage() {
                       Setup {index + 1}
                     </Badge>
                   </div>
-                  <CardContent className="p-2 sm:p-3 md:p-4">
-                    <h3 className="font-semibold text-[11px] sm:text-sm md:text-lg mb-0.5 md:mb-1 group-hover:text-amber-800 transition-colors leading-tight">
+                  <CardContent className="p-2.5 sm:p-3 md:p-4">
+                    <h3 className="font-semibold text-xs sm:text-sm md:text-lg mb-0.5 md:mb-1 group-hover:text-amber-800 transition-colors leading-tight">
                       {pkg.name}
                     </h3>
                     <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm line-clamp-2 mb-1 md:mb-2 hidden md:block">
                       {pkg.shortDescription}
                     </p>
-                    <p className="text-sm sm:text-base md:text-xl font-bold text-amber-800">
+                    <p className="text-base sm:text-base md:text-xl font-bold text-amber-800">
                       {formatPrice(pkg.price)}
                     </p>
+                    {/* View Details */}
+                    <div className="flex justify-end mt-2">
+                      <span className="text-[10px] sm:text-xs text-amber-700 font-medium flex items-center gap-1 hover:text-amber-900">
+                        View Details <ChevronRight className="h-3 w-3" />
+                      </span>
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
@@ -737,6 +743,67 @@ export default function FFCHomePage() {
 
       {/* Blog Section */}
       <BlogSection />
+
+      {/* Extended SEO Content Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-amber-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-amber-800">
+            Why HIVY is Surat's Most Trusted Celebration Venue
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+            <p className="hero-description">
+              In a city known for its entrepreneurial spirit and warm hospitality, Surat has witnessed a remarkable transformation in how couples celebrate their special moments. At the forefront of this evolution stands HIVY - Place for Celebrations, a venue that has redefined what romantic celebrations mean for modern couples. Situated at the prestigious The Boulevard complex in Adajan, HIVY has emerged as the undisputed leader in private celebration experiences, earning the trust of thousands of couples who seek something extraordinary beyond the ordinary restaurant dinner or hotel booking.
+            </p>
+            <p className="hero-description">
+              What truly sets HIVY apart from every other celebration option in Surat is our unwavering commitment to creating exclusive, private experiences. When couples step into our venue, they enter a world designed solely for them — no other diners, no shared spaces, no compromises. This philosophy of absolute privacy has resonated deeply with Surat couples who value intimate moments away from the public eye. Our 4.9-star Google rating, built on hundreds of genuine reviews from couples across the city, stands as testament to the consistent excellence we deliver for every single celebration.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-amber-700">The Complete Private Celebration Experience</h3>
+            <p className="hero-description">
+              A celebration at HIVY is not merely an event — it is a carefully orchestrated experience that engages all senses and creates lasting memories. From the moment you enquire about a booking, our dedicated team works to understand your vision, your preferences, and the story you want to tell through your celebration. Whether you are planning a candlelight dinner for your partner, a surprise birthday celebration that will leave them speechless, or an anniversary dinner that honours your journey together, every element is customised to reflect your unique relationship.
+            </p>
+            <p className="hero-description">
+              Our three-hour private booking ensures you never feel rushed. Unlike restaurants where servers hover impatiently or hotels where the next event is being set up in an adjacent room, HIVY gives you complete ownership of your celebration time. You can linger over conversations, take unlimited photographs, enjoy multiple courses at your own pace, and savour every moment without watching the clock. This unhurried intimacy is what couples remember long after the celebration ends.
+            </p>
+            <p className="hero-description">
+              The setup quality at HIVY represents the pinnacle of celebration aesthetics in Surat. Our six signature packages — including the ethereal Swing of Love, the bohemian-inspired BoHo Chic, the majestic Fairy Tale setup, and the intimate Tent of Romance — are not merely decorations but complete transformations of space. Premium balloons, fairy lights, rose petals, candles, customised backdrops, and thoughtful touches like personalised name boards and flower arrangements create Instagram-worthy settings that photography simply cannot capture fully. You must experience it to understand why our couples call it magical.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-amber-700">Why Surat Couples Choose HIVY</h3>
+            <p className="hero-description">
+              The reasons couples from Vesu, Adajan, Athwa, Piplod, City Light, Varachha, Althan, Pal, and every corner of Surat choose HIVY are both practical and emotional. Practically, we offer transparent pricing with no hidden costs, flexible time slots from noon to late night, comprehensive packages that include food delicious multi-course meals and beverages, complimentary celebration cakes, professional photography assistance, and customisation options for any special request. Emotionally, we provide something far more valuable — the confidence that your celebration will be perfect.
+            </p>
+            <p className="hero-description">
+              Many of our couples are celebrating major milestones — first anniversaries that mark a year of married life, decade anniversaries that reflect enduring love, milestone birthdays that deserve grand gestures, or proposals where one partner has spent months planning the perfect moment. These occasions carry profound emotional significance, and the stakes are high. Couples choose HIVY because they know we understand this weight and we deliver accordingly. Our team comprises celebration specialists who have coordinated thousands of romantic events and who anticipate needs before they are expressed.
+            </p>
+            <p className="hero-description">
+              Word-of-mouth recommendations drive much of our business, and this speaks volumes. When a couple has an exceptional experience, they tell friends, family, and colleagues. Those recommendations carry credibility that no advertisement can match. Walk into any gathering in Surat and mention romantic celebrations, and chances are someone will enthusiastically share their HIVY experience. This organic growth through genuine satisfaction remains our proudest achievement.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-amber-700">Our Commitment to Privacy & Excellence</h3>
+            <p className="hero-description">
+              Privacy is not merely a feature at HIVY — it is our foundational principle. We understand that romantic moments are deeply personal, and couples deserve a space where they can be completely themselves without self-consciousness or external distractions. Our venue design, booking system, and operational protocols all prioritise this privacy. Only one couple occupies our celebration space at any given time, and our staff is trained to be present when needed but invisible otherwise.
+            </p>
+            <p className="hero-description">
+              Excellence, similarly, is embedded in every aspect of our operations. The ingredients in our kitchen are fresh and premium. The decorations are new and meticulously arranged. The music playlists are carefully curated for romantic ambiance. The lighting is professionally designed to create warmth without harshness. The serving temperature of food is precisely maintained. These details might seem minor individually, but collectively they create an experience that feels effortlessly perfect — though considerable effort goes into achieving that effortlessness.
+            </p>
+            <p className="hero-description">
+              Our quality commitment extends to continuous improvement. After every celebration, we reflect on feedback both given and implied. We update our setups seasonally to incorporate new design trends. We train our staff regularly to enhance service quality. We upgrade our equipment and technology to match evolving couple expectations. This pursuit of excellence has no finish line — we simply keep getting better.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-amber-700">Perfect For Every Romantic Occasion</h3>
+            <p className="hero-description">
+              The versatility of HIVY celebrations covers virtually every romantic occasion couples wish to mark. Candlelight dinners remain our most popular offering — perfect for reigniting romance, celebrating monthly anniversaries, or simply reminding your partner that love needs no special reason. Birthday celebrations transform into unforgettable surprises when coordinated with our team, who excel at maintaining secrecy while orchestrating dramatic reveals. Anniversary celebrations, from the first to the golden jubilee, receive the reverence they deserve with setups that honour the years of commitment.
+            </p>
+            <p className="hero-description">
+              Marriage proposals at HIVY carry exceptional success rates — not that we take credit for the love, but our settings undoubtedly enhance the magic of that life-changing question. We work closely with proposing partners to plan ring reveal moments, coordinate photography, arrange post-proposal champagne toasts, and even organise surprise appearances by family or friends if desired. The joy of a successful HIVY proposal energises our entire team.
+            </p>
+            <p className="hero-description">
+              Beyond these marquee occasions, we celebrate Valentine's Day with themed setups throughout February, host pre-wedding couple shoots that provide stunning backdrops, facilitate baby announcement celebrations where couples share pregnancy news, and create surprise date nights that keep long-term relationships fresh and exciting. Whatever your reason for celebrating love, HIVY has a setting, a package, and a team ready to make it exceptional. Contact us today and discover why over three thousand Surat couples consider HIVY their trusted celebration partner.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-stone-100">

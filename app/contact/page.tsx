@@ -31,7 +31,7 @@ export default function ContactPage() {
           '@type': 'LocalBusiness',
           name: 'HIVY - Place for Celebrations',
           url: 'https://hivy.co.in',
-          telephone: '+91-9727027278',
+          telephone: '+91 9727027278',
           email: 'hello@hivy.co.in',
           address: {
             '@type': 'PostalAddress',
@@ -56,7 +56,7 @@ export default function ContactPage() {
           ],
           contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+91-9727027278',
+            telephone: '+91 9727027278',
             contactType: 'reservations',
             areaServed: 'Surat',
             availableLanguage: ['English', 'Hindi', 'Gujarati'],

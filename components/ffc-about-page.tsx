@@ -94,7 +94,7 @@ export default function FFCAboutPage() {
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/30.webp"
+                  src="/hivy-images/5100/4.webp"
                   alt="HIVY - Place for Celebrations Surat - Romantic Swing of Love Setup for Candlelight Dinner"
                   fill
                   className="object-cover"
@@ -139,7 +139,7 @@ export default function FFCAboutPage() {
             <div className="order-1">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/35.webp"
+                  src="/hivy-images/5100/9.webp"
                   alt="HIVY - Place for Celebrations Team - Romantic Setup Surat"
                   fill
                   className="object-cover"
@@ -233,7 +233,7 @@ export default function FFCAboutPage() {
             <div className="order-1 lg:order-2">
               <div className="aspect-[4/3] bg-gradient-to-br from-stone-200 to-stone-100 rounded-2xl overflow-hidden relative shadow-xl">
                 <Image
-                  src="/packages/swing-of-love/images/40.webp"
+                  src="/hivy-images/5100/10.webp"
                   alt="Why Choose HIVY - Place for Celebrations - Romantic Setup Surat"
                   fill
                   className="object-cover"
@@ -319,6 +319,32 @@ export default function FFCAboutPage() {
                 </p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Philosophy Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-amber-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8 text-amber-800">Our Philosophy: Creating Moments That Matter</h2>
+          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+            <p>At HIVY, we believe that every celebration deserves to be extraordinary. Our philosophy centers on creating private, intimate spaces where couples can celebrate life's most precious moments without interruption. From candlelight dinners to birthday surprises, anniversary celebrations to proposals, we transform ordinary evenings into unforgettable memories.</p>
+            
+            <h3 className="text-2xl font-semibold text-amber-700">The HIVY Difference</h3>
+            <p>What sets HIVY apart from traditional venues is our unwavering commitment to privacy and personalization. When you book HIVY, you're not just reserving a table – you're securing an entire transformed space exclusively for you and your partner. Our team works tirelessly behind the scenes to ensure every detail reflects your vision, from the placement of rose petals to the selection of background music that speaks to your journey together.</p>
+            <p>We understand that modern life offers few opportunities for genuine intimacy. Restaurants are crowded, hotels feel impersonal, and home celebrations lack the magic of a professionally designed space. HIVY bridges this gap by offering couples a sanctuary where they can reconnect, celebrate, and create memories without the distractions of everyday life. Every element of our venue has been thoughtfully designed to enhance romantic connection and celebrate love in all its forms.</p>
+            
+            <h3 className="text-2xl font-semibold text-amber-700">Quality Without Compromise</h3>
+            <p>Excellence drives everything we do at HIVY. Our decorations are never reused – every celebration receives fresh flowers, pristine candles, and crisp linens. Our culinary team prepares each meal with care, using quality ingredients to create dining experiences that complement the romantic ambiance. We believe that true luxury lies in these details, and we spare no effort in delivering perfection.</p>
+            <p>From the moment you inquire about our services to the final farewell after your celebration, quality remains our guiding principle. Our decorators are trained artists who understand how lighting, color, and spatial arrangement create emotional impact. Our service staff moves discreetly, ensuring your privacy while remaining attentive to your needs. Even our photographers capture moments with an artistic eye that preserves the beauty of your celebration for years to come.</p>
+            
+            <h3 className="text-2xl font-semibold text-amber-700">Building Trust in Surat</h3>
+            <p>Since our founding, HIVY has earned the trust of hundreds of couples across Surat. Our 4.9-star Google rating reflects not just our service quality, but the genuine connections we've helped celebrate. Every positive review represents a love story that unfolded within our walls, a birthday surprise that brought tears of joy, or an anniversary that rekindled romance. This trust is sacred to us, and we honor it by treating every booking with the same dedication and attention.</p>
+            <p>We've become more than a venue – we're a trusted partner in Surat's celebration culture. Couples recommend us to friends and family, return year after year for anniversary celebrations, and share their HIVY experiences on social media. This organic growth speaks to the authentic value we provide. We don't chase trends or cut corners; instead, we focus relentlessly on exceeding expectations for every single couple who walks through our doors.</p>
+            
+            <h3 className="text-2xl font-semibold text-amber-700">Looking Forward</h3>
+            <p>As we continue to grow, our commitment to couples remains unchanged. We're constantly innovating – exploring new package themes, enhancing our menu offerings, and finding creative ways to make celebrations even more special. HIVY will always be a place where love is celebrated, memories are created, and couples find their perfect private escape from the world.</p>
+            <p>The future of HIVY is bright, filled with possibilities for deeper customization, expanded services, and even more magical experiences. Yet no matter how much we grow, our core philosophy remains constant: every couple deserves a celebration space that honors their unique love story. Whether you're planning your first date or your fiftieth anniversary, HIVY is here to make your moment extraordinary.</p>
           </div>
         </div>
       </section>

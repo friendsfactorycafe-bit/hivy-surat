@@ -67,7 +67,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
           "seller": {
             "@type": "LocalBusiness",
             "name": "HIVY - Place for Celebrations",
-            "telephone": "+91-9727027278"
+            "telephone": "+91 9727027278"
           }
         },
         "aggregateRating": {

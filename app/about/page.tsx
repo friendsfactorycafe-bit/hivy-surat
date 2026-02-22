@@ -32,7 +32,7 @@ export default function AboutPage() {
           name: 'HIVY - Place for Celebrations',
           description: 'Surat\'s premier destination for candlelight dinners, birthday surprises, anniversary celebrations & romantic experiences for couples.',
           url: 'https://hivy.co.in',
-          telephone: '+91-9727027278',
+          telephone: '+91 9727027278',
           email: 'hello@hivy.co.in',
           address: {
             '@type': 'PostalAddress',

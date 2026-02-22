@@ -211,96 +211,60 @@ export default function FFCContactPage() {
         </div>
       </section>
 
-      {/* Rich SEO Content Section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <article className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif text-gray-900">
-                How to Reach HIVY — Surat's Best Private Celebration Venue for Couples
-              </h2>
-              <p>
-                Finding the perfect <strong>candlelight dinner venue in Surat</strong> is only half the journey — getting there stress-free matters just as much, especially when you're planning a surprise. HIVY - Place for Celebrations is located near Pratham Circle on Green City Road in Adajan, one of Surat's most well-connected residential areas. Whether you're driving from <strong>Vesu, Adajan, City Light, Althan, or Pal</strong>, you'll find us within a comfortable 15-to-25-minute drive, with clearly marked road signs and full Google Maps navigation support.
-              </p>
+      {/* Contact Info SEO Section */}
+      <section className="py-16 bg-amber-50/30">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold text-center mb-8">Getting in Touch with HIVY</h2>
+          <div className="prose prose-lg prose-amber max-w-none text-gray-700">
+            <h3 className="text-xl font-bold text-amber-900 mt-6">Multiple Ways to Contact HIVY</h3>
+            <p>
+              At HIVY, we understand that convenience matters when you're planning a special celebration. That's why we offer multiple contact channels to suit your preference. You can reach us via WhatsApp for instant messaging and quick responses, call our dedicated booking number to speak directly with our celebration coordinators, or fill out the online booking form on this page to have us call you back. WhatsApp is our most popular contact method because it allows us to share photos of setups, send menu options, and answer your questions in real time. Phone calls are ideal when you want to discuss elaborate customizations or have detailed questions about packages. The online form works well for those who prefer structured communication and want to provide all details upfront.
+            </p>
 
-              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
-                Step-by-Step Driving Directions from Key Surat Locations
-              </h3>
-              <p>
-                <strong>From VR Surat Mall / Dumas Road:</strong> Take the Surat–Dumas Road towards Citylight, continue on Ring Road past Althan Circle, and follow the Adajan exit towards Green City Road. Total distance: approximately 14 km, or about 25 minutes in moderate traffic.
-              </p>
-              <p>
-                <strong>From Adajan / Rander:</strong> Head towards Green City Road near Pratham Circle. The journey is around 5 km and typically takes 10-15 minutes.
-              </p>
-              <p>
-                <strong>From Varachha / Katargam:</strong> Use the Varachha Main Road to connect with the Surat Ring Road, then take the Adajan / Green City Road exit. Distance is roughly 12 km, approximately 22 minutes.
-              </p>
-              <p>
-                <strong>From Udhna / Surat Railway Station:</strong> Follow Ring Road westbound past Puna Kumbharia, then exit at Adajan. About 16 km, or 30 minutes. If you're arriving by train and planning a surprise, our team can coordinate the timing so decorations are ready exactly when you walk in.
-              </p>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Operating Hours and Response Times</h3>
+            <p>
+              Our booking team is available daily from 10 AM to 10 PM to assist with all your celebration queries. During these hours, WhatsApp messages typically receive responses within five to fifteen minutes, ensuring you're never left waiting long for important information. Phone calls are answered promptly, and if we miss a call during busy periods, we return calls within thirty minutes. For booking form submissions, our team reaches out within one hour during operating hours. Even outside our active hours, you can send messages and submit forms, and we will respond first thing the next morning. Our commitment is to make the booking process as smooth and responsive as possible.
+            </p>
 
-              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
-                What to Expect When You Arrive at HIVY
-              </h3>
-              <p>
-                The venue is set back from the main road for added privacy, with dedicated parking space for cars and two-wheelers. If you're bringing your partner blindfolded for a surprise — a very common request — our team will be waiting at the entrance to guide you both safely to your pre-decorated tent. First-time visitors often tell us the moment they step past the entrance and see the glowing fairy lights through the curtains, any nervousness immediately turns into excitement.
-              </p>
-              <p>
-                Your private celebration tent is prepared at least 30 minutes before your arrival. The decoration team checks every candle placement, every balloon arch, every rose petal trail, and every photograph prop. By the time you walk in, the space looks exactly like the images you saw on our website — many couples say it looks even better in person because photos cannot capture the warm glow and the subtle floral scent that fills each tent.
-              </p>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Location Overview — Near VR Mall, Dumas Road, Surat</h3>
+            <p>
+              HIVY - Place for Celebrations is located in a prime location near VR Mall on Dumas Road in Surat's well-connected Adajan area. This central location makes us easily accessible from all major neighborhoods including Vesu, City Light, Althan, Pal, Athwa, Varachha, Katargam, Udhna, and beyond. The drive from most parts of Surat takes between 15 to 30 minutes depending on traffic. Our venue is set back from the main road for privacy yet remains easy to find with Google Maps navigation. Search for "HIVY - Place For Celebration" on Google Maps for turn-by-turn directions directly to our entrance.
+            </p>
 
-              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
-                Booking Your Celebration — Phone, WhatsApp, or Online
-              </h3>
-              <p>
-                We offer three convenient ways to book your <strong>romantic dinner date in Surat</strong>, <strong>birthday surprise party</strong>, <strong>anniversary celebration</strong>, or <strong>proposal setup</strong>:
-              </p>
-              <ul className="space-y-3 my-4">
-                <li><strong>Phone Call:</strong> Dial <a href={`tel:${siteConfig.phone}`} className="text-amber-800 font-bold hover:underline">{siteConfig.phone}</a> to speak with our celebration coordinator. We'll help you choose the right package, select a time slot, and discuss any special customisation requests.</li>
-                <li><strong>WhatsApp:</strong> Send a message to <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-green-600 font-bold hover:underline">our WhatsApp</a> with your preferred date, occasion, and any specific wishes. Most enquiries receive a response within 15 minutes during operating hours.</li>
-                <li><strong>Online Form:</strong> Fill out the booking form on this page with your name, contact number, occasion, preferred date, and package choice. Our team will call you back within an hour to confirm availability and finalise details.</li>
-              </ul>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">What to Expect After Contacting Us</h3>
+            <p>
+              Once you reach out to HIVY, our celebration coordinators take over to guide you through every step. We begin by understanding your occasion, whether it's a romantic candlelight dinner, birthday celebration, anniversary, proposal, or any other special event. Based on your requirements, we recommend packages that fit your vision and budget. We answer all your questions about decorations, food, timing, and customizations. After you select your package and preferred time slot, we walk you through the booking confirmation process. Throughout this journey, our team remains available to address any concerns, make adjustments, and ensure you feel confident about your upcoming celebration.
+            </p>
 
-              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
-                Available Time Slots and How to Choose the Best One
-              </h3>
-              <p>
-                HIVY operates three main session windows: <strong>Lunch (12 PM–5 PM)</strong>, <strong>Evening (4 PM–9 PM)</strong>, and <strong>Dinner (7 PM–11 PM)</strong>. Each booking gets a private 3-hour slot within the chosen window. The evening and dinner slots are the most popular for <strong>candlelight dinner dates</strong> and <strong>surprise proposals</strong> because the natural light fading outside creates a dramatic contrast with the glowing candles and fairy lights inside.
-              </p>
-              <p>
-                For <strong>birthday celebrations</strong> and <strong>baby shower events</strong>, the lunch slot works wonderfully — natural daylight floods through the glass elements of certain setups, creating stunning photographs without flash. If you're planning a <strong>pre-wedding photoshoot</strong>, we recommend the late-afternoon slot (4 PM–7 PM) for the golden-hour lighting that our outdoor-adjacent spaces catch beautifully.
-              </p>
-              <p>
-                Weekends — especially Friday and Saturday evenings — fill up quickly, so we recommend booking at least 3–5 days in advance. Weekday slots are easier to secure and offer the same full experience at no additional cost. Special dates like <strong>Valentine's Day, Propose Day, Rose Day</strong>, and New Year's Eve should be booked at least two weeks ahead.
-              </p>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Booking Process from Inquiry to Confirmation</h3>
+            <p>
+              The booking journey at HIVY is designed to be straightforward and stress-free. It begins with your initial inquiry where you share your preferred date, occasion type, and any specific requirements. Our team checks availability and presents suitable package options with pricing. Once you choose your package and time slot, we proceed to booking confirmation which requires a small advance payment. After confirmation, you receive a digital booking confirmation with all details documented. In the days leading up to your celebration, we coordinate any final customizations, confirm arrival timing, and ensure every detail is in place. On the day of your celebration, our team prepares everything before your arrival, so you walk into a perfectly prepared romantic setting.
+            </p>
 
-              <h3 className="text-2xl font-bold mt-10 mb-4 font-serif text-gray-900">
-                Frequently Asked Questions About Contacting HIVY
-              </h3>
-              <div className="space-y-4 mt-4">
-                <div className="bg-stone-50 p-4 rounded-lg">
-                  <p className="font-semibold text-gray-900">Can I visit HIVY before booking to see the setups?</p>
-                  <p className="mt-1 text-gray-600">Yes — we welcome walk-in visits during non-peak hours (typically weekday afternoons). Call ahead to ensure a setup is available for preview. We'll show you the available tent styles and help you choose one that matches your occasion.</p>
-                </div>
-                <div className="bg-stone-50 p-4 rounded-lg">
-                  <p className="font-semibold text-gray-900">Is there a booking deposit?</p>
-                  <p className="mt-1 text-gray-600">A small advance payment (typically ₹500–₹1,000) secures your slot. The remaining amount is due on the day of the celebration. We accept UPI, bank transfer, and cash.</p>
-                </div>
-                <div className="bg-stone-50 p-4 rounded-lg">
-                  <p className="font-semibold text-gray-900">What if I need to reschedule?</p>
-                  <p className="mt-1 text-gray-600">Rescheduling is free if informed at least 24 hours before your slot. The new date must fall within one month of the original booking, subject to availability.</p>
-                </div>
-              </div>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Payment Methods and Advance Requirements</h3>
+            <p>
+              Securing your celebration at HIVY requires a nominal advance payment that typically ranges from ₹500 to ₹1,000 depending on the package. This advance locks in your date and time slot, ensuring your celebration is confirmed on our calendar. We accept multiple payment methods for your convenience: UPI payments through Google Pay, PhonePe, and Paytm are the quickest options. Bank transfers are available for those who prefer traditional banking. Credit and debit cards are accepted at the venue. Cash payments are also welcome. The remaining balance is due on the day of your celebration, giving you flexibility in managing your payment timing.
+            </p>
 
-              <div className="mt-10 p-6 bg-amber-50 border border-amber-200 rounded-xl text-center">
-                <p className="text-lg font-semibold text-amber-900 mb-2">
-                  Have questions? We're one call away.
-                </p>
-                <p className="text-gray-600">
-                  Reach us at <a href={`tel:${siteConfig.phone}`} className="text-amber-800 font-bold hover:underline">{siteConfig.phone}</a> — available daily from 10 AM to 10 PM.
-                </p>
-              </div>
-            </article>
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Visit and Venue Tour Information</h3>
+            <p>
+              We encourage prospective couples to visit HIVY before booking to see our setups and experience the ambiance firsthand. Venue visits are particularly valuable if you're planning a proposal or elaborate customization and want to visualize the space. Walk-in visits are welcome during weekday afternoons when our setups are available for preview. We recommend calling ahead to ensure a coordinator is available to show you around and discuss your specific requirements. During your visit, you can see our different themed setups, understand spacing and seating arrangements, and get a feel for the romantic atmosphere that awaits you and your partner.
+            </p>
+
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Rescheduling and Cancellation Policies</h3>
+            <p>
+              We understand that plans can change, and our policies are designed to be fair and accommodating. Rescheduling your celebration is free when you inform us at least 24 hours before your booked slot. The new date must fall within one month of your original booking and is subject to availability. Our team works with you to find an alternative date that suits your schedule. Please note that we maintain a no-refund policy on bookings, as significant preparation begins once a celebration is confirmed. However, the free rescheduling option ensures that you never lose the value of your booking due to unexpected changes in plans.
+            </p>
+
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Why Customers Love Our Responsive Service</h3>
+            <p>
+              Customer satisfaction at HIVY begins with responsive, attentive service from your first inquiry. Our booking team is trained to listen carefully, offer helpful suggestions, and address concerns promptly. Couples consistently appreciate our quick WhatsApp responses that keep conversations flowing without delays. They value the detailed information we provide about packages, timing, and customizations. Most importantly, they love that our team genuinely cares about making their celebration special. The personal attention continues from booking through to your celebration day, where our on-ground staff ensures every element is perfect. This responsive approach has earned us hundreds of positive reviews and returning customers.
+            </p>
+
+            <h3 className="text-xl font-bold text-amber-900 mt-8">Our Commitment to Customer Satisfaction</h3>
+            <p>
+              At HIVY, every celebration we host represents a couple's special moment, and we treat it with the respect and attention it deserves. Our commitment extends beyond beautiful decorations and delicious food. It encompasses the entire experience from your first message to your final goodbye. We listen to your vision and work to exceed your expectations. We handle unexpected situations gracefully and find solutions quickly. We follow up after celebrations to ensure satisfaction and gather feedback for continuous improvement. This dedication to customer satisfaction is why couples trust HIVY with their most meaningful occasions and recommend us to friends and family.
+            </p>
           </div>
         </div>
       </section>
