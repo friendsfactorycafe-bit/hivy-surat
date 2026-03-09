@@ -108,7 +108,7 @@ const faqs = [
   },
   {
     question: "What's included in every package?",
-    answer: "3 uninterrupted hours in your own private world — dreamy decorations, a welcome drink to set the mood, handpicked snacks (cheese fondue, paneer tortilla & more), soft romantic music, and an ambiance that makes you forget the world exists. Every package comes with a complimentary celebration cake on the house!"
+    answer: "3 uninterrupted hours in your own private world — dreamy decorations, a mojito welcome drink to set the mood, handpicked snacks (cheese fondue, paneer tortilla & more), unlimited cold drinks, soft romantic music, and an ambiance that makes you forget the world exists. Every package comes with a complimentary celebration cake on the house!"
   },
   {
     question: "Can I customize the setup?",

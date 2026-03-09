@@ -492,14 +492,16 @@ export const getVisiblePackages = (): SetupPackage[] => {
 // ==================== MENU ITEMS ====================
 export const menuItems = {
   starters: [
-    { name: "Welcome Drink", description: "A refreshing welcome to begin your romantic experience", emoji: "🥤" },
-    { name: "Cheese Fondue", description: "A rich, velvety cheese fondue served with cheese balls, wedges, and nachos", emoji: "🧀" },
-    { name: "Paneer Tortilla", description: "Soft tortilla filled with spicy paneer and the chef's special seasoning", emoji: "🌯" },
-    { name: "Peri Peri Fries with Mac & Cheese", description: "Creamy mac & cheese paired with peri-peri fries", emoji: "🍟" },
-    { name: "Tangy Loaf", description: "Warm loaf served with cheesy garlic sauce", emoji: "🍞" }
+    { name: "Mojito Welcome Drink", description: "A refreshing mojito welcome drink to begin your romantic experience (one time)", emoji: "🍹" },
+    { name: "Cheese Fondue", description: "Rich, velvety cheese fondue served with cheese balls, wedges, nachos and rich cheesy sauce", emoji: "🧀" },
+    { name: "Paneer Tortilla", description: "Spicy paneer, chef's special stuff served in tortilla", emoji: "🌯" },
+    { name: "Peri Peri Fries with Mac & Cheese", description: "Cheesy stuff served with fries, garnished with red paprika & green onion", emoji: "🍟" },
+    { name: "Tangy Loaf", description: "Warm loaf served with cheesy garlic sauce", emoji: "🍞" },
+    { name: "Unlimited Cold Drink", description: "Unlimited cold drinks throughout your celebration", emoji: "🥤" },
   ],
   desserts: [
-    { name: "Dessert with Chocolate Bite", description: "A sweet ending with rich chocolate indulgence", emoji: "🍫" }
+    { name: "Dessert with Chocolate Bite", description: "A sweet ending with rich chocolate indulgence (one time)", emoji: "🍫" },
+    { name: "Mineral Water", description: "Complimentary mineral water", emoji: "💧" },
   ],
   addOns: [
     { name: "Cake", description: "Complimentary with all packages", price: "Free", emoji: "🍰" },

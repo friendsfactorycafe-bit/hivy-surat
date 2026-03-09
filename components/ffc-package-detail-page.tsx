@@ -32,13 +32,13 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
 
   // 10 unique FAQs for this package
   const packageFaqs = [
-    { question: `What is included in the ${pkg.name} package?`, answer: `The ${pkg.name} package (₹${pkg.price.toLocaleString()}) includes 3 hours of private venue access, themed ${pkg.name} decoration with fairy lights, candles, balloons and flowers, a three-course meal for two, welcome drinks, mocktails, ${pkg.cakeIncluded ? 'a complimentary celebration cake, ' : ''}background music via Bluetooth speaker, and a personalised welcome board.` },
+    { question: `What is included in the ${pkg.name} package?`, answer: `The ${pkg.name} package (₹${pkg.price.toLocaleString()}) includes 3 hours of private venue access, themed ${pkg.name} decoration with fairy lights, candles, balloons and flowers, a full dinner menu (mojito welcome drink, cheese fondue, paneer tortilla, peri peri fries with mac & cheese, tangy loaf, unlimited cold drinks, dessert with chocolate bite, mineral water), ${pkg.cakeIncluded ? 'a complimentary celebration cake, ' : ''}background music via Bluetooth speaker, and a personalised welcome board.` },
     { question: `How do I book the ${pkg.name} package?`, answer: `Call ${siteConfig.phone}, send a WhatsApp message, or fill out the booking form on our website. Share your preferred date, time slot, and any customisation requests. Our team confirms availability within minutes.` },
     { question: `Can I customise the ${pkg.name} decorations?`, answer: `Yes! You can request specific colour themes, neon signs, custom banners, particular flower varieties, extra balloons, and personalised props. Our team will match your vision for the ${pkg.name} setup.` },
     { question: `What occasions is the ${pkg.name} best suited for?`, answer: `The ${pkg.name} is perfect for ${pkg.perfectFor.join(', ')}. Each occasion gets tailored decoration touches within the ${pkg.name} framework.` },
     { question: `Is photography included in the ${pkg.name} package?`, answer: `Professional photography is included in select premium packages. For the ${pkg.name}, you can add a photographer at a nominal cost or bring your own. Our setup is designed to be highly photogenic.` },
     { question: `How many guests can the ${pkg.name} accommodate?`, answer: `The ${pkg.name} is designed for couples (2 people). For celebrations with up to 4 guests, we can discuss special arrangements. Contact us for group requirements.` },
-    { question: `What food is served with the ${pkg.name}?`, answer: `The ${pkg.name} includes a full three-course meal: starters (cheese fondue, paneer tortilla), mains (peri peri fries, mac & cheese, tangy loaf), and dessert (chocolate brownie). All dishes are freshly prepared vegetarian cuisine. Jain options available.` },
+    { question: `What food is served with the ${pkg.name}?`, answer: `The ${pkg.name} includes a full dinner menu: mojito welcome drink, cheese fondue (with cheese balls, wedges, nachos & rich cheesy sauce), paneer tortilla, peri peri fries with mac & cheese (garnished with red paprika & green onion), tangy loaf (with cheesy garlic sauce), unlimited cold drinks, dessert with chocolate bite, and mineral water. All dishes are freshly prepared vegetarian cuisine. Jain options available.` },
     { question: `Can I reschedule my ${pkg.name} booking?`, answer: `Yes, rescheduling is free if informed at least 24 hours before your slot. The new date must fall within one month. Call ${siteConfig.phone} to reschedule. Note: no-refund policy applies.` },
     { question: `What time slots are available for the ${pkg.name}?`, answer: `Lunch (12–5 PM), Evening (4–9 PM), and Dinner (7–11 PM) slots are available. Evening and dinner slots are most popular for the ${pkg.name} due to the enhanced candlelight ambiance.` },
     { question: `How does the ${pkg.name} differ from other HIVY packages?`, answer: `Each HIVY package features a unique tent style and decoration aesthetic. The ${pkg.name} has its own distinctive design, layout, and atmosphere. Visit our virtual tour page or call us to compare setups and find your perfect match.` },
@@ -327,28 +327,36 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
-                <h4 className="font-semibold text-stone-900 mb-1">🥤 Welcome Drink</h4>
-                <p className="text-gray-600 text-sm">A refreshing welcome to begin your romantic experience</p>
+                <h4 className="font-semibold text-stone-900 mb-1">🍹 Mojito Welcome Drink</h4>
+                <p className="text-gray-600 text-sm">A refreshing mojito welcome drink to begin your romantic experience (one time)</p>
               </div>
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
                 <h4 className="font-semibold text-stone-900 mb-1">🧀 Cheese Fondue</h4>
-                <p className="text-gray-600 text-sm">Rich, velvety cheese fondue served with cheese balls, wedges, and nachos</p>
+                <p className="text-gray-600 text-sm">Rich, velvety cheese fondue served with cheese balls, wedges, nachos and rich cheesy sauce</p>
               </div>
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
                 <h4 className="font-semibold text-stone-900 mb-1">🌯 Paneer Tortilla</h4>
-                <p className="text-gray-600 text-sm">Soft tortilla filled with spicy paneer and chef's special seasoning</p>
+                <p className="text-gray-600 text-sm">Spicy paneer, chef's special stuff served in tortilla</p>
               </div>
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
                 <h4 className="font-semibold text-stone-900 mb-1">🍟 Peri Peri Fries with Mac & Cheese</h4>
-                <p className="text-gray-600 text-sm">Creamy mac & cheese paired with peri-peri fries</p>
+                <p className="text-gray-600 text-sm">Cheesy stuff served with fries, garnished with red paprika & green onion</p>
               </div>
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
                 <h4 className="font-semibold text-stone-900 mb-1">🍞 Tangy Loaf</h4>
                 <p className="text-gray-600 text-sm">Warm loaf served with cheesy garlic sauce</p>
               </div>
               <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
+                <h4 className="font-semibold text-stone-900 mb-1">🥤 Unlimited Cold Drink</h4>
+                <p className="text-gray-600 text-sm">Unlimited cold drinks throughout your celebration</p>
+              </div>
+              <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
                 <h4 className="font-semibold text-stone-900 mb-1">🍫 Dessert with Chocolate Bite</h4>
-                <p className="text-gray-600 text-sm">A sweet ending with rich chocolate indulgence</p>
+                <p className="text-gray-600 text-sm">A sweet ending with rich chocolate indulgence (one time)</p>
+              </div>
+              <div className="bg-stone-100 rounded-lg p-4 border border-stone-200">
+                <h4 className="font-semibold text-stone-900 mb-1">💧 Mineral Water</h4>
+                <p className="text-gray-600 text-sm">Complimentary mineral water</p>
               </div>
             </div>
 

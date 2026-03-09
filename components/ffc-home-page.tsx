@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "What are the prices for candlelight dinner packages in Surat?",
-    answer: "Our romantic celebration packages start from affordable rates and include premium private setup, welcome drinks, decorations, and gourmet dining. Contact us for current pricing on candlelight dinner packages, birthday surprise setups, and anniversary celebration deals."
+    answer: "Our romantic celebration packages start from affordable rates and include premium private setup, mojito welcome drink, decorations, unlimited cold drinks, and gourmet dining. Contact us for current pricing on candlelight dinner packages, birthday surprise setups, and anniversary celebration deals."
   },
   {
     question: "Can I book HIVY for a marriage proposal or engagement?",
@@ -608,8 +608,8 @@ export default function FFCHomePage() {
                     <Wine className="h-5 w-5 text-amber-300" />
                   </div>
                   <div>
-                    <h4 className="font-semibold">Welcome Drink</h4>
-                    <p className="text-gray-400 text-sm">A refreshing welcome to begin your romantic experience</p>
+                    <h4 className="font-semibold">Mojito Welcome Drink</h4>
+                    <p className="text-gray-400 text-sm">A refreshing mojito welcome drink to begin your romantic experience</p>
                   </div>
                 </div>
                 
@@ -619,7 +619,7 @@ export default function FFCHomePage() {
                   </div>
                   <div>
                     <h4 className="font-semibold">Cheese Fondue</h4>
-                    <p className="text-gray-400 text-sm">Rich, velvety cheese fondue with cheese balls, wedges & nachos</p>
+                    <p className="text-gray-400 text-sm">Rich, velvety cheese fondue with cheese balls, wedges, nachos & rich cheesy sauce</p>
                   </div>
                 </div>
                 

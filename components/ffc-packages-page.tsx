@@ -18,7 +18,7 @@ const packagesFaqs = [
   { question: "Do all packages include cake?", answer: "Yes, all HIVY packages include a complimentary celebration cake. Premium cake upgrades are available at additional cost for custom designs or larger sizes." },
   { question: "Can I customize any package?", answer: "Absolutely! Every package is fully customizable. You can add extra decorations, change color schemes, include personalized messages, and incorporate special elements to match your celebration vision." },
   { question: "How long is each package booking?", answer: "All packages include 3 hours of exclusive venue access. Extended time can be arranged based on availability for an additional charge." },
-  { question: "What's included in the dining experience?", answer: "Each package includes a multi-course dining experience with welcome drinks, appetizers, main courses, and dessert. Menu preferences and dietary requirements can be accommodated." },
+  { question: "What's included in the dining experience?", answer: "Each package includes a full dinner menu: mojito welcome drink, cheese fondue, paneer tortilla, peri peri fries with mac & cheese, tangy loaf, unlimited cold drinks, dessert with chocolate bite, and mineral water. Dietary requirements can be accommodated." },
   { question: "Which package is best for anniversaries?", answer: "All packages work beautifully for anniversaries. Tent of Romance offers intimacy, BoHo Chic provides warm ambiance, and Swing of LOVE creates a playful romantic atmosphere." },
   { question: "Is photography included in packages?", answer: "Photography is available as an add-on for ₹2700, including 10-15 edited photos and a 30-45 second reel with same-day delivery." },
   { question: "How do I choose between packages?", answer: "Consider your occasion, aesthetic preferences, and budget. Our team is happy to share photos and videos of each setup to help you decide. Contact us on WhatsApp for personalized recommendations." },
@@ -173,7 +173,7 @@ export default function FFCPackagesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: "🕐", title: "3 Hours Private Time", desc: "Exclusive private celebration" },
-              { icon: "🥂", title: "Welcome Drink", desc: "Refreshing start to your evening" },
+              { icon: "🥂", title: "Mojito Welcome Drink", desc: "Refreshing mojito to start your evening" },
               { icon: "🍰", title: "Celebration Cake", desc: "Complimentary cake included" },
               { icon: "🎶", title: "Romantic Music", desc: "Soft melodies throughout" },
               { icon: "🕯️", title: "Candle Setup", desc: "Warm candlelight ambiance" },
@@ -213,17 +213,17 @@ export default function FFCPackagesPage() {
 
             <h3 className="text-xl font-bold text-amber-900 mt-8">The Booking to Celebration Journey</h3>
             <p>
-              Booking a HIVY package is designed to be seamless. You start by browsing our five packages online or through WhatsApp, selecting the aesthetic that resonates with your occasion. Once you choose a package and date, our team confirms availability and discusses any customizations you desire. We collect necessary details including dietary preferences, personalization requests, and timing preferences. On celebration day, our team sets up your entire experience before your arrival, from decorations to dining arrangements. You simply walk in with your partner or guests and step into a fully prepared celebration space. The three-hour session includes welcome drinks, romantic ambiance, your selected dining experience, celebration cake, and background music throughout.
+              Booking a HIVY package is designed to be seamless. You start by browsing our five packages online or through WhatsApp, selecting the aesthetic that resonates with your occasion. Once you choose a package and date, our team confirms availability and discusses any customizations you desire. We collect necessary details including dietary preferences, personalization requests, and timing preferences. On celebration day, our team sets up your entire experience before your arrival, from decorations to dining arrangements. You simply walk in with your partner or guests and step into a fully prepared celebration space. The three-hour session includes a mojito welcome drink, romantic ambiance, your selected dining experience, celebration cake, unlimited cold drinks, and background music throughout.
             </p>
 
             <h3 className="text-xl font-bold text-amber-900 mt-8">Understanding Your 3-Hour Exclusive Access</h3>
             <p>
-              The three hours included in every package provide ample time for a complete celebration experience. Typically, the first thirty minutes involve arriving, taking photos with the setup, and settling in with welcome drinks. The next ninety minutes cover your dining experience: appetizers, main courses, and conversations without any rush. The remaining hour is perfect for cake cutting, more photos, music enjoyment, and simply being present with each other in a beautiful setting. Many couples tell us this uninterrupted quality time is worth more than any material gift.
+              The three hours included in every package provide ample time for a complete celebration experience. Typically, the first thirty minutes involve arriving, taking photos with the setup, and settling in with your mojito welcome drink. The next ninety minutes cover your dining experience: appetizers, main courses, and conversations without any rush. The remaining hour is perfect for cake cutting, more photos, music enjoyment, and simply being present with each other in a beautiful setting. Many couples tell us this uninterrupted quality time is worth more than any material gift.
             </p>
 
             <h3 className="text-xl font-bold text-amber-900 mt-8">The HIVY Dining Experience Explained</h3>
             <p>
-              Food at HIVY isn't an afterthought—it's integral to your celebration. Each package includes a thoughtfully composed multi-course meal starting with welcome drinks and appetizers, followed by main courses from both Indian and Continental cuisines, and culminating in dessert alongside your celebration cake. We accommodate vegetarian preferences, spice tolerances, and dietary restrictions with advance notice. The dining experience is served at your comfort pace, not rushed or delayed, allowing conversations and celebration to flow naturally around your meal.
+              Food at HIVY isn't an afterthought—it's integral to your celebration. Each package includes a full dinner menu starting with a refreshing mojito welcome drink, followed by cheese fondue, paneer tortilla, peri peri fries with mac & cheese, tangy loaf, unlimited cold drinks, and ending with a dessert with chocolate bite alongside your celebration cake. Mineral water is also included. We accommodate vegetarian preferences, spice tolerances, and dietary restrictions with advance notice. The dining experience is served at your comfort pace, not rushed or delayed, allowing conversations and celebration to flow naturally around your meal.
             </p>
 
             <h3 className="text-xl font-bold text-amber-900 mt-8">Customization Possibilities for Every Package</h3>
