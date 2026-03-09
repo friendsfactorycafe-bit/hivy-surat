@@ -83,7 +83,7 @@ export default function TermsConditionsPage() {
               <li>Payment can be made via UPI, bank transfer, or cash at the venue</li>
               <li>Advance payment may be required to confirm your booking</li>
               <li>Additional charges may apply for extra decorations, add-ons, or extended time</li>
-              <li>Cake with Setup 1, Setup 2, and Setup 3 packages is complimentary; for other packages, cake costs ₹500 extra</li>
+              <li>Cake is complimentary with all packages</li>
             </ul>
 
             <h2 className="text-2xl font-bold mb-4 font-serif text-gray-900">5. Cancellation and Refund Policy</h2>

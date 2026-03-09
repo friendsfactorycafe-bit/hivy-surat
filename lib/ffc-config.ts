@@ -9,7 +9,7 @@ export interface SetupPackage {
   shortDescription: string;
   fullDescription: string;
   price: number;
-  cakeIncluded: boolean; // true for Setup 1-3, false for Setup 4-8 (extra cost)
+  cakeIncluded: boolean; // true for all packages (free cake)
   features: string[];
   perfectFor: string[];
   thumbnail: string;
@@ -502,7 +502,7 @@ export const menuItems = {
     { name: "Dessert with Chocolate Bite", description: "A sweet ending with rich chocolate indulgence", emoji: "🍫" }
   ],
   addOns: [
-    { name: "Cake", description: "Free in select packages, ₹350 for others", price: "Free / ₹350", emoji: "🍰" },
+    { name: "Cake", description: "Complimentary with all packages", price: "Free", emoji: "🍰" },
     { name: "Champagne", description: "Non-Alcoholic Fruit Flavour", price: "₹500", emoji: "🥂" }
   ]
 };

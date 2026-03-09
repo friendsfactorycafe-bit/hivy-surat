@@ -108,7 +108,7 @@ const faqs = [
   },
   {
     question: "What's included in every package?",
-    answer: "3 uninterrupted hours in your own private world — dreamy decorations, a welcome drink to set the mood, handpicked snacks (cheese fondue, paneer tortilla & more), soft romantic music, and an ambiance that makes you forget the world exists. Most packages come with a celebration cake on the house; others let you add one for just ₹350."
+    answer: "3 uninterrupted hours in your own private world — dreamy decorations, a welcome drink to set the mood, handpicked snacks (cheese fondue, paneer tortilla & more), soft romantic music, and an ambiance that makes you forget the world exists. Every package comes with a complimentary celebration cake on the house!"
   },
   {
     question: "Can I customize the setup?",
@@ -553,7 +553,7 @@ function PackageShowcase({ pkg, index }: { pkg: typeof packages[0]; index: numbe
                 <div className="w-4 h-4 rounded-full bg-amber-700 flex items-center justify-center flex-shrink-0">
                   <Check className="w-2.5 h-2.5 text-white" />
                 </div>
-                <span className="text-xs text-gray-700 font-medium leading-tight">{feature.replace(/[✨🍰🥂🎈💡🕯️🌆🎶🌙🤍🌸💞📸]/g, '').trim()}</span>
+                <span className="text-xs text-gray-700 font-medium leading-tight">{feature.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, '').trim()}</span>
               </div>
             ))}
           </div>
