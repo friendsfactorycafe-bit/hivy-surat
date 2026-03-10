@@ -72,8 +72,8 @@ const landingPagePricing: Record<string, { originalPrice: number; discountedPric
 // WhatsApp booking link generator
 const getWhatsAppLink = (packageName?: string) => {
   const message = packageName 
-    ? `Hi! I'm interested in booking the "${packageName}" package at HIVY - Place for Celebrations, Surat. Please share the availability.`
-    : `Hi! I'm interested in booking a celebration at HIVY - Place for Celebrations, Surat. Please share the available packages and slots.`;
+    ? `🎉 SPECIAL OFFER 🎉\n\nHi! I'm interested in booking the "${packageName}" package at HIVY - Place for Celebrations, Surat. Please share the availability.`
+    : `🎉 SPECIAL OFFER 🎉\n\nHi! I'm interested in booking a celebration at HIVY - Place for Celebrations, Surat. Please share the available packages and slots.`;
   return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`;
 };
 
