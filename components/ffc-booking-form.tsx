@@ -132,7 +132,7 @@ export function FFCBookingForm({ pageTitle, variant = 'default', packageName, de
     const timeLabel = timeSlots.find(t => t.value === data.preferredTime)?.label || data.preferredTime;
     const selectedPkg = data.selectedPackage ? packages.find(p => p.slug === data.selectedPackage) : null;
     
-    let message = `🎉 *SPECIAL OFFER* 🎉\n\n*New Booking Inquiry - HIVY - Place for Celebrations*\n\n`;
+    let message = `*New Booking Inquiry - HIVY - Place for Celebrations*\n\n`;
     message += `*Your Name:* ${data.name}\n`;
     message += `*Partner's Name:* ${data.partnerName}\n`;
     message += `*Phone:* ${data.phone}\n`;
@@ -435,7 +435,7 @@ export function FFCWhatsAppFloat({ pageTitle }: { pageTitle?: string }) {
   
   // Pre-written WhatsApp message (using WhatsApp bold formatting with *text*)
   const preWrittenMessage = encodeURIComponent(
-    `🎉 *SPECIAL OFFER* 🎉\n\n*Hi HIVY!*\n\nI'm interested in booking a romantic celebration at your venue.\n\n*I'd like to know more about:*\n- Candlelight dinner packages\n- Birthday surprise setups\n- Anniversary celebration options\n- Available dates & pricing\n\nPlease share the details. Thank you!`
+    `*Hi HIVY!*\n\nI'm interested in booking a romantic celebration at your venue.\n\n*I'd like to know more about:*\n- Candlelight dinner packages\n- Birthday surprise setups\n- Anniversary celebration options\n- Available dates & pricing\n\nPlease share the details. Thank you!`
   );
 
   return (
