@@ -60,6 +60,15 @@ const formatPrice = (price: number) => {
   }).format(price);
 };
 
+// Landing page discount pricing (only shown on /book-now)
+const landingPagePricing: Record<string, { originalPrice: number; discountedPrice: number }> = {
+  'setup-3': { originalPrice: 5500, discountedPrice: 4950 },   // Swing of LOVE
+  'setup-4': { originalPrice: 6100, discountedPrice: 5500 },   // BoHo Chic
+  'setup-2': { originalPrice: 6300, discountedPrice: 6100 },   // Fairy Tale Proposals
+  'setup-1': { originalPrice: 7000, discountedPrice: 6300 },   // Tent of Romance
+  'setup-6': { originalPrice: 5900, discountedPrice: 5300 },   // Elite Group Setup
+};
+
 // WhatsApp booking link generator
 const getWhatsAppLink = (packageName?: string) => {
   const message = packageName 
@@ -538,8 +547,16 @@ function PackageShowcase({ pkg, index }: { pkg: typeof packages[0]; index: numbe
           <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">{pkg.name}</h3>
 
           {/* Price */}
-          <div className="flex items-baseline gap-3 mb-5">
-            <span className="text-5xl font-black text-amber-700">{formatPrice(pkg.price)}</span>
+          <div className="flex flex-wrap items-baseline gap-2 mb-5">
+            {landingPagePricing[pkg.id] ? (
+              <>
+                <span className="text-2xl font-bold text-gray-400 line-through">{formatPrice(landingPagePricing[pkg.id].originalPrice)}</span>
+                <span className="text-5xl font-black text-amber-700">{formatPrice(landingPagePricing[pkg.id].discountedPrice)}</span>
+                <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">10% OFF</span>
+              </>
+            ) : (
+              <span className="text-5xl font-black text-amber-700">{formatPrice(pkg.price)}</span>
+            )}
             <span className="text-gray-500 font-medium">for 3 hours</span>
           </div>
 
@@ -600,7 +617,7 @@ function PackageShowcase({ pkg, index }: { pkg: typeof packages[0]; index: numbe
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="text-white font-bold text-base">{pkg.name}</h3>
-                <p className="text-white/80 text-xs">{formatPrice(pkg.price)} for 3 hours</p>
+                <p className="text-white/80 text-xs">{landingPagePricing[pkg.id] ? formatPrice(landingPagePricing[pkg.id].discountedPrice) : formatPrice(pkg.price)} for 3 hours</p>
               </div>
               <button
                 onClick={() => setShowBookingPopup(false)}
@@ -717,7 +734,7 @@ export function BookNowLandingPage() {
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl leading-relaxed">
               Real rose petals, fairy lights, intimate lower seating &mdash; a 100% private world made just for two in Surat. 
-              <span className="font-bold text-amber-700"> 5 dreamy setups</span> starting at just <span className="font-bold text-gray-900">₹5,100</span>
+              <span className="font-bold text-amber-700"> 5 dreamy setups</span> starting at just <span className="font-bold text-gray-900">₹4,950</span>
             </p>
 
             {/* Desktop CTA */}
