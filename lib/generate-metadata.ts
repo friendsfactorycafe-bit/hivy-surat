@@ -76,7 +76,7 @@ export function generateServicePageMetadata(
 ): Metadata {
   const description =
     customDescription ||
-    `Professional ${serviceName} in ${SEO_CONFIG.location} by ${SEO_CONFIG.siteName}. Trusted experts, affordable pricing, fast service. Call ${SEO_CONFIG.phone} for booking.`;
+    `Book ${serviceName} in ${SEO_CONFIG.location} at ${SEO_CONFIG.siteName}. Private decorated tent setups, vegetarian dinner, cake & photography-friendly lighting. Call ${SEO_CONFIG.phone}.`;
 
   return generatePageMetadata({
     title: `${serviceName} in ${SEO_CONFIG.location}`,

@@ -15,29 +15,6 @@ function getAllRoutes(): string[] {
     "admin",
     "node_modules",
   ]);
-  const ignoreFiles = new Set([
-    "layout.tsx",
-    "layout.js",
-    "loading.tsx",
-    "loading.js",
-    "error.tsx",
-    "error.js",
-    "not-found.tsx",
-    "not-found.js",
-    "globals.css",
-    "global.css",
-    "sitemap.ts",
-    "sitemap.xml",
-    "robots.ts",
-    "robots.txt",
-    "manifest.ts",
-    "manifest.json",
-    "opengraph-image.tsx",
-    "opengraph-image.png",
-    "apple-icon.svg",
-    "icon.svg",
-    "favicon.ico",
-  ]);
 
   function scanDir(dir: string, basePath: string) {
     let entries: fs.Dirent[];
@@ -56,21 +33,16 @@ function getAllRoutes(): string[] {
         const dirPath = path.join(dir, entry.name);
         const routePath = `${basePath}/${entry.name}`;
 
-        // Check if this directory has a page file
         const hasPage =
           fs.existsSync(path.join(dirPath, "page.tsx")) ||
           fs.existsSync(path.join(dirPath, "page.js")) ||
           fs.existsSync(path.join(dirPath, "page.jsx")) ||
           fs.existsSync(path.join(dirPath, "page.mdx"));
 
-        if (hasPage) {
-          // Skip dynamic route folders like [slug], [city] etc.
-          if (!entry.name.startsWith("[")) {
-            routes.push(routePath);
-          }
+        if (hasPage && !entry.name.startsWith("[")) {
+          routes.push(routePath);
         }
 
-        // Continue scanning subdirectories
         scanDir(dirPath, routePath);
       }
     }
@@ -80,33 +52,43 @@ function getAllRoutes(): string[] {
   return [...new Set(routes)].sort();
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Generate multiple sitemaps, each with max 100 URLs
+// Next.js will auto-create /sitemap.xml as the index pointing to /sitemap/0.xml, /sitemap/1.xml, etc.
+export async function generateSitemaps() {
+  const allRoutes = getAllRoutes();
+  const maxPerSitemap = SEO_CONFIG.maxUrlsPerSitemap;
+  const totalSitemaps = Math.ceil(allRoutes.length / maxPerSitemap);
+
+  return Array.from({ length: totalSitemaps }, (_, i) => ({ id: i }));
+}
+
+export default function sitemap({ id }: { id: number }): MetadataRoute.Sitemap {
   const baseUrl = SEO_CONFIG.siteUrl;
   const allRoutes = getAllRoutes();
+  const maxPerSitemap = SEO_CONFIG.maxUrlsPerSitemap;
   const lastModified = new Date();
 
-  // Define priority tiers
-  const highPriorityPaths = new Set(["/"]);
-  const mediumPriorityKeywords = [
-    "about",
-    "contact",
-    "services",
-    "service",
-  ];
+  // Slice routes for this sitemap chunk
+  const start = id * maxPerSitemap;
+  const end = start + maxPerSitemap;
+  const chunk = allRoutes.slice(start, end);
 
-  return allRoutes.map((route) => {
+  const highPriorityPaths = new Set(["/"]);
+  const mediumPriorityKeywords = ["about", "contact", "services", "service", "packages", "book-now", "menu"];
+  const servicePrefixes = ["candlelight", "birthday", "anniversary", "proposal", "pre-wedding", "baby", "valentine"];
+
+  return chunk.map((route) => {
     let priority = 0.7;
     let changeFrequency: "daily" | "weekly" | "monthly" = "weekly";
 
     if (highPriorityPaths.has(route)) {
       priority = 1.0;
       changeFrequency = "daily";
-    } else if (
-      mediumPriorityKeywords.some((kw) =>
-        route.toLowerCase().includes(kw)
-      )
-    ) {
+    } else if (mediumPriorityKeywords.some((kw) => route.toLowerCase().includes(kw))) {
       priority = 0.9;
+      changeFrequency = "weekly";
+    } else if (servicePrefixes.some((kw) => route.toLowerCase().includes(kw))) {
+      priority = 0.8;
       changeFrequency = "weekly";
     } else if (route.split("/").length <= 2) {
       priority = 0.8;

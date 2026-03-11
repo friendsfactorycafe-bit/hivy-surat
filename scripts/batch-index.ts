@@ -1,6 +1,7 @@
 // ============================================================================
 // Batch Google Indexing Script
 // Run: npx tsx scripts/batch-index.ts
+// Or for auto-discovery: npx tsx scripts/batch-index.ts --auto
 // Requires: GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY, REINDEX_API_KEY
 // ============================================================================
 
@@ -8,7 +9,8 @@ import fs from "fs";
 import path from "path";
 
 const SITE_URL = "https://hivy.co.in";
-const API_URL = `${SITE_URL}/api/reindex`;
+const REINDEX_API_URL = `${SITE_URL}/api/reindex`;
+const AUTO_INDEX_API_URL = `${SITE_URL}/api/auto-index`;
 
 function getAllRoutes(): string[] {
   const appDir = path.join(process.cwd(), "app");
@@ -16,7 +18,6 @@ function getAllRoutes(): string[] {
   
   const routes: string[] = ["/"];
   const ignoreDirs = new Set(["api", "_components", "_lib", "admin", "node_modules"]);
-  const ignoreFiles = new Set(["layout.tsx", "layout.js", "loading.tsx", "error.tsx", "not-found.tsx", "globals.css", "sitemap.ts", "robots.ts"]);
 
   function scanDir(dir: string, basePath: string) {
     let entries: fs.Dirent[];
@@ -39,12 +40,12 @@ function getAllRoutes(): string[] {
   return [...new Set(routes)].sort();
 }
 
-async function main() {
+async function batchIndex() {
   const routes = getAllRoutes();
   const urls = routes.map(r => `${SITE_URL}${r}`);
   
   console.log(`Found ${urls.length} URLs to index`);
-  console.log("Submitting to Google Indexing API...");
+  console.log("Submitting to Google Indexing API...\n");
   
   const apiKey = process.env.REINDEX_API_KEY;
   if (!apiKey) {
@@ -52,17 +53,16 @@ async function main() {
     process.exit(1);
   }
 
-  // Process in batches
   const batchSize = 50;
   let successCount = 0;
   let failCount = 0;
 
   for (let i = 0; i < urls.length; i += batchSize) {
     const batch = urls.slice(i, i + batchSize);
-    console.log(`\nBatch ${Math.floor(i/batchSize) + 1}: Submitting ${batch.length} URLs...`);
+    console.log(`Batch ${Math.floor(i/batchSize) + 1}: Submitting ${batch.length} URLs...`);
     
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(REINDEX_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,6 @@ async function main() {
       failCount += batch.length;
     }
     
-    // Rate limit delay
     if (i + batchSize < urls.length) {
       await new Promise(r => setTimeout(r, 2000));
     }
@@ -89,4 +88,35 @@ async function main() {
   console.log(`\n✅ Done! Success: ${successCount}, Failed: ${failCount}, Total: ${urls.length}`);
 }
 
-main().catch(console.error);
+async function autoIndex() {
+  console.log("Auto-indexing all discovered URLs via /api/auto-index...\n");
+  
+  const apiKey = process.env.REINDEX_API_KEY;
+  if (!apiKey) {
+    console.error("Missing REINDEX_API_KEY environment variable");
+    process.exit(1);
+  }
+
+  try {
+    const response = await fetch(AUTO_INDEX_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({}),
+    });
+
+    const data = await response.json();
+    console.log(`✅ Auto-index complete!`);
+    console.log(`   Total URLs: ${data.total}`);
+    console.log(`   Successful: ${data.successful}`);
+    console.log(`   Failed: ${data.failed}`);
+  } catch (err) {
+    console.error(`Auto-index failed: ${err}`);
+    process.exit(1);
+  }
+}
+
+const isAuto = process.argv.includes("--auto");
+(isAuto ? autoIndex() : batchIndex()).catch(console.error);

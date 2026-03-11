@@ -1,6 +1,7 @@
 /**
  * DYNAMIC [SLUG] PAGE
  * Handles all keyword and area pages for HIVY - Place for Celebrations
+ * ISR: Revalidates every 3600 seconds (1 hour) for service pages
  */
 
 import { Metadata } from "next";
@@ -15,6 +16,9 @@ import {
   ServiceKeyword,
   ServiceCategory
 } from "@/lib/ffc-config";
+
+// ISR: Revalidate every 1 hour for service/keyword pages, 24 hours for area pages
+export const revalidate = 3600;
 
 // Get all keyword slugs from all service categories
 function getAllKeywords(): { slug: string; keyword: ServiceKeyword; service: ServiceCategory }[] {
