@@ -632,7 +632,7 @@ function PackageShowcase({ pkg, index }: { pkg: typeof packages[0]; index: numbe
           
           {/* Booking Form - Compact */}
           <div className="px-3 pb-3 pt-1">
-            <FFCBookingForm variant="modal" pageTitle={`Book Now - ${pkg.name}`} />
+            <FFCBookingForm variant="modal" pageTitle={`Book Now - ${pkg.name}`} defaultPackageSlug={pkg.slug} />
           </div>
         </div>
       </div>
