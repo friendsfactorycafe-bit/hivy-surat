@@ -311,26 +311,8 @@ export function FFCBookingForm({ pageTitle, variant = 'default', packageName, de
                 </SelectTrigger>
                 <SelectContent>
                   {getVisiblePackages().map((pkg) => (
-                    <SelectItem key={pkg.slug} value={pkg.slug} className="pr-2">
-                      <span className="flex items-center w-full gap-2">
-                        <span className="truncate">
-                          {pkg.emoji} {pkg.name} - ₹{pkg.price.toLocaleString('en-IN')}
-                        </span>
-                        <button
-                          type="button"
-                          onPointerDown={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            const currentValues = getValues();
-                            localStorage.setItem(FORM_STORAGE_KEY, JSON.stringify(currentValues));
-                            router.push(`/packages/${pkg.slug}`);
-                          }}
-                          className="ml-auto flex-shrink-0 text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 transition-colors border border-amber-300"
-                          title="View package details"
-                        >
-                          View
-                        </button>
-                      </span>
+                    <SelectItem key={pkg.slug} value={pkg.slug}>
+                      {pkg.emoji} {pkg.name} - ₹{pkg.price.toLocaleString('en-IN')}
                     </SelectItem>
                   ))}
                 </SelectContent>
