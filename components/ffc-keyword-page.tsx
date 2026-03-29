@@ -13,6 +13,7 @@ import { FFCBookingForm, FFCWhatsAppFloat, FFCBookNowButton } from '@/components
 import { FFCGalleryCompact } from '@/components/ffc-gallery';
 import { ServiceCategory, ServiceKeyword, getVisiblePackages, suratAreas, siteConfig, formatPrice } from '@/lib/ffc-config';
 import { generateKeywordPageContent } from '@/lib/ffc-unique-content';
+import { getRelatedKeywords } from '@/lib/expanded-keywords';
 
 interface KeywordPageProps {
   service: ServiceCategory;
@@ -378,7 +379,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
         </div>
       </section>
 
-      {/* Related Keywords */}
+      {/* Related Keywords + Cross-Links */}
       <section className="py-16 bg-stone-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -391,7 +392,7 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
             {relatedKeywords.map((kw) => (
               <Link 
                 key={kw.slug}
-                href={`/services/${service.slug}/${kw.slug}`}
+                href={`/${kw.slug}`}
               >
                 <Card className="border-amber-100 hover:border-amber-200 hover:shadow-md transition-all group">
                   <CardContent className="p-4">
@@ -401,6 +402,26 @@ export default function FFCKeywordPage({ service, keyword }: KeywordPageProps) {
                     </h3>
                   </CardContent>
                 </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expanded Cross-Links for SEO */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-xl font-bold mb-6 font-serif text-center">
+            Explore More Celebrations in Surat
+          </h2>
+          <div className="flex flex-wrap justify-center gap-2">
+            {getRelatedKeywords(keyword.slug, 12).map((ek) => (
+              <Link
+                key={ek.slug}
+                href={`/${ek.slug}`}
+                className="px-3 py-1.5 bg-amber-50 rounded-full text-sm text-gray-700 hover:bg-amber-800 hover:text-white transition-colors border border-amber-100"
+              >
+                {ek.title}
               </Link>
             ))}
           </div>

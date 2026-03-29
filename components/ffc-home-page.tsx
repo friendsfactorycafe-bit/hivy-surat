@@ -409,9 +409,55 @@ export default function FFCHomePage() {
           ))}
         </div>
         
-        <div className="container mx-auto px-4 py-20 md:py-28 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
+        <div className="container mx-auto px-4 py-10 md:py-28 relative">
+          {/* MOBILE LAYOUT: Form-first, compact hero */}
+          <div className="lg:hidden">
+            {/* Compact Hero Text for Mobile */}
+            <div className="text-center mb-5">
+              <h1 className="text-3xl sm:text-4xl font-bold mb-2 leading-tight font-serif">
+                HIVY - Place for Celebrations
+              </h1>
+              <p className="text-base sm:text-lg text-white/90 mb-3">
+                {siteConfig.tagline}
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 text-xs">
+                <span className="flex items-center gap-1 bg-white/15 px-3 py-1.5 rounded-full">
+                  <Shield className="h-3 w-3" /> 100% Private
+                </span>
+                <span className="flex items-center gap-1 bg-white/15 px-3 py-1.5 rounded-full">
+                  <Star className="h-3 w-3" /> 4.9★ Rated
+                </span>
+                <span className="flex items-center gap-1 bg-white/15 px-3 py-1.5 rounded-full">
+                  <Users className="h-3 w-3" /> 3000+ Couples
+                </span>
+              </div>
+            </div>
+
+            {/* Booking Form Immediately Visible on Mobile */}
+            <div>
+              <FFCBookingForm variant="hero" />
+            </div>
+
+            {/* Quick Action Buttons */}
+            <div className="flex gap-3 mt-4">
+              <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white py-5 text-sm">
+                  <MessageCircle className="h-4 w-4 mr-1.5" />
+                  WhatsApp
+                </Button>
+              </a>
+              <a href={`tel:${siteConfig.phone}`} className="flex-1">
+                <Button size="lg" className="w-full bg-white/20 hover:bg-white/30 text-white py-5 text-sm border border-white/30">
+                  <Phone className="h-4 w-4 mr-1.5" />
+                  Call Now
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* DESKTOP LAYOUT: Side-by-side text + form */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-left">
               <Badge className="mb-6 bg-white/20 text-white border-white/30 text-sm px-4 py-1">
                 <Sparkles className="h-4 w-4 mr-2" /> Couples Only Experience in Surat
               </Badge>
@@ -425,22 +471,22 @@ export default function FFCHomePage() {
                 Surat's premier venue for romantic candlelight dinners, birthday surprises, anniversary celebrations, marriage proposals & intimate date nights. 100% private, couples-only experience.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-row gap-4">
                 <Link href="/packages">
-                  <Button size="lg" className="bg-white text-amber-800 hover:bg-amber-50 text-lg px-8 py-6 w-full sm:w-auto">
+                  <Button size="lg" className="bg-white text-amber-800 hover:bg-amber-50 text-lg px-8 py-6">
                     <Gift className="h-5 w-5 mr-2" />
                     View Packages
                   </Button>
                 </Link>
                 <a href={`tel:${siteConfig.phone}`}>
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6 w-full sm:w-auto">
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-6">
                     <Phone className="h-5 w-5 mr-2" />
                     {siteConfig.phone}
                   </Button>
                 </a>
               </div>
               
-              <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4 text-sm md:text-base">
+              <div className="mt-10 flex flex-wrap gap-4 text-base">
                 <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
                   <Shield className="h-4 w-4" /> 100% Private
                 </span>
@@ -448,12 +494,12 @@ export default function FFCHomePage() {
                   <Star className="h-4 w-4" /> 4.9★ Rated
                 </span>
                 <span className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
-                  <Users className="h-4 w-4" /> 500+ Couples
+                  <Users className="h-4 w-4" /> 3000+ Couples
                 </span>
               </div>
             </div>
             
-            {/* Hero Booking Form */}
+            {/* Hero Booking Form - Desktop */}
             <div>
               <FFCBookingForm variant="hero" />
             </div>
@@ -461,51 +507,94 @@ export default function FFCHomePage() {
         </div>
       </section>
 
-      {/* Packages Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-stone-100 to-white">
+      {/* Packages Section - Mobile Optimized with Full Thumbnails */}
+      <section className="py-8 md:py-20 bg-gradient-to-b from-stone-100 to-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-16">
-            <Badge className="mb-4 bg-amber-100 text-amber-900 border-amber-200">
+          <div className="text-center mb-6 md:mb-16">
+            <Badge className="mb-3 md:mb-4 bg-amber-100 text-amber-900 border-amber-200">
               Candlelight Dinner & Celebration Packages
             </Badge>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 font-serif">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 font-serif">
               Romantic Celebration Packages in Surat
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-              5 unique private setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals in Surat
+              5 unique private setups for candlelight dinners, birthday surprises, anniversary celebrations & proposals
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
+          {/* Mobile: Vertical scroll with large thumbnails */}
+          <div className="md:hidden space-y-4">
+            {getVisiblePackages().map((pkg, index) => (
+              <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
+                <Card className="overflow-hidden border-amber-100 group active:scale-[0.98] transition-transform">
+                  <div className="flex gap-0">
+                    {/* Large thumbnail on left */}
+                    <div className="relative w-[42%] min-h-[140px] flex-shrink-0 overflow-hidden">
+                      <Image
+                        src={pkg.thumbnail}
+                        alt={`${pkg.name} - Romantic celebration package Surat`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="45vw"
+                        quality={85}
+                      />
+                      <Badge className="absolute top-2 left-2 bg-amber-800/90 text-white text-[10px] px-1.5 py-0.5">
+                        Setup {index + 1}
+                      </Badge>
+                    </div>
+                    {/* Details on right */}
+                    <CardContent className="p-3 flex flex-col justify-center flex-1">
+                      <h3 className="font-bold text-sm mb-1 text-gray-900 leading-tight">
+                        {pkg.name}
+                      </h3>
+                      <p className="text-gray-500 text-[11px] line-clamp-2 mb-2 leading-snug">
+                        {pkg.shortDescription}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-lg font-bold text-amber-800">
+                          {formatPrice(pkg.price)}
+                        </p>
+                        <span className="text-[11px] text-amber-700 font-semibold flex items-center gap-0.5 bg-amber-50 px-2 py-1 rounded-full">
+                          Book <ChevronRight className="h-3 w-3" />
+                        </span>
+                      </div>
+                    </CardContent>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+          
+          {/* Desktop/Tablet: Grid layout */}
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-3 gap-6">
             {getVisiblePackages().map((pkg, index) => (
               <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
                 <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-amber-100 group overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
                     <Image
                       src={pkg.thumbnail}
-                      alt={pkg.name}
+                      alt={`${pkg.name} - Best romantic package Surat`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 400px"
+                      sizes="(max-width: 1200px) 33vw, 400px"
                       quality={90}
                     />
                     <Badge className="absolute top-2 left-2 bg-amber-800 text-white text-xs">
                       Setup {index + 1}
                     </Badge>
                   </div>
-                  <CardContent className="p-2.5 sm:p-3 md:p-4">
-                    <h3 className="font-semibold text-xs sm:text-sm md:text-lg mb-0.5 md:mb-1 group-hover:text-amber-800 transition-colors leading-tight">
+                  <CardContent className="p-4">
+                    <h3 className="font-semibold text-lg mb-1 group-hover:text-amber-800 transition-colors leading-tight">
                       {pkg.name}
                     </h3>
-                    <p className="text-gray-600 text-[10px] sm:text-xs md:text-sm line-clamp-2 mb-1 md:mb-2 hidden md:block">
+                    <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                       {pkg.shortDescription}
                     </p>
-                    <p className="text-base sm:text-base md:text-xl font-bold text-amber-800">
-                      {formatPrice(pkg.price)}
-                    </p>
-                    {/* View Details */}
-                    <div className="flex justify-end mt-2">
-                      <span className="text-[10px] sm:text-xs text-amber-700 font-medium flex items-center gap-1 hover:text-amber-900">
+                    <div className="flex items-center justify-between">
+                      <p className="text-xl font-bold text-amber-800">
+                        {formatPrice(pkg.price)}
+                      </p>
+                      <span className="text-xs text-amber-700 font-medium flex items-center gap-1">
                         View Details <ChevronRight className="h-3 w-3" />
                       </span>
                     </div>

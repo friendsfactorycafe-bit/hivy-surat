@@ -1,7 +1,7 @@
 /**
  * DYNAMIC [SLUG] PAGE
  * Handles all keyword and area pages for HIVY - Place for Celebrations
- * ISR: Revalidates every 3600 seconds (1 hour) for service pages
+ * ISR: Revalidates every 86400 seconds (24 hours) for keyword/area pages
  */
 
 import { Metadata } from "next";
@@ -16,9 +16,14 @@ import {
   ServiceKeyword,
   ServiceCategory
 } from "@/lib/ffc-config";
+import { 
+  getExpandedKeywordBySlug, 
+  getAllExpandedKeywordSlugs, 
+  ExpandedKeyword 
+} from "@/lib/expanded-keywords";
 
-// ISR: Revalidate every 1 hour for service/keyword pages, 24 hours for area pages
-export const revalidate = 3600;
+// ISR: Revalidate every 24 hours for keyword/area pages (content rarely changes)
+export const revalidate = 86400;
 
 // Get all keyword slugs from all service categories
 function getAllKeywords(): { slug: string; keyword: ServiceKeyword; service: ServiceCategory }[] {
@@ -37,13 +42,41 @@ function getAllKeywords(): { slug: string; keyword: ServiceKeyword; service: Ser
   return keywords;
 }
 
-// Find keyword by slug
+// Find keyword by slug - checks both original and expanded keywords
 function findKeywordBySlug(slug: string): { keyword: ServiceKeyword; service: ServiceCategory } | undefined {
+  // First check original keywords
   const allKeywords = getAllKeywords();
   const found = allKeywords.find(k => k.slug === slug);
   if (found) {
     return { keyword: found.keyword, service: found.service };
   }
+  
+  // Then check expanded keywords - convert to ServiceKeyword format
+  const expanded = getExpandedKeywordBySlug(slug);
+  if (expanded) {
+    const service = serviceCategories.find(s => s.slug === expanded.category);
+    if (service) {
+      const keyword: ServiceKeyword = {
+        slug: expanded.slug,
+        title: expanded.title,
+        h1: expanded.h1,
+        metaTitle: expanded.metaTitle,
+        metaDescription: expanded.metaDescription,
+      };
+      return { keyword, service };
+    }
+    // Fallback: use first service category if category doesn't match
+    const fallbackService = serviceCategories[0];
+    const keyword: ServiceKeyword = {
+      slug: expanded.slug,
+      title: expanded.title,
+      h1: expanded.h1,
+      metaTitle: expanded.metaTitle,
+      metaDescription: expanded.metaDescription,
+    };
+    return { keyword, service: fallbackService };
+  }
+  
   return undefined;
 }
 
@@ -56,8 +89,13 @@ export async function generateStaticParams() {
     params.push({ slug: area.slug });
   });
   
-  // Add all keyword pages from all services
+  // Add all original keyword pages from all services
   getAllKeywords().forEach(({ slug }) => {
+    params.push({ slug });
+  });
+  
+  // Add all expanded keyword pages
+  getAllExpandedKeywordSlugs().forEach((slug) => {
     params.push({ slug });
   });
   
