@@ -34,7 +34,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/hivy-images/6500/9.webp', alt: 'Couple celebration Surat', title: 'Couple Moment', featured: false },
   { type: 'image', src: '/hivy-images/5700/4.webp', alt: 'Evening romantic celebration Surat', title: 'Evening Magic', featured: false },
   { type: 'video', src: '/videos/VID_20251027_181020858.mp4', alt: 'Birthday reel Surat', title: 'Birthday Reel', featured: false },
-  { type: 'image', src: '/hivy-images/5700/Cover.webp', alt: 'Glass house dinner Surat', title: 'Glass House', featured: false },
+  { type: 'image', src: '/hivy-images/5700/cover.webp', alt: 'Glass house dinner Surat', title: 'Glass House', featured: false },
   { type: 'image', src: '/hivy-images/6500/6.webp', alt: 'Night romantic setup Surat', title: 'Night Setup', featured: false },
   { type: 'video', src: '/videos/InShot_20250217_151234749.mp4', alt: 'Romantic moments reel Surat', title: 'Romantic Reel', featured: false },
   { type: 'image', src: '/hivy-images/6300/3.webp', alt: 'Proposal setup Surat', title: 'Proposal Setup', featured: false },

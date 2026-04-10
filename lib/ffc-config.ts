@@ -291,9 +291,10 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Instagram-worthy Photo Spots 📸"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Date Night"],
-    thumbnail: "/hivy-images/5100/Cover%20photo.webp",
+    thumbnail: "/hivy-images/5100/cover.webp",
     images: [
-      "/hivy-images/5100/Cover%20photo.webp",
+      "/hivy-images/5100/cover.webp",
+      "/hivy-images/5100/1.webp",
       "/hivy-images/5100/2.webp",
       "/hivy-images/5100/3.webp",
       "/hivy-images/5100/4.webp",
@@ -303,10 +304,14 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "/hivy-images/5100/8.webp",
       "/hivy-images/5100/9.webp",
       "/hivy-images/5100/10.webp",
+      "/hivy-images/5100/11.webp",
       "/hivy-images/5100/12.webp",
-      "/hivy-images/5100/IMG-20250311-WA0023.webp",
-      "/hivy-images/5100/IMG-20250311-WA0029.webp",
-      "/hivy-images/5100/IMG_20251104_193020373.webp"
+      "/hivy-images/5100/13.webp",
+      "/hivy-images/5100/14.webp",
+      "/hivy-images/5100/15.webp",
+      "/hivy-images/5100/16.webp",
+      "/hivy-images/5100/17.webp",
+      "/hivy-images/5100/18.webp"
     ]
   },
   {
@@ -371,9 +376,10 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Open Roof Experience with Wind 🌙"
     ],
     perfectFor: ["Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot", "Boho Theme Party"],
-    thumbnail: "/hivy-images/5700/Cover.webp",
+    thumbnail: "/hivy-images/5700/cover.webp",
     images: [
-      "/hivy-images/5700/Cover.webp",
+      "/hivy-images/5700/cover.webp",
+      "/hivy-images/5700/1.webp",
       "/hivy-images/5700/2.webp",
       "/hivy-images/5700/3.webp",
       "/hivy-images/5700/4.webp",
@@ -388,7 +394,10 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "/hivy-images/5700/13.webp",
       "/hivy-images/5700/14.webp",
       "/hivy-images/5700/15.webp",
-      "/hivy-images/5700/20240224_202715_IMG_3867.webp"
+      "/hivy-images/5700/16.webp",
+      "/hivy-images/5700/17.webp",
+      "/hivy-images/5700/18.webp",
+      "/hivy-images/5700/19.webp"
     ]
   },
   {
