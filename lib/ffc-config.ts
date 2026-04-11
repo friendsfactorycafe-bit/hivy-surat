@@ -214,9 +214,9 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "Perfect for Proposals 💍"
     ],
     perfectFor: ["Marriage Proposal", "Romantic Proposal", "Anniversary Celebration", "Birthday Surprise", "Candlelight Dinner", "Pre-Wedding Photoshoot"],
-    thumbnail: "/hivy-images/6300/Cover.webp",
+    thumbnail: "/hivy-images/6300/cover.webp",
     images: [
-      "/hivy-images/6300/Cover.webp",
+      "/hivy-images/6300/cover.webp",
       "/hivy-images/6300/2.webp",
       "/hivy-images/6300/3.webp",
       "/hivy-images/6300/4.webp",

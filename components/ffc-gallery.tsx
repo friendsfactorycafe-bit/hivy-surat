@@ -50,7 +50,7 @@ export const galleryItems: GalleryItem[] = [
   { type: 'image', src: '/hivy-images/5100/5.webp', alt: 'Birthday surprise for girlfriend Surat', title: 'Girlfriend Surprise', featured: false },
   { type: 'video', src: '/videos/20241108_170507_f93c7cf5-f786-456a-baeb-54af2f03872c.mp4', alt: 'Baby moments video Surat', title: 'Baby Moments', featured: false },
   { type: 'image', src: '/hivy-images/6500/11.webp', alt: 'Birthday surprise for boyfriend Surat', title: 'Boyfriend Surprise', featured: false },
-  { type: 'image', src: '/hivy-images/6300/Cover.webp', alt: 'Birthday room decoration Surat', title: 'Room Decoration', featured: false },
+  { type: 'image', src: '/hivy-images/6300/cover.webp', alt: 'Birthday room decoration Surat', title: 'Room Decoration', featured: false },
   { type: 'video', src: '/videos/20231212_215029_1a70c04cb5664a19a68df3f08b9e46f4.mp4', alt: 'Pre-wedding couple video Surat', title: 'Pre-Wedding Video', featured: false },
   { type: 'image', src: '/hivy-images/5700/7.webp', alt: 'Couple birthday party Surat', title: 'Birthday Party', featured: false },
   { type: 'image', src: '/hivy-images/6500/12.webp', alt: 'Surprise date Surat', title: 'Surprise Date', featured: false },
