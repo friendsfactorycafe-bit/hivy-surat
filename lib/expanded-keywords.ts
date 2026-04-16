@@ -3223,7 +3223,6 @@ const miscKeywords: ExpandedKeyword[] = [
   createKeyword("romantic-night-ideas-in-surat", "misc"),
   createKeyword("romantic-morning-ideas-in-surat", "misc"),
   createKeyword("romantic-afternoon-ideas-in-surat", "misc"),
-  createKeyword("couple-cooking-experience-in-surat", "misc"),
   createKeyword("how-to-celebrate-anniversary-in-surat", "misc"),
   createKeyword("how-to-celebrate-birthday-in-surat", "misc"),
   createKeyword("how-to-celebrate-valentines-in-surat", "misc"),

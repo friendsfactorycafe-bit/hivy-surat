@@ -788,7 +788,7 @@ const extraCoupleActivity = [];
  'memorable-date-ideas', 'unforgettable-date-ideas',
  'romantic-evening-ideas', 'romantic-night-ideas',
  'romantic-morning-ideas', 'romantic-afternoon-ideas',
- 'couple-cooking-experience', 'couple-dining-experience',
+ 'couple-dining-experience',
  'couple-celebration-ideas', 'how-to-celebrate-anniversary',
  'how-to-celebrate-birthday', 'how-to-celebrate-valentines',
  'how-to-plan-date-night', 'how-to-plan-romantic-dinner',
