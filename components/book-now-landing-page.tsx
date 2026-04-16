@@ -189,6 +189,7 @@ function GallerySlider() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -341,6 +342,7 @@ function PackageImageSlider({ images, name }: { images: string[]; name: string }
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       priority={index === 0}
+                      loading={index === 0 ? 'eager' : 'lazy'}
                     />
                   </div>
                 </div>
@@ -513,7 +515,7 @@ function PackageShowcase({ pkg, index }: { pkg: typeof packages[0]; index: numbe
         <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
           {/* Image Slider - Left/Right alternating */}
           <div className="lg:w-1/2 p-5 md:p-8">
-            <PackageImageSlider images={pkg.images} name={pkg.name} />
+            <PackageImageSlider images={pkg.images.slice(0, 8)} name={pkg.name} />
           </div>
 
           {/* Package Info - Right/Left alternating */}

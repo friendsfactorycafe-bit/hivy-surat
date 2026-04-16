@@ -186,6 +186,7 @@ function GallerySection() {
                     width={item.featured ? 600 : 300}
                     height={item.featured ? 600 : 300}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className={`absolute ${item.featured ? 'bottom-4 left-4' : 'bottom-3 left-3'} text-white`}>
@@ -223,7 +224,7 @@ function GallerySection() {
 
         {/* View More Button */}
         <div className="text-center mt-10">
-          <Link href="/virtual-tour">
+          <Link href="/virtual-tour" prefetch={false}>
             <Button className="bg-gradient-to-r from-amber-900 to-amber-700 hover:from-amber-800 hover:to-amber-700 text-white px-8 py-6 text-lg">
               <Camera className="h-5 w-5 mr-2" />
               View Virtual Tour
@@ -258,7 +259,7 @@ function BlogSection() {
         {/* Blog Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`}>
+            <Link key={post.slug} href={`/blog/${post.slug}`} prefetch={false}>
               <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 group border-stone-200">
                 <div className="relative h-48">
                   <Image
@@ -525,7 +526,7 @@ export default function FFCHomePage() {
           {/* Mobile: Vertical scroll with large thumbnails */}
           <div className="md:hidden space-y-4">
             {getVisiblePackages().map((pkg, index) => (
-              <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
+              <Link key={pkg.id} href={`/packages/${pkg.slug}`} prefetch={false}>
                 <Card className="overflow-hidden border-amber-100 group active:scale-[0.98] transition-transform">
                   <div className="flex gap-0">
                     {/* Large thumbnail on left */}
@@ -536,7 +537,8 @@ export default function FFCHomePage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                         sizes="45vw"
-                        quality={85}
+                        quality={75}
+                        loading="lazy"
                       />
                       <Badge className="absolute top-2 left-2 bg-amber-800/90 text-white text-[10px] px-1.5 py-0.5">
                         Setup {index + 1}
@@ -568,7 +570,7 @@ export default function FFCHomePage() {
           {/* Desktop/Tablet: Grid layout */}
           <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-3 gap-6">
             {getVisiblePackages().map((pkg, index) => (
-              <Link key={pkg.id} href={`/packages/${pkg.slug}`}>
+              <Link key={pkg.id} href={`/packages/${pkg.slug}`} prefetch={false}>
                 <Card className="h-full hover:shadow-xl transition-all hover:-translate-y-1 border-amber-100 group overflow-hidden">
                   <div className="aspect-square bg-gradient-to-br from-stone-200 to-stone-100 relative overflow-hidden">
                     <Image
@@ -577,7 +579,8 @@ export default function FFCHomePage() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 1200px) 33vw, 400px"
-                      quality={90}
+                      quality={75}
+                      loading="lazy"
                     />
                     <Badge className="absolute top-2 left-2 bg-amber-800 text-white text-xs">
                       Setup {index + 1}
@@ -765,6 +768,7 @@ export default function FFCHomePage() {
               <Link 
                 key={area.slug}
                 href={`/${area.slug}`}
+                prefetch={false}
                 className="px-4 py-2 bg-white rounded-full text-gray-700 hover:bg-amber-800 hover:text-white transition-colors border border-stone-300"
               >
                 {area.name}

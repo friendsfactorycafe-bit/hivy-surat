@@ -175,7 +175,7 @@ export default function FFCPackageDetailPage({ package: pkg }: PackageDetailPage
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                   priority
-                  quality={100}
+                  quality={80}
                 />
                 
                 {/* Navigation Arrows - Always visible on mobile */}
