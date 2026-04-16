@@ -294,7 +294,6 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
     thumbnail: "/hivy-images/5100/cover.webp",
     images: [
       "/hivy-images/5100/cover.webp",
-      "/hivy-images/5100/1.webp",
       "/hivy-images/5100/2.webp",
       "/hivy-images/5100/3.webp",
       "/hivy-images/5100/4.webp",
@@ -311,7 +310,9 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "/hivy-images/5100/15.webp",
       "/hivy-images/5100/16.webp",
       "/hivy-images/5100/17.webp",
-      "/hivy-images/5100/18.webp"
+      "/hivy-images/5100/18.webp",
+      "/hivy-images/5100/19.webp",
+      "/hivy-images/5100/20.webp"
     ]
   },
   {
@@ -379,7 +380,6 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
     thumbnail: "/hivy-images/5700/cover.webp",
     images: [
       "/hivy-images/5700/cover.webp",
-      "/hivy-images/5700/1.webp",
       "/hivy-images/5700/2.webp",
       "/hivy-images/5700/3.webp",
       "/hivy-images/5700/4.webp",
@@ -397,7 +397,8 @@ Romantic Proposal Surat | Anniversary Celebration | Birthday Surprise | Candleli
       "/hivy-images/5700/16.webp",
       "/hivy-images/5700/17.webp",
       "/hivy-images/5700/18.webp",
-      "/hivy-images/5700/19.webp"
+      "/hivy-images/5700/19.webp",
+      "/hivy-images/5700/20.webp"
     ]
   },
   {
