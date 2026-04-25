@@ -463,12 +463,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfairDisplay.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
+        {/* Preconnect to external domains for faster DNS resolution */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        {/* Google Tag Manager - Single source of truth for analytics */}
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -477,27 +482,8 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-PSXMHLQF');
           `}
         </Script>
-        {/* Google Tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GT-PHWHQV4L"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tags" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GT-PHWHQV4L');
-            gtag('config', 'AW-11390931743');
-            gtag('event', 'conversion', {
-              'send_to': 'AW-11390931743/O21FCL-_9-0bEJ-mz7cq',
-              'value': 1.0,
-              'currency': 'INR'
-            });
-          `}
-        </Script>
         {/* Meta Pixel Code */}
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

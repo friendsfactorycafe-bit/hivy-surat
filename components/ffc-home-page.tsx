@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import { 
@@ -14,8 +15,10 @@ import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { FFCHeader, FFCFooter } from '@/components/ffc-layout';
 import { FFCBookingForm, FFCWhatsAppFloat } from '@/components/ffc-booking-form';
-import FFCReviewsSlider from '@/components/ffc-reviews-slider';
 import { siteConfig, getVisiblePackages, serviceCategories, suratAreas, formatPrice, getAllBlogPosts, BlogPost } from '@/lib/ffc-config';
+
+// Lazy load below-fold components to improve initial load time
+const FFCReviewsSlider = dynamic(() => import('@/components/ffc-reviews-slider'), { ssr: false });
 
 // Experience features
 const experienceFeatures = [
@@ -322,12 +325,14 @@ export default function FFCHomePage() {
   ];
 
   // Auto-slide effect
+  /*
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [heroSlides.length]);
+  */
 
   // FAQ Schema (FAQPage structured data)
   const homeFaqJsonLd = {
